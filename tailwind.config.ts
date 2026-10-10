@@ -14,10 +14,11 @@ const config: Config = {
         ink: { DEFAULT: '#F5F6F8', 2: '#8E93A0', 3: '#7F8595' },
         line: { DEFAULT: 'rgba(255,255,255,0.08)', 2: 'rgba(255,255,255,0.16)' },
       },
+      // ทุกตระกูลใช้ LINE Seed Sans TH — คงชื่อ serif/mono ไว้ให้คลาสเดิมใช้ได้
       fontFamily: {
-        sans: ['var(--font-jakarta)', 'var(--font-thai)', 'system-ui', 'sans-serif'],
-        serif: ['var(--font-newsreader)', 'var(--font-thai-serif)', 'Georgia', 'serif'],
-        mono: ['var(--font-mono)', 'var(--font-thai)', 'ui-monospace', 'monospace'],
+        sans: ['var(--font-line)', 'system-ui', 'sans-serif'],
+        serif: ['var(--font-line)', 'system-ui', 'sans-serif'],
+        mono: ['var(--font-line)', 'system-ui', 'sans-serif'],
       },
       borderRadius: { DEFAULT: '4px', lg: '8px' },
       boxShadow: {

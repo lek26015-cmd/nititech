@@ -1,15 +1,19 @@
 import type { Metadata, Viewport } from 'next';
-import { Newsreader, Plus_Jakarta_Sans, JetBrains_Mono, IBM_Plex_Sans_Thai, Noto_Serif_Thai } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
 import { Header, Footer } from '@/components/site';
 import { SITE_URL, SITE_NAME, SITE_DESC } from '@/lib/site';
 
-// ฟอนต์ละตินตามดีไซน์ (Newsreader / Plus Jakarta Sans / JetBrains Mono) + ฟอนต์ไทยคู่กัน
-const newsreader = Newsreader({ subsets: ['latin'], weight: ['300', '400'], variable: '--font-newsreader', display: 'swap' });
-const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-jakarta', display: 'swap' });
-const mono = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '500', '600'], variable: '--font-mono', display: 'swap' });
-const thai = IBM_Plex_Sans_Thai({ subsets: ['thai'], weight: ['400', '500', '600', '700'], variable: '--font-thai', display: 'swap' });
-const thaiSerif = Noto_Serif_Thai({ subsets: ['thai'], weight: ['300', '400', '500'], variable: '--font-thai-serif', display: 'swap' });
+// LINE Seed Sans TH ทั้งเว็บ (ไฟล์ชุดเดียวกับสิทธิคนทำงาน)
+const lineSeed = localFont({
+  src: [
+    { path: '../fonts/LINESeedSansTH_W_Rg.woff2', weight: '400', style: 'normal' },
+    { path: '../fonts/LINESeedSansTH_W_Bd.woff2', weight: '700', style: 'normal' },
+    { path: '../fonts/LINESeedSansTH_W_XBd.woff2', weight: '800', style: 'normal' },
+  ],
+  variable: '--font-line',
+  display: 'swap',
+});
 
 export const viewport: Viewport = { themeColor: '#0A0B0E', colorScheme: 'dark' };
 
@@ -30,7 +34,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="th" className={[newsreader.variable, jakarta.variable, mono.variable, thai.variable, thaiSerif.variable].join(' ')}>
+    <html lang="th" className={lineSeed.variable}>
       <body className="font-sans">
         <Header />
         <main>{children}</main>
