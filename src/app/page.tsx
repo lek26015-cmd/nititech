@@ -1,21 +1,21 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Search, ShieldCheck, Timer, Network, ArrowUpRight } from 'lucide-react';
+import { ArrowRight, Search, ShieldCheck, Timer, Network, ArrowUpRight, ListChecks } from 'lucide-react';
 import { allArticles, categories, findArticle, toCard } from '@/content/topics';
 import { radar } from '@/content/radar';
 import { useCases, riskLabel } from '@/content/matrix';
-import { UPDATED } from '@/content/types';
 import { ArticleCard } from '@/components/article-card';
 import { RadarList } from '@/components/radar-list';
 import { SectionHead } from '@/components/site';
 import { CodeRain, CountUp, Scramble } from '@/components/fx';
+import { AdSlot } from '@/components/ads';
 import { SITE_URL, SITE_NAME, SITE_DESC, LAWSLANE_URL, lawyerUrl } from '@/lib/site';
 
-const FEATURED = ['pdpa-basics', 'deepfake-law', 'online-scam-victim'];
+const FEATURED = ['privacy-by-design-checklist', 'license-map-tech-business', 'deepfake-law'];
 const featured = FEATURED.map(findArticle).filter((a) => a !== undefined);
-const more = allArticles.filter((a) => !FEATURED.includes(a.slug)).slice(0, 8);
 
 const tools = [
+  { href: '/guide/launch-checklist', icon: ListChecks, code: 'GUIDE_00', title: 'เช็กลิสต์กฎหมายก่อนเปิดระบบ', desc: '24 ข้อ ตั้งแต่ไอเดียจนถึงหลังเปิดตัว' },
   { href: '/tools/pdpa-check', icon: ShieldCheck, code: 'TOOL_01', title: 'เช็กความพร้อม PDPA', desc: 'แบบประเมิน 12 ข้อ ได้รายการสิ่งที่ต้องทำต่อทันที' },
   { href: '/tools/breach-clock', icon: Timer, code: 'TOOL_02', title: 'นาฬิกาแจ้งเหตุข้อมูลรั่ว', desc: 'คำนวณเส้นตาย 72 ชั่วโมง พร้อมลำดับงานรับมือ' },
   { href: '/matrix', icon: Network, code: 'TOOL_03', title: 'แผนผังกฎหมายตามกรณีใช้งาน', desc: 'AI แชตบอต สแกนใบหน้า คริปโต ต้องดูกฎหมายอะไร' },
@@ -52,15 +52,15 @@ export default function Home() {
         <div className="fx-scanline" aria-hidden />
         <div className="fx-drift pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-gold/10 blur-[120px]" />
         <div className="fx-drift pointer-events-none absolute -bottom-40 left-1/3 h-[360px] w-[360px] rounded-full bg-cyan/[0.08] blur-[120px] [animation-delay:-9s]" />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 md:px-10 md:py-20 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-center">
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 md:px-10 md:py-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,540px)] lg:items-center">
           <div>
             <p className="label fx-in fx-caret text-gold">THAI TECH LAW // KNOWLEDGE HUB</p>
-            <h1 className="fx-in mt-5 font-serif [--d:120ms] text-[40px] font-light leading-[1.15] tracking-tight md:text-[64px] md:leading-[1.1]">
-              ถอดรหัส<Scramble text="กฎหมายเทคโนโลยี" delay={500} className="text-gold-bright drop-shadow-[0_0_24px_rgba(242,202,80,0.35)]" />
-              <br className="hidden md:block" /> ให้คนทำงานดิจิทัลใช้ได้จริง
+            <h1 className="fx-in mt-5 font-serif [--d:120ms] text-[40px] font-light leading-[1.15] tracking-tight md:text-[56px] md:leading-[1.12] xl:text-[64px]">
+              ถอดรหัส<br /><Scramble text="กฎหมายเทคโนโลยี" delay={500} className="text-gold-bright drop-shadow-[0_0_24px_rgba(242,202,80,0.35)]" />
+              <br /><span className="whitespace-nowrap">ให้ใช้ได้จริง</span>
             </h1>
             <p className="fx-in mt-6 max-w-2xl text-lg leading-relaxed text-ink-2 [--d:260ms]">
-              PDPA อาชญากรรมไซเบอร์ AI ลิขสิทธิ์ แพลตฟอร์มดิจิทัล และคริปโต อธิบายด้วยภาษาคน พร้อมเลขมาตราอ้างอิงและเครื่องมือเช็กความพร้อม
+              สร้างระบบ ขออนุญาต เก็บข้อมูล ให้ถูกกฎหมาย อธิบายด้วยภาษาคน พร้อมเลขมาตรา
             </p>
             <form action="/knowledge" className="fx-in relative mt-8 max-w-2xl [--d:380ms]">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-ink-3" size={18} />
@@ -73,23 +73,40 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="glass-2 fx-orbit fx-in relative p-5 shadow-aureum [--d:300ms]">
-            <div className="flex items-center justify-between">
-              <p className="index fx-caret">JURIS // NITI-TH</p>
-              <p className="label flex items-center gap-1.5 text-cyan"><span className="dot" /> อัปเดตแล้ว</p>
+          {/* เทพีแห่งความยุติธรรม: จุดเด่นของหน้า */}
+          <div className="fx-in relative mx-auto aspect-square w-full max-w-[340px] sm:max-w-[440px] lg:max-w-[540px] [--d:200ms]">
+            <div className="pointer-events-none absolute inset-[8%] rounded-full bg-gold/25 blur-[70px]" aria-hidden />
+            <div className="fx-rotate-slow absolute inset-0 rounded-full border border-dashed border-gold/30" aria-hidden />
+            <div className="fx-rotate-rev absolute inset-[7%] rounded-full border border-cyan/25" aria-hidden>
+              <span className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan shadow-cyan" />
             </div>
-            <div className="relative mx-auto mt-2 h-28 w-28 sm:h-56 sm:w-56">
-              <div className="fx-radar" aria-hidden />
-              <div className="absolute inset-[6%] rounded-full border border-cyan/20" aria-hidden />
-              <div className="absolute inset-[22%] rounded-full border border-dashed border-gold/20" aria-hidden />
-              <Image src="/logo/emblem-gold.png" alt="เทพีแห่งความยุติธรรมในวงจรดิจิทัล สัญลักษณ์ NITI.TECH" width={224} height={224} priority className="fx-float relative h-full w-full object-contain drop-shadow-[0_0_30px_rgba(212,175,55,0.35)]" />
+            <div className="fx-rotate-slow absolute inset-[14%] rounded-full border border-gold/15" aria-hidden>
+              <span className="absolute bottom-0 left-1/2 h-2 w-2 -translate-x-1/2 translate-y-1/2 rounded-full bg-gold shadow-aureum" />
             </div>
-            <div className="mt-4 grid grid-cols-3 divide-x divide-line border-t border-line pt-4 text-center">
-              <div><p className="font-serif text-3xl font-light text-gold-bright"><CountUp to={allArticles.length} /></p><p className="mt-1 text-xs text-ink-2">บทความ</p></div>
-              <div><p className="font-serif text-3xl font-light text-gold-bright"><CountUp to={inForce} /></p><p className="mt-1 text-xs text-ink-2">กฎหมายที่มีผล</p></div>
-              <div><p className="font-serif text-3xl font-light text-gold-bright"><CountUp to={useCases.length} /></p><p className="mt-1 text-xs text-ink-2">กรณีใช้งาน</p></div>
+            <div className="absolute inset-[3%]"><div className="fx-radar" aria-hidden /></div>
+            <Image
+              src="/logo/emblem-gold.png"
+              alt="เทพีแห่งความยุติธรรมถือตาชั่งในวงจรดิจิทัล สัญลักษณ์ NITI.TECH"
+              width={540}
+              height={540}
+              priority
+              sizes="(min-width: 1024px) 540px, (min-width: 640px) 440px, 340px"
+              className="fx-float relative h-full w-full object-contain drop-shadow-[0_0_45px_rgba(212,175,55,0.45)]"
+            />
+            {/* ตัวเลขลอยรอบเทพี */}
+            <div className="glass absolute left-0 top-[12%] px-3 py-2 shadow-aureum sm:-left-4">
+              <p className="font-serif text-2xl leading-none text-gold-bright"><CountUp to={allArticles.length} /></p>
+              <p className="mt-1 text-[11px] text-ink-2">บทความ</p>
             </div>
-            <p className="code mt-4 text-center text-ink-3">อัปเดตล่าสุด {new Date(UPDATED).toLocaleDateString('th-TH', { dateStyle: 'long' })}</p>
+            <div className="glass absolute right-0 top-[38%] px-3 py-2 shadow-cyan sm:-right-4">
+              <p className="font-serif text-2xl leading-none text-cyan"><CountUp to={inForce} /></p>
+              <p className="mt-1 text-[11px] text-ink-2">กฎหมายที่มีผล</p>
+            </div>
+            <div className="glass absolute bottom-[8%] left-[6%] px-3 py-2 shadow-aureum">
+              <p className="font-serif text-2xl leading-none text-gold-bright"><CountUp to={useCases.length} /></p>
+              <p className="mt-1 text-[11px] text-ink-2">กรณีใช้งาน</p>
+            </div>
+            <p className="label absolute bottom-0 right-[4%] flex items-center gap-1.5 text-cyan"><span className="dot" /> JURIS // SYNCED</p>
           </div>
         </div>
 
@@ -118,6 +135,7 @@ export default function Home() {
       </section>
 
       <div className="mx-auto max-w-7xl px-4 md:px-10">
+        <AdSlot placement="home-top" className="!mb-0" />
         {/* บทความเด่น */}
         <section className="pt-16" data-reveal>
           <SectionHead
@@ -165,6 +183,8 @@ export default function Home() {
           </div>
         </section>
 
+        <AdSlot placement="home-mid" className="!mb-0 mt-16" />
+
         {/* Matrix teaser */}
         <section className="mt-16">
           <SectionHead
@@ -191,17 +211,19 @@ export default function Home() {
 
         {/* บทความอื่น */}
         <section className="mt-16">
-          <SectionHead index="INDEX // LATEST" title="อ่านต่อในคลังความรู้" />
-          <ol className="mt-6 grid gap-x-10 border-t border-line md:grid-cols-2" data-stagger>
-            {more.map((a) => (
-              <li key={a.slug} className="border-b border-line">
-                <Link href={`/knowledge/${a.slug}`} className="group flex gap-4 py-4">
-                  <span className="code w-16 shrink-0 pt-0.5 text-gold">{toCard(a).ref}</span>
-                  <span className="leading-snug text-ink/90 transition group-hover:text-gold-bright">{a.title}</span>
-                </Link>
-              </li>
+          <SectionHead index="INDEX // DOMAINS" title="เลือกตามหัวข้อ" action={<Link href="/knowledge" className="link-ghost">→ คลังความรู้ทั้งหมด</Link>} />
+          <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4" data-stagger>
+            {categories.map((c) => (
+              <Link key={c.id} href={`/category/${c.id}`} className="glass group relative aspect-[4/3] overflow-hidden transition hover:border-gold hover:shadow-aureum">
+                <Image src={c.image} alt="" fill sizes="(min-width: 768px) 300px, 50vw" className="object-cover opacity-60 transition duration-700 group-hover:scale-110 group-hover:opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-void via-void/50 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-4">
+                  <p className="code text-gold">{c.articles.length} บทความ</p>
+                  <p className="mt-1 font-semibold leading-snug text-ink">{c.title}</p>
+                </div>
+              </Link>
             ))}
-          </ol>
+          </div>
         </section>
 
         {/* CTA */}

@@ -55,6 +55,8 @@ body { @apply bg-void text-ink antialiased; }
 
   .grid-bg-live { animation: fx-grid 4s linear infinite; }
   .fx-float { animation: fx-float 6s ease-in-out infinite; }
+  .fx-rotate-slow { animation: fx-rotate 40s linear infinite; }
+  .fx-rotate-rev { animation: fx-rotate 28s linear infinite reverse; }
   .fx-drift { animation: fx-drift 18s ease-in-out infinite; }
   .fx-ping::after { content: ''; position: absolute; inset: 0; border-radius: 9999px; background: inherit; animation: fx-ping 2.2s cubic-bezier(0, 0, 0.2, 1) infinite; }
   .fx-caret::after { content: '▍'; margin-left: 4px; animation: fx-blink 1s steps(1) infinite; }

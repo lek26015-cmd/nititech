@@ -4,6 +4,7 @@ import Script from 'next/script';
 import './globals.css';
 import { Header, Footer } from '@/components/site';
 import { FxRoot } from '@/components/fx';
+import { AdsProvider } from '@/components/ads';
 import { SITE_URL, SITE_NAME, SITE_DESC } from '@/lib/site';
 
 // LINE Seed Sans TH ทั้งเว็บ (ไฟล์ชุดเดียวกับสิทธิคนทำงาน)
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+        <AdsProvider />
       </body>
     </html>
   );

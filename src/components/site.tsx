@@ -7,6 +7,7 @@ import { MobileNav } from './mobile-nav';
 
 export const nav = [
   { href: '/knowledge', label: 'คลังความรู้' },
+  { href: '/guide/launch-checklist', label: 'เช็กลิสต์เปิดระบบ' },
   { href: '/radar', label: 'สถานะกฎหมาย' },
   { href: '/matrix', label: 'แผนผังกฎหมาย' },
   { href: '/tools/pdpa-check', label: 'เช็ก PDPA' },
@@ -58,10 +59,12 @@ export function Footer() {
         <div>
           <p className="index">เครื่องมือ</p>
           <ul className="mt-3 space-y-2 text-sm text-ink-2">
+            <li><Link href="/guide/launch-checklist" className="hover:text-gold">เช็กลิสต์กฎหมายก่อนเปิดระบบ</Link></li>
             <li><Link href="/tools/pdpa-check" className="hover:text-gold">เช็กความพร้อม PDPA</Link></li>
             <li><Link href="/tools/breach-clock" className="hover:text-gold">นาฬิกาแจ้งเหตุข้อมูลรั่ว 72 ชม.</Link></li>
             <li><Link href="/radar" className="hover:text-gold">สถานะกฎหมายเทคโนโลยี</Link></li>
             <li><Link href="/matrix" className="hover:text-gold">แผนผังกฎหมายตามกรณีใช้งาน</Link></li>
+            <li><Link href="/advertise" className="hover:text-gold">ลงโฆษณากับเรา</Link></li>
             <li><Link href="/about" className="hover:text-gold">เกี่ยวกับเราและนโยบายความเป็นส่วนตัว</Link></li>
           </ul>
         </div>

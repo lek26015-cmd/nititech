@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { BreachClock } from '@/components/breach-clock';
 import { Disclaimer, LawyerCta } from '@/components/site';
+import { AdSlot } from '@/components/ads';
 
 export const metadata: Metadata = {
   title: 'นาฬิกาแจ้งเหตุข้อมูลรั่ว 72 ชั่วโมง (PDPA มาตรา 37)',
@@ -20,6 +21,7 @@ export default function Page() {
           — อ่านรายละเอียดใน <Link href="/knowledge/data-breach-72-hours" className="text-gold underline-offset-4 hover:underline">บทความขั้นตอนแจ้งเหตุ</Link>
         </p>
         <div className="mt-10"><BreachClock /></div>
+        <AdSlot placement="tool" />
         <div className="mt-12 grid max-w-4xl gap-4">
           <Disclaimer>เครื่องมือนี้ช่วยคำนวณเวลาเท่านั้น การตัดสินว่าต้องแจ้งหรือไม่ขึ้นกับการประเมินความเสี่ยงของแต่ละเหตุ</Disclaimer>
           <LawyerCta text="กำลังเผชิญเหตุข้อมูลรั่ว? ปรึกษาทนายทันทีเพื่อเตรียมการแจ้งเหตุและลดความเสี่ยงคดี" />

@@ -1,11 +1,13 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
-import { allArticles, findArticle, metaTitleOf, readingMinutes, refOf, toCard } from '@/content/topics';
+import { allArticles, findArticle, imageOf, metaTitleOf, readingMinutes, refOf, toCard } from '@/content/topics';
 import { UPDATED } from '@/content/types';
 import { ArticleCard } from '@/components/article-card';
 import { ReadProgress } from '@/components/fx';
+import { AdSlot } from '@/components/ads';
 import { LawyerCta, Disclaimer } from '@/components/site';
 import { SITE_URL, SITE_NAME, LAWSLANE_URL, breadcrumbLd } from '@/lib/site';
 
@@ -75,8 +77,14 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     <div className="grid-bg">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <ReadProgress />
-      <header className="border-b border-line">
-        <div className="mx-auto max-w-7xl px-4 pb-10 pt-10 md:px-10">
+      <header className="relative overflow-hidden border-b border-line">
+        {/* ภาพหมวดเป็นฉากหลังของหัวบทความ */}
+        <div className="absolute inset-0" aria-hidden>
+          <Image src={imageOf(a)} alt="" fill priority sizes="100vw" className="object-cover opacity-50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-void via-void/85 to-void/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-void via-transparent to-void/60" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-12 md:px-10 md:pb-16">
           <nav aria-label="breadcrumb" className="code flex flex-wrap gap-2 text-ink-3">
             <Link href="/" className="hover:text-gold">หน้าแรก</Link>/<Link href="/knowledge" className="hover:text-gold">คลังความรู้</Link>/
             <Link href={`/category/${a.category.id}`} className="hover:text-gold">{a.category.short}</Link>/<span className="text-ink-2">{refOf(a)}</span>
@@ -112,17 +120,21 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               <p className="index">เหมาะกับ</p>
               <p className="mt-2 text-ink-2">{a.audience}</p>
             </div>
+            <AdSlot placement="sidebar" className="!my-0 hidden lg:block" />
           </div>
         </aside>
 
         <article className="order-1 min-w-0 max-w-3xl lg:order-2">
           <div className="space-y-10">
             {a.points.map((p, i) => (
-              <section key={p.heading} id={`sec-${i + 1}`} className="scroll-mt-24" data-reveal>
+              <div key={p.heading}>
+              {i === 2 && <AdSlot placement="article-mid" className="!mt-0" />}
+              <section id={`sec-${i + 1}`} className="scroll-mt-24" data-reveal>
                 <p className="index fx-caret">SEC // {String(i + 1).padStart(2, '0')}</p>
                 <h2 className="mt-1 text-xl font-semibold leading-snug md:text-2xl">{p.heading}</h2>
                 <Body text={p.body} />
               </section>
+              </div>
             ))}
           </div>
 
@@ -162,6 +174,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               </ul>
             </section>
           )}
+
+          <AdSlot placement="article-end" />
 
           <div className="mt-8 space-y-4">
             <Disclaimer />

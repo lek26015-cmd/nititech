@@ -3,6 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 import { Search } from 'lucide-react';
 import { ArticleCard, type CardArticle } from './article-card';
+import { AdSlot } from './ads';
 
 export interface KArticle extends CardArticle { laws: string[]; text: string }
 export interface KCategory { id: string; code: string; title: string; blurb: string; articles: KArticle[] }
@@ -95,8 +96,10 @@ export function KnowledgeSearch({ categories }: { categories: KCategory[] }) {
           {results.length === 0 && <p className="glass mt-3 p-5 text-ink-2">ไม่พบบทความที่ตรงกัน ลองใช้คำอื่น หรือเลือกหมวดหมู่ด้านบน</p>}
         </section>
       ) : (
-        scoped.map((c) => (
-          <section key={c.id} id={c.id} className="mt-12 scroll-mt-24">
+        scoped.map((c, idx) => (
+          <div key={c.id}>
+          {idx === 2 && <AdSlot placement="listing" />}
+          <section id={c.id} className="mt-12 scroll-mt-24">
             <p className="label text-gold">{c.code}</p>
             <h2 className="mt-1 text-xl font-semibold"><Link href={`/category/${c.id}`} className="hover:text-gold-bright">{c.title}</Link></h2>
             <p className="mt-1 text-sm text-ink-2">{c.blurb}</p>
@@ -104,6 +107,7 @@ export function KnowledgeSearch({ categories }: { categories: KCategory[] }) {
               {c.articles.map((a) => <ArticleCard key={a.slug} a={a} />)}
             </div>
           </section>
+          </div>
         ))
       )}
     </>
