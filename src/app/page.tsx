@@ -214,10 +214,10 @@ export default function Home() {
           <SectionHead index="INDEX // DOMAINS" title="เลือกตามหัวข้อ" action={<Link href="/knowledge" className="link-ghost">→ คลังความรู้ทั้งหมด</Link>} />
           <div className="mt-6 grid grid-cols-2 gap-3 md:grid-cols-4" data-stagger>
             {categories.map((c) => (
-              <Link key={c.id} href={`/category/${c.id}`} className="glass group relative aspect-[4/3] overflow-hidden transition hover:border-gold hover:shadow-aureum">
+              <Link key={c.id} href={`/category/${c.id}`} className="glass group relative aspect-[16/9] overflow-hidden transition hover:border-gold hover:shadow-aureum">
                 <Image src={c.image} alt="" fill sizes="(min-width: 768px) 300px, 50vw" className="object-cover opacity-60 transition duration-700 group-hover:scale-110 group-hover:opacity-90" />
-                <div className="absolute inset-0 bg-gradient-to-t from-void via-void/50 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-4">
+                <div className="absolute inset-0 bg-gradient-to-r from-void/90 via-void/30 to-transparent" />
+                <div className="absolute inset-y-0 left-0 flex max-w-[65%] flex-col justify-end p-4">
                   <p className="code text-gold">{c.articles.length} บทความ</p>
                   <p className="mt-1 font-semibold leading-snug text-ink">{c.title}</p>
                 </div>

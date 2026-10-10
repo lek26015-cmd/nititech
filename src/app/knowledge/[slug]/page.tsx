@@ -80,9 +80,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <header className="relative overflow-hidden border-b border-line">
         {/* ภาพหมวดเป็นฉากหลังของหัวบทความ */}
         <div className="absolute inset-0" aria-hidden>
-          <Image src={imageOf(a)} alt="" fill priority sizes="100vw" className="object-cover opacity-50" />
+          <Image src={imageOf(a)} alt="" fill priority sizes="100vw" className="object-cover object-right-bottom opacity-60" />
           <div className="absolute inset-0 bg-gradient-to-r from-void via-void/85 to-void/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-void via-transparent to-void/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-void/40 via-transparent to-void/60" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 pb-12 pt-12 md:px-10 md:pb-16">
           <nav aria-label="breadcrumb" className="code flex flex-wrap gap-2 text-ink-3">

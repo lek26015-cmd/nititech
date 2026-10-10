@@ -10,7 +10,7 @@ export function ArticleCard({ a, big = false }: { a: CardArticle; big?: boolean 
     <Link href={`/knowledge/${a.slug}`} className="glass group flex flex-col overflow-hidden transition hover:border-line-2 hover:shadow-aureum">
       <div className="relative aspect-[16/9] overflow-hidden border-b border-line">
         <Image src={a.image} alt="" fill sizes="(min-width: 1024px) 380px, (min-width: 640px) 50vw, 100vw" className="object-cover opacity-80 transition duration-700 group-hover:scale-105 group-hover:opacity-100" />
-        <div className="absolute inset-0 bg-gradient-to-t from-void via-void/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-void/50 via-transparent to-void/40" />
         <span className="chip absolute left-3 top-3 !bg-black/70 backdrop-blur">{a.category}</span>
         <span className="index absolute right-3 top-3 rounded-sm bg-black/60 px-1.5 py-0.5 !text-ink-2">{a.ref}</span>
       </div>

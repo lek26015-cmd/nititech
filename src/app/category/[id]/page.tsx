@@ -37,9 +37,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ id: s
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
       <header className="relative overflow-hidden border-b border-line">
         <div className="absolute inset-0" aria-hidden>
-          <Image src={c.image} alt="" fill priority sizes="100vw" className="object-cover opacity-40" />
+          <Image src={c.image} alt="" fill priority sizes="100vw" className="object-cover object-right-bottom opacity-60" />
           <div className="absolute inset-0 bg-gradient-to-r from-void via-void/80 to-void/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-void to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-void/40 to-transparent" />
         </div>
         <div className="relative mx-auto max-w-7xl px-4 py-16 md:px-10 md:py-20">
           <nav className="code text-ink-3"><Link href="/knowledge" className="hover:text-gold">คลังความรู้</Link> / {c.short}</nav>
