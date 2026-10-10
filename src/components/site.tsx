@@ -17,7 +17,7 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-line bg-void/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center gap-6 px-4 py-3 md:px-10">
         <Link href="/" aria-label="NITI.TECH หน้าแรก" className="group flex shrink-0 items-center gap-4">
-          <Image src="/logo/wordmark-duo.png" alt="NITI.TECH" width={720} height={180} priority className="h-6 w-auto transition group-hover:drop-shadow-[0_0_12px_rgba(212,175,55,0.35)] md:h-7" />
+          <Image src="/logo/wordmark-duo.png" alt="NITI.TECH" width={128} height={32} priority className="h-6 w-auto transition group-hover:drop-shadow-[0_0_12px_rgba(212,175,55,0.35)] md:h-7" />
           <span className="hidden h-8 w-px bg-line-2 sm:block" />
           <span className="hidden leading-tight sm:block">
             <span className="block text-[13px] text-ink">กฎหมายเทคโนโลยี</span>
@@ -41,7 +41,7 @@ export function Footer() {
     <footer className="mt-24 border-t border-line bg-void-2/60">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr] md:px-10">
         <div>
-          <Image src="/logo/wordmark-duo.png" alt="NITI.TECH" width={720} height={180} className="h-8 w-auto" />
+          <Image src="/logo/wordmark-duo.png" alt="NITI.TECH" width={128} height={32} className="h-8 w-auto" />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink-2">
             พื้นที่ความรู้กฎหมายเทคโนโลยีไทย ข้อมูลส่วนบุคคล อาชญากรรมไซเบอร์ AI และธุรกิจดิจิทัล จัดทำโดย <a href={lawslane.home} className="text-gold hover:underline">Lawslane</a> แพลตฟอร์มปรึกษาทนายความออนไลน์
           </p>

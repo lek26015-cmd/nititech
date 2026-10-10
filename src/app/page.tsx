@@ -20,7 +20,7 @@ const tools = [
   { href: '/matrix', icon: Network, code: 'TOOL_03', title: 'แผนผังกฎหมายตามกรณีใช้งาน', desc: 'AI แชตบอต สแกนใบหน้า คริปโต ต้องดูกฎหมายอะไร' },
 ];
 
-const homeLd = {
+const homeLd = [{
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: SITE_NAME,
@@ -29,7 +29,15 @@ const homeLd = {
   description: SITE_DESC,
   publisher: { '@type': 'Organization', name: 'Lawslane', url: LAWSLANE_URL },
   potentialAction: { '@type': 'SearchAction', target: `${SITE_URL}/knowledge?q={q}`, 'query-input': 'required name=q' },
-};
+}, {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: SITE_NAME,
+  url: SITE_URL,
+  logo: `${SITE_URL}/logo/emblem-gold.png`,
+  description: SITE_DESC,
+  parentOrganization: { '@type': 'Organization', name: 'Lawslane', url: LAWSLANE_URL },
+}];
 
 export default function Home() {
   const inForce = radar.filter((r) => r.status === 'in-force').length;
@@ -67,7 +75,7 @@ export default function Home() {
               <p className="index">JURIS // NITI-TH</p>
               <p className="label flex items-center gap-1.5 text-cyan"><span className="dot" /> อัปเดตแล้ว</p>
             </div>
-            <Image src="/logo/emblem-gold.png" alt="เทพีแห่งความยุติธรรมในวงจรดิจิทัล สัญลักษณ์ NITI.TECH" width={900} height={900} priority className="mx-auto mt-2 h-28 w-28 object-contain sm:h-56 sm:w-56" />
+            <Image src="/logo/emblem-gold.png" alt="เทพีแห่งความยุติธรรมในวงจรดิจิทัล สัญลักษณ์ NITI.TECH" width={224} height={224} priority className="mx-auto mt-2 h-28 w-28 object-contain sm:h-56 sm:w-56" />
             <div className="mt-4 grid grid-cols-3 divide-x divide-line border-t border-line pt-4 text-center">
               <div><p className="font-serif text-3xl font-light text-gold-bright">{allArticles.length}</p><p className="mt-1 text-xs text-ink-2">บทความ</p></div>
               <div><p className="font-serif text-3xl font-light text-gold-bright">{inForce}</p><p className="mt-1 text-xs text-ink-2">กฎหมายที่มีผล</p></div>

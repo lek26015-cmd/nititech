@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
-import { allArticles, findArticle, readingMinutes, refOf, toCard } from '@/content/topics';
+import { allArticles, findArticle, metaTitleOf, readingMinutes, refOf, toCard } from '@/content/topics';
 import { UPDATED } from '@/content/types';
 import { ArticleCard } from '@/components/article-card';
 import { LawyerCta, Disclaimer } from '@/components/site';
@@ -17,10 +17,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const a = findArticle(slug);
   if (!a) return {};
   return {
-    title: a.title,
+    title: metaTitleOf(a),
     description: a.summary,
+    keywords: [a.category.title, ...(a.laws ?? [])],
     alternates: { canonical: `/knowledge/${a.slug}` },
-    openGraph: { type: 'article', title: a.title, description: a.summary, siteName: SITE_NAME, locale: 'th_TH' },
+    openGraph: { type: 'article', title: a.title, description: a.summary, siteName: SITE_NAME, locale: 'th_TH', publishedTime: UPDATED, modifiedTime: UPDATED, section: a.category.title },
   };
 }
 
@@ -55,8 +56,10 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     {
       '@context': 'https://schema.org', '@type': 'Article', headline: a.title, description: a.summary, inLanguage: 'th', isAccessibleForFree: true,
       datePublished: UPDATED, dateModified: UPDATED, articleSection: a.category.title, keywords: (a.laws ?? []).join(', '),
-      mainEntityOfPage: `${SITE_URL}/knowledge/${a.slug}`,
-      author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL }, publisher: { '@type': 'Organization', name: 'Lawslane', url: LAWSLANE_URL },
+      mainEntityOfPage: `${SITE_URL}/knowledge/${a.slug}`, image: `${SITE_URL}/knowledge/${a.slug}/opengraph-image`,
+      about: (a.laws ?? []).map((l) => ({ '@type': 'Legislation', name: l, legislationJurisdiction: 'TH' })),
+      author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+      publisher: { '@type': 'Organization', name: 'Lawslane', url: LAWSLANE_URL, logo: { '@type': 'ImageObject', url: `${SITE_URL}/logo/emblem-gold.png` } },
     },
     breadcrumbLd([{ name: 'หน้าแรก', path: '/' }, { name: 'คลังความรู้', path: '/knowledge' }, { name: a.category.title, path: `/category/${a.category.id}` }, { name: a.title, path: `/knowledge/${a.slug}` }]),
   ];
@@ -149,6 +152,12 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                 {a.laws.map((l) => <li key={l} className="flex gap-2"><span className="text-gold">§</span>{l}</li>)}
               </ul>
               <p className="code mt-4 text-ink-3">ข้อมูล ณ วันที่ {thaiDate(UPDATED)}</p>
+              <p className="mt-4 text-sm text-ink-2">ตรวจสอบตัวบทและประกาศล่าสุดได้ที่</p>
+              <ul className="mt-1 space-y-1 text-sm">
+                {a.category.sources.map((s) => (
+                  <li key={s.href}><a href={s.href} target="_blank" rel="noopener" className="text-cyan underline-offset-4 hover:underline">{s.name}</a></li>
+                ))}
+              </ul>
             </section>
           )}
 

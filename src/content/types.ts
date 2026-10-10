@@ -21,6 +21,8 @@ export interface Category {
   short: string;
   /** ลิงก์ไปบริการที่ตรงหมวดบน Lawslane */
   lawslane: { href: string; label: string; desc: string };
+  /** แหล่งข้อมูลทางการของหน่วยงานรัฐ */
+  sources: { name: string; href: string }[];
   title: string;
   blurb: string;
   articles: Article[];

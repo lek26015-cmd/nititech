@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import { allArticles, categories, toCard } from '@/content/topics';
 import { ArticleCard } from '@/components/article-card';
 import { LawyerCta } from '@/components/site';
-import { breadcrumbLd } from '@/lib/site';
+import { SITE_URL, breadcrumbLd } from '@/lib/site';
 
 export function generateStaticParams() {
   return categories.map((c) => ({ id: c.id }));
@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const { id } = await params;
   const c = categories.find((x) => x.id === id);
   if (!c) return {};
-  return { title: c.title, description: c.blurb, alternates: { canonical: `/category/${c.id}` } };
+  return { title: `${c.title} — รวมบทความ`, description: `${c.blurb} สรุปเข้าใจง่ายพร้อมเลขมาตราอ้างอิง`, alternates: { canonical: `/category/${c.id}` } };
 }
 
 export default async function CategoryPage({ params }: { params: Promise<{ id: string }> }) {
@@ -22,7 +22,13 @@ export default async function CategoryPage({ params }: { params: Promise<{ id: s
   const c = categories.find((x) => x.id === id);
   if (!c) notFound();
   const list = allArticles.filter((a) => a.category.id === c.id);
-  const ld = breadcrumbLd([{ name: 'หน้าแรก', path: '/' }, { name: 'คลังความรู้', path: '/knowledge' }, { name: c.title, path: `/category/${c.id}` }]);
+  const ld = [
+    breadcrumbLd([{ name: 'หน้าแรก', path: '/' }, { name: 'คลังความรู้', path: '/knowledge' }, { name: c.title, path: `/category/${c.id}` }]),
+    {
+      '@context': 'https://schema.org', '@type': 'CollectionPage', name: c.title, description: c.blurb, inLanguage: 'th', url: `${SITE_URL}/category/${c.id}`,
+      mainEntity: { '@type': 'ItemList', itemListElement: list.map((a, i) => ({ '@type': 'ListItem', position: i + 1, url: `${SITE_URL}/knowledge/${a.slug}`, name: a.title })) },
+    },
+  ];
 
   return (
     <div className="grid-bg">
