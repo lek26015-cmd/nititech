@@ -18,7 +18,7 @@ export default function Radar() {
     <div className="grid-bg">
       <div className="mx-auto max-w-7xl px-4 py-14 md:px-10">
         <p className="label text-gold">REGULATORY_TRACKER // LEGISLATIVE RADAR</p>
-        <h1 className="mt-3 font-serif text-4xl font-light md:text-5xl">สถานะกฎหมายเทคโนโลยี</h1>
+        <h1 className="fx-in mt-3 font-serif text-4xl font-light md:text-5xl">สถานะกฎหมายเทคโนโลยี</h1>
         <p className="mt-3 max-w-2xl text-ink-2">กฎหมายหลักที่ธุรกิจและผู้ใช้เทคโนโลยีในไทยต้องรู้ แยกตามสถานะ พร้อมหน่วยงานที่กำกับและบทความสรุป</p>
         <p className="chip mt-5"><span className="dot" /> อัปเดต {new Date(UPDATED).toLocaleDateString('th-TH', { dateStyle: 'long' })}</p>
 
@@ -28,7 +28,7 @@ export default function Radar() {
           return (
             <section key={s} className="mt-12">
               <h2 className="flex items-center gap-3 text-xl font-semibold">{statusLabel[s]} <span className="code text-ink-3">{items.length}</span></h2>
-              <div className="mt-4 grid gap-4 md:grid-cols-2">
+              <div className="mt-4 grid gap-4 md:grid-cols-2" data-stagger>
                 {items.map((r) => (
                   <article key={r.id} className="glass flex flex-col p-5">
                     <div className="flex items-start justify-between gap-3">

@@ -44,7 +44,7 @@ export function BreachClock() {
         {deadline && (
           <div className="mt-8" aria-live="polite">
             <p className="index">{overdue ? 'เกินกำหนดมาแล้ว' : 'เหลือเวลา (ชั่วโมง:นาที:วินาที)'}</p>
-            <p className={`mt-2 font-mono text-5xl font-medium tabular-nums tracking-tight md:text-6xl ${overdue ? 'text-amber' : 'text-cyan'}`}>
+            <p className={`mt-2 font-mono text-5xl font-medium tabular-nums tracking-tight md:text-6xl ${overdue ? 'text-amber' : 'fx-glow text-cyan'}`}>
               {pad(h)}:{pad(m)}:{pad(s)}
             </p>
             <p className="mt-4 text-sm text-ink-2">เส้นตายแจ้ง สคส.</p>

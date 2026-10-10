@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from 'next';
 import localFont from 'next/font/local';
+import Script from 'next/script';
 import './globals.css';
 import { Header, Footer } from '@/components/site';
+import { FxRoot } from '@/components/fx';
 import { SITE_URL, SITE_NAME, SITE_DESC } from '@/lib/site';
 
 // LINE Seed Sans TH ทั้งเว็บ (ไฟล์ชุดเดียวกับสิทธิคนทำงาน)
@@ -34,8 +36,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="th" className={lineSeed.variable}>
+    <html lang="th" className={lineSeed.variable} suppressHydrationWarning>
       <body className="font-sans">
+        {/* ใส่ .fx ก่อนวาดหน้า เพื่อซ่อนส่วนที่จะเผยตอนเลื่อนถึง (ไม่ทำเมื่อผู้ใช้ลดการเคลื่อนไหว) */}
+        <Script id="fx-flag" strategy="beforeInteractive">{"if(!matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('fx')"}</Script>
+        <FxRoot />
         <Header />
         <main>{children}</main>
         <Footer />

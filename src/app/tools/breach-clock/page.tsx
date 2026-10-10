@@ -14,7 +14,7 @@ export default function Page() {
     <div className="grid-bg">
       <div className="mx-auto max-w-7xl px-4 py-14 md:px-10">
         <p className="label text-amber">INCIDENT // BREACH_CLOCK</p>
-        <h1 className="mt-3 font-serif text-4xl font-light md:text-5xl">นาฬิกาแจ้งเหตุข้อมูลรั่ว 72 ชั่วโมง</h1>
+        <h1 className="fx-in mt-3 font-serif text-4xl font-light md:text-5xl">นาฬิกาแจ้งเหตุข้อมูลรั่ว 72 ชั่วโมง</h1>
         <p className="mt-3 max-w-2xl text-ink-2">
           PDPA มาตรา 37(4) กำหนดให้แจ้ง สคส. โดยไม่ชักช้าภายใน 72 ชั่วโมงนับแต่ทราบเหตุ ใส่เวลาที่ทราบเหตุเพื่อดูเส้นตายและลำดับงาน
           — อ่านรายละเอียดใน <Link href="/knowledge/data-breach-72-hours" className="text-gold underline-offset-4 hover:underline">บทความขั้นตอนแจ้งเหตุ</Link>

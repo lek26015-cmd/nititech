@@ -8,6 +8,7 @@ import { UPDATED } from '@/content/types';
 import { ArticleCard } from '@/components/article-card';
 import { RadarList } from '@/components/radar-list';
 import { SectionHead } from '@/components/site';
+import { CodeRain, CountUp, Scramble } from '@/components/fx';
 import { SITE_URL, SITE_NAME, SITE_DESC, LAWSLANE_URL, lawyerUrl } from '@/lib/site';
 
 const FEATURED = ['pdpa-basics', 'deepfake-law', 'online-scam-victim'];
@@ -46,40 +47,47 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeLd) }} />
 
       {/* HERO */}
-      <section className="grid-bg relative overflow-hidden border-b border-line">
-        <div className="pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-gold/10 blur-[120px]" />
-        <div className="pointer-events-none absolute -bottom-40 left-1/3 h-[360px] w-[360px] rounded-full bg-cyan/[0.06] blur-[120px]" />
+      <section className="grid-bg grid-bg-live relative overflow-hidden border-b border-line">
+        <CodeRain className="pointer-events-none absolute inset-0 h-full w-full opacity-[0.22] [mask-image:linear-gradient(to_bottom,black,transparent_85%)]" />
+        <div className="fx-scanline" aria-hidden />
+        <div className="fx-drift pointer-events-none absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full bg-gold/10 blur-[120px]" />
+        <div className="fx-drift pointer-events-none absolute -bottom-40 left-1/3 h-[360px] w-[360px] rounded-full bg-cyan/[0.08] blur-[120px] [animation-delay:-9s]" />
         <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 md:px-10 md:py-20 lg:grid-cols-[minmax(0,1fr)_380px] lg:items-center">
           <div>
-            <p className="label text-gold">THAI TECH LAW // KNOWLEDGE HUB</p>
-            <h1 className="mt-5 font-serif text-[40px] font-light leading-[1.15] tracking-tight md:text-[64px] md:leading-[1.1]">
-              ถอดรหัส<span className="text-gold-bright">กฎหมายเทคโนโลยี</span>
+            <p className="label fx-in fx-caret text-gold">THAI TECH LAW // KNOWLEDGE HUB</p>
+            <h1 className="fx-in mt-5 font-serif [--d:120ms] text-[40px] font-light leading-[1.15] tracking-tight md:text-[64px] md:leading-[1.1]">
+              ถอดรหัส<Scramble text="กฎหมายเทคโนโลยี" delay={500} className="text-gold-bright drop-shadow-[0_0_24px_rgba(242,202,80,0.35)]" />
               <br className="hidden md:block" /> ให้คนทำงานดิจิทัลใช้ได้จริง
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-2">
+            <p className="fx-in mt-6 max-w-2xl text-lg leading-relaxed text-ink-2 [--d:260ms]">
               PDPA อาชญากรรมไซเบอร์ AI ลิขสิทธิ์ แพลตฟอร์มดิจิทัล และคริปโต อธิบายด้วยภาษาคน พร้อมเลขมาตราอ้างอิงและเครื่องมือเช็กความพร้อม
             </p>
-            <form action="/knowledge" className="relative mt-8 max-w-2xl">
+            <form action="/knowledge" className="fx-in relative mt-8 max-w-2xl [--d:380ms]">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-ink-3" size={18} />
               <input name="q" className="field !py-4 pl-11 pr-28" placeholder="ค้นหา เช่น คุกกี้ Deepfake บัญชีม้า มาตรา 16" aria-label="ค้นหาความรู้" />
               <button className="btn-gold absolute right-1.5 top-1/2 -translate-y-1/2 !py-2.5">ค้นหา</button>
             </form>
-            <div className="mt-5 flex flex-wrap gap-3">
+            <div className="fx-in mt-5 flex flex-wrap gap-3 [--d:480ms]">
               <Link href="/knowledge" className="btn-term">เปิดคลังความรู้ <ArrowRight size={16} /></Link>
               <Link href="/tools/pdpa-check" className="btn-term">เช็กความพร้อม PDPA</Link>
             </div>
           </div>
 
-          <div className="glass-2 relative p-5 shadow-aureum">
+          <div className="glass-2 fx-orbit fx-in relative p-5 shadow-aureum [--d:300ms]">
             <div className="flex items-center justify-between">
-              <p className="index">JURIS // NITI-TH</p>
+              <p className="index fx-caret">JURIS // NITI-TH</p>
               <p className="label flex items-center gap-1.5 text-cyan"><span className="dot" /> อัปเดตแล้ว</p>
             </div>
-            <Image src="/logo/emblem-gold.png" alt="เทพีแห่งความยุติธรรมในวงจรดิจิทัล สัญลักษณ์ NITI.TECH" width={224} height={224} priority className="mx-auto mt-2 h-28 w-28 object-contain sm:h-56 sm:w-56" />
+            <div className="relative mx-auto mt-2 h-28 w-28 sm:h-56 sm:w-56">
+              <div className="fx-radar" aria-hidden />
+              <div className="absolute inset-[6%] rounded-full border border-cyan/20" aria-hidden />
+              <div className="absolute inset-[22%] rounded-full border border-dashed border-gold/20" aria-hidden />
+              <Image src="/logo/emblem-gold.png" alt="เทพีแห่งความยุติธรรมในวงจรดิจิทัล สัญลักษณ์ NITI.TECH" width={224} height={224} priority className="fx-float relative h-full w-full object-contain drop-shadow-[0_0_30px_rgba(212,175,55,0.35)]" />
+            </div>
             <div className="mt-4 grid grid-cols-3 divide-x divide-line border-t border-line pt-4 text-center">
-              <div><p className="font-serif text-3xl font-light text-gold-bright">{allArticles.length}</p><p className="mt-1 text-xs text-ink-2">บทความ</p></div>
-              <div><p className="font-serif text-3xl font-light text-gold-bright">{inForce}</p><p className="mt-1 text-xs text-ink-2">กฎหมายที่มีผล</p></div>
-              <div><p className="font-serif text-3xl font-light text-gold-bright">{useCases.length}</p><p className="mt-1 text-xs text-ink-2">กรณีใช้งาน</p></div>
+              <div><p className="font-serif text-3xl font-light text-gold-bright"><CountUp to={allArticles.length} /></p><p className="mt-1 text-xs text-ink-2">บทความ</p></div>
+              <div><p className="font-serif text-3xl font-light text-gold-bright"><CountUp to={inForce} /></p><p className="mt-1 text-xs text-ink-2">กฎหมายที่มีผล</p></div>
+              <div><p className="font-serif text-3xl font-light text-gold-bright"><CountUp to={useCases.length} /></p><p className="mt-1 text-xs text-ink-2">กรณีใช้งาน</p></div>
             </div>
             <p className="code mt-4 text-center text-ink-3">อัปเดตล่าสุด {new Date(UPDATED).toLocaleDateString('th-TH', { dateStyle: 'long' })}</p>
           </div>
@@ -95,23 +103,35 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        {/* แถบข่าววิ่งสถานะกฎหมาย */}
+        <div className="relative overflow-hidden border-t border-line bg-black/40 py-2.5 [mask-image:linear-gradient(to_right,transparent,black_8%,black_92%,transparent)]">
+          <div className="fx-marquee flex w-max gap-10 whitespace-nowrap">
+            {[...radar, ...radar].map((r, i) => (
+              <Link key={i} href="/radar" className="code flex items-center gap-2 text-ink-2 hover:text-ink" aria-hidden={i >= radar.length} tabIndex={i >= radar.length ? -1 : undefined}>
+                <span className={`h-1.5 w-1.5 rounded-full ${r.status === 'draft' ? 'bg-amber' : r.status === 'foreign' ? 'bg-ink-3' : 'bg-cyan'}`} />
+                <span className="text-gold">{r.short}</span> {r.when}
+              </Link>
+            ))}
+          </div>
+        </div>
       </section>
 
       <div className="mx-auto max-w-7xl px-4 md:px-10">
         {/* บทความเด่น */}
-        <section className="pt-16">
+        <section className="pt-16" data-reveal>
           <SectionHead
             index="DISPATCH // CORE INQUIRY"
             title="บทวิเคราะห์กฎหมายเทคโนโลยีเด่น"
             action={<Link href="/knowledge" className="link-ghost">→ ดูทั้งหมด (EXPLORE ARCHIVE)</Link>}
           />
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="mt-6 grid gap-4 md:grid-cols-3" data-stagger>
             {featured.map((a) => <ArticleCard key={a.slug} a={toCard(a)} big />)}
           </div>
         </section>
 
         {/* Radar + Tools */}
-        <section className="mt-16 grid gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
+        <section className="mt-16 grid gap-6 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]" data-stagger>
           <div className="glass p-6">
             <div className="flex items-start justify-between gap-3">
               <div>
@@ -129,7 +149,7 @@ export default function Home() {
             <p className="label text-gold">TOOLKITS // FREE</p>
             <h2 className="mt-2 text-2xl font-semibold">เครื่องมือสำหรับธุรกิจ</h2>
             <p className="text-sm text-ink-2">ใช้ฟรี ประมวลผลในเบราว์เซอร์ ไม่เก็บข้อมูลของคุณ</p>
-            <div className="mt-6 space-y-3">
+            <div className="mt-6 space-y-3" data-stagger>
               {tools.map((t) => (
                 <Link key={t.href} href={t.href} className="glass group flex items-center gap-4 p-4 transition hover:border-cyan hover:shadow-cyan">
                   <span className="grid h-11 w-11 shrink-0 place-items-center rounded border border-line-2 bg-black/40 text-gold"><t.icon size={20} /></span>
@@ -153,7 +173,7 @@ export default function Home() {
             desc="กรณีใช้งานเทคโนโลยียอดนิยม จับคู่กับกฎหมายที่เกี่ยวข้องในหน้าเดียว"
             action={<Link href="/matrix" className="link-ghost">→ ดูแผนผังทั้งหมด</Link>}
           />
-          <div className="mt-6 grid gap-4 md:grid-cols-3">
+          <div className="mt-6 grid gap-4 md:grid-cols-3" data-stagger>
             {useCases.slice(0, 3).map((u, i) => (
               <Link key={u.id} href="/matrix" className="glass group p-5 transition hover:border-line-2">
                 <div className="flex items-center justify-between">
@@ -172,7 +192,7 @@ export default function Home() {
         {/* บทความอื่น */}
         <section className="mt-16">
           <SectionHead index="INDEX // LATEST" title="อ่านต่อในคลังความรู้" />
-          <ol className="mt-6 grid gap-x-10 border-t border-line md:grid-cols-2">
+          <ol className="mt-6 grid gap-x-10 border-t border-line md:grid-cols-2" data-stagger>
             {more.map((a) => (
               <li key={a.slug} className="border-b border-line">
                 <Link href={`/knowledge/${a.slug}`} className="group flex gap-4 py-4">
@@ -185,7 +205,7 @@ export default function Home() {
         </section>
 
         {/* CTA */}
-        <section className="glass-2 relative mt-20 overflow-hidden p-8 text-center shadow-aureum md:p-14">
+        <section className="glass-2 fx-orbit relative mt-20 overflow-hidden p-8 text-center shadow-aureum md:p-14" data-reveal>
           <div className="pointer-events-none absolute left-1/2 top-0 h-48 w-[600px] -translate-x-1/2 rounded-full bg-gold/10 blur-[100px]" />
           <p className="chip relative mx-auto">ADVISORY // LAWSLANE NETWORK</p>
           <h2 className="relative mx-auto mt-5 max-w-3xl font-serif text-3xl font-light leading-tight md:text-5xl">

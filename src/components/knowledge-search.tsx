@@ -100,7 +100,7 @@ export function KnowledgeSearch({ categories }: { categories: KCategory[] }) {
             <p className="label text-gold">{c.code}</p>
             <h2 className="mt-1 text-xl font-semibold"><Link href={`/category/${c.id}`} className="hover:text-gold-bright">{c.title}</Link></h2>
             <p className="mt-1 text-sm text-ink-2">{c.blurb}</p>
-            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
               {c.articles.map((a) => <ArticleCard key={a.slug} a={a} />)}
             </div>
           </section>

@@ -110,7 +110,7 @@ export function SectionHead({ index, title, desc, action }: { index: string; tit
   return (
     <div className="flex flex-wrap items-end justify-between gap-4">
       <div>
-        <p className="label text-gold">{index}</p>
+        <p className="label fx-caret text-gold">{index}</p>
         <h2 className="mt-2 text-2xl font-semibold tracking-tight md:text-[32px] md:leading-10">{title}</h2>
         {desc && <p className="mt-2 max-w-2xl text-sm text-ink-2">{desc}</p>}
       </div>

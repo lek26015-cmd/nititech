@@ -35,14 +35,14 @@ export default async function CategoryPage({ params }: { params: Promise<{ id: s
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
       <div className="mx-auto max-w-7xl px-4 py-14 md:px-10">
         <nav className="code text-ink-3"><Link href="/knowledge" className="hover:text-gold">คลังความรู้</Link> / {c.short}</nav>
-        <h1 className="mt-4 font-serif text-4xl font-light md:text-5xl">{c.title}</h1>
+        <h1 className="fx-in mt-4 font-serif text-4xl font-light md:text-5xl">{c.title}</h1>
         <p className="mt-3 max-w-2xl text-ink-2">{c.blurb}</p>
         <div className="mt-8 flex gap-2 overflow-x-auto pb-1">
           {categories.map((x) => (
             <Link key={x.id} href={`/category/${x.id}`} className={`shrink-0 rounded border px-3 py-1.5 text-sm ${x.id === c.id ? 'border-gold bg-gold text-void' : 'border-line-2 text-ink-2 hover:text-ink'}`}>{x.title}</Link>
           ))}
         </div>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-stagger>
           {list.map((a) => <ArticleCard key={a.slug} a={toCard(a)} />)}
         </div>
         <div className="mt-12 max-w-3xl"><LawyerCta /></div>

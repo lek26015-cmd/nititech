@@ -21,7 +21,7 @@ export function RadarRow({ r, compact = false }: { r: RadarItem; compact?: boole
   const first = findArticle(r.articles[0]);
   return (
     <li className="relative border-l border-line pl-6">
-      <span className={`absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full ${r.status === 'draft' ? 'bg-amber shadow-amber' : r.status === 'foreign' ? 'bg-ink-3' : 'bg-cyan shadow-cyan'}`} />
+      <span className={`fx-ping absolute -left-[5px] top-1.5 h-2.5 w-2.5 rounded-full ${r.status === 'draft' ? 'bg-amber shadow-amber' : r.status === 'foreign' ? 'bg-ink-3' : 'bg-cyan shadow-cyan'}`} />
       <div className="flex flex-wrap items-center gap-2">
         <StatusChip s={r.status} />
         <span className="code text-ink-3">{r.when}</span>

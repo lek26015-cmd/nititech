@@ -13,7 +13,7 @@ export default function Page() {
     <div className="grid-bg">
       <div className="mx-auto max-w-7xl px-4 py-14 md:px-10">
         <p className="label text-gold">TOOL // PDPA_READINESS</p>
-        <h1 className="mt-3 font-serif text-4xl font-light md:text-5xl">เช็กความพร้อม PDPA</h1>
+        <h1 className="fx-in mt-3 font-serif text-4xl font-light md:text-5xl">เช็กความพร้อม PDPA</h1>
         <p className="mt-3 max-w-2xl text-ink-2">ตอบ 12 ข้อ ใช้เวลาไม่ถึง 3 นาที เพื่อดูว่าธุรกิจของคุณยังขาดอะไร และควรเริ่มแก้ตรงไหนก่อน</p>
         <div className="mt-10"><PdpaCheck /></div>
         <div className="mt-12 grid max-w-4xl gap-4">

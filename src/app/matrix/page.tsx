@@ -21,12 +21,12 @@ export default function Matrix() {
     <div className="grid-bg">
       <div className="mx-auto max-w-7xl px-4 py-14 md:px-10">
         <p className="label text-gold">TAXONOMY // USE-CASE MAPPING</p>
-        <h1 className="mt-3 font-serif text-4xl font-light md:text-5xl">แผนผังกฎหมายตามกรณีใช้งาน</h1>
+        <h1 className="fx-in mt-3 font-serif text-4xl font-light md:text-5xl">แผนผังกฎหมายตามกรณีใช้งาน</h1>
         <p className="mt-3 max-w-2xl text-ink-2">
           โปรเจกต์เทคโนโลยีหนึ่งชิ้นมักโดนกฎหมายหลายฉบับพร้อมกัน ตารางนี้ช่วยให้เห็นภาพรวมว่าต้องเช็กอะไรบ้างก่อนเริ่ม
         </p>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3" data-stagger>
           {useCases.map((u, i) => (
             <article key={u.id} className="glass flex flex-col p-5">
               <div className="flex items-center justify-between gap-3">

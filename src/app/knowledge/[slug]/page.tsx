@@ -5,6 +5,7 @@ import { ArrowRight } from 'lucide-react';
 import { allArticles, findArticle, metaTitleOf, readingMinutes, refOf, toCard } from '@/content/topics';
 import { UPDATED } from '@/content/types';
 import { ArticleCard } from '@/components/article-card';
+import { ReadProgress } from '@/components/fx';
 import { LawyerCta, Disclaimer } from '@/components/site';
 import { SITE_URL, SITE_NAME, LAWSLANE_URL, breadcrumbLd } from '@/lib/site';
 
@@ -73,14 +74,15 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
   return (
     <div className="grid-bg">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <ReadProgress />
       <header className="border-b border-line">
         <div className="mx-auto max-w-7xl px-4 pb-10 pt-10 md:px-10">
           <nav aria-label="breadcrumb" className="code flex flex-wrap gap-2 text-ink-3">
             <Link href="/" className="hover:text-gold">หน้าแรก</Link>/<Link href="/knowledge" className="hover:text-gold">คลังความรู้</Link>/
             <Link href={`/category/${a.category.id}`} className="hover:text-gold">{a.category.short}</Link>/<span className="text-ink-2">{refOf(a)}</span>
           </nav>
-          <h1 className="mt-5 max-w-4xl font-serif text-[32px] font-light leading-[1.25] tracking-tight md:text-5xl md:leading-[1.2]">{a.title}</h1>
-          <p className="mt-5 max-w-3xl text-lg leading-relaxed text-ink-2">{a.summary}</p>
+          <h1 className="fx-in mt-5 max-w-4xl font-serif text-[32px] font-light leading-[1.25] tracking-tight md:text-5xl md:leading-[1.2]">{a.title}</h1>
+          <p className="fx-in mt-5 max-w-3xl text-lg leading-relaxed text-ink-2 [--d:150ms]">{a.summary}</p>
           <div className="mt-6 flex flex-wrap gap-2">
             <span className="chip"><span className="dot" />{a.category.title}</span>
             <span className="chip">อ่าน {readingMinutes(a)} นาที</span>
@@ -116,8 +118,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <article className="order-1 min-w-0 max-w-3xl lg:order-2">
           <div className="space-y-10">
             {a.points.map((p, i) => (
-              <section key={p.heading} id={`sec-${i + 1}`} className="scroll-mt-24">
-                <p className="index">SEC // {String(i + 1).padStart(2, '0')}</p>
+              <section key={p.heading} id={`sec-${i + 1}`} className="scroll-mt-24" data-reveal>
+                <p className="index fx-caret">SEC // {String(i + 1).padStart(2, '0')}</p>
                 <h2 className="mt-1 text-xl font-semibold leading-snug md:text-2xl">{p.heading}</h2>
                 <Body text={p.body} />
               </section>
@@ -177,7 +179,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
           {related.length > 0 && (
             <section className="mt-14">
               <p className="index">อ่านต่อ</p>
-              <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              <div className="mt-4 grid gap-4 sm:grid-cols-2" data-stagger>
                 {related.map((r) => <ArticleCard key={r.slug} a={toCard(r)} />)}
               </div>
             </section>
