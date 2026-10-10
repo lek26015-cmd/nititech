@@ -37,13 +37,13 @@ export function BreachClock() {
   return (
     <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
       <div className="glass-2 p-6">
-        <label htmlFor="known" className="index">INPUT // เวลาที่ "ทราบเหตุ"</label>
+        <label htmlFor="known" className="index">เวลาที่ "ทราบเหตุ"</label>
         <input id="known" type="datetime-local" className="field mt-3 font-mono" value={known} onChange={(e) => setKnown(e.target.value)} />
         <p className="mt-2 text-xs text-ink-3">นับจากเวลาที่องค์กรทราบว่ามีการละเมิดข้อมูลส่วนบุคคล ไม่ใช่เวลาที่เหตุเกิด</p>
 
         {deadline && (
           <div className="mt-8" aria-live="polite">
-            <p className="index">{overdue ? 'OVERDUE // เกินกำหนดมาแล้ว' : 'T-MINUS // เหลือเวลา'}</p>
+            <p className="index">{overdue ? 'เกินกำหนดมาแล้ว' : 'เหลือเวลา (ชั่วโมง:นาที:วินาที)'}</p>
             <p className={`mt-2 font-mono text-5xl font-medium tabular-nums tracking-tight md:text-6xl ${overdue ? 'text-amber' : 'text-cyan'}`}>
               {pad(h)}:{pad(m)}:{pad(s)}
             </p>
@@ -55,7 +55,7 @@ export function BreachClock() {
       </div>
 
       <div className="glass p-6">
-        <p className="index">TELEMETRY_RAIL // ลำดับงานแนะนำ</p>
+        <p className="index">ลำดับงานแนะนำ</p>
         <ol className="mt-5 space-y-5">
           {steps.map((st, i) => {
             const done = elapsedH >= st.h && valid;

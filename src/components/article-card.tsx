@@ -12,7 +12,7 @@ export function ArticleCard({ a, big = false }: { a: CardArticle; big?: boolean 
       </div>
       <h3 className={`mt-4 font-semibold leading-snug text-ink transition group-hover:text-gold-bright ${big ? 'text-xl' : 'text-[17px]'}`}>{a.title}</h3>
       <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-ink-2">{a.summary}</p>
-      <p className="code mt-auto flex items-center gap-1.5 pt-4 text-ink-3"><Clock size={12} /> {a.minutes} MIN READ</p>
+      <p className="mt-auto flex text-xs items-center gap-1.5 pt-4 text-ink-3"><Clock size={12} /> อ่าน {a.minutes} นาที</p>
     </Link>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { useCases, riskLabel, type Risk } from '@/content/matrix';
-import { findArticle } from '@/content/topics';
+import { findArticle, shortOf } from '@/content/topics';
 import { Disclaimer, LawyerCta } from '@/components/site';
 
 export const metadata: Metadata = {
@@ -45,7 +45,7 @@ export default function Matrix() {
               </ul>
               <div className="mt-auto flex flex-col gap-2 pt-4">
                 {u.articles.map(findArticle).filter((a) => a !== undefined).map((a) => (
-                  <Link key={a.slug} href={`/knowledge/${a.slug}`} className="link-ghost w-fit">→ {a.title.split(':')[0]}</Link>
+                  <Link key={a.slug} href={`/knowledge/${a.slug}`} className="link-ghost w-fit">→ {shortOf(a)}</Link>
                 ))}
               </div>
             </article>

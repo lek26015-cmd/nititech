@@ -44,7 +44,7 @@ export default function Home() {
           <div>
             <p className="label text-gold">THAI TECH LAW // KNOWLEDGE HUB</p>
             <h1 className="mt-5 font-serif text-[40px] font-light leading-[1.15] tracking-tight md:text-[64px] md:leading-[1.1]">
-              ถอดรหัส<span className="italic text-gold-bright">กฎหมายเทคโนโลยี</span>
+              ถอดรหัส<span className="text-gold-bright">กฎหมายเทคโนโลยี</span>
               <br className="hidden md:block" /> ให้คนทำงานดิจิทัลใช้ได้จริง
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ink-2">
@@ -64,15 +64,15 @@ export default function Home() {
           <div className="glass-2 relative p-5 shadow-aureum">
             <div className="flex items-center justify-between">
               <p className="index">JURIS // NITI-TH</p>
-              <p className="label flex items-center gap-1.5 text-cyan"><span className="dot" /> SYNCED</p>
+              <p className="label flex items-center gap-1.5 text-cyan"><span className="dot" /> อัปเดตแล้ว</p>
             </div>
-            <Image src="/logo/emblem-gold.png" alt="เทพีแห่งความยุติธรรมในวงจรดิจิทัล สัญลักษณ์ NITI.TECH" width={900} height={900} priority className="mx-auto mt-2 h-56 w-56 object-contain" />
+            <Image src="/logo/emblem-gold.png" alt="เทพีแห่งความยุติธรรมในวงจรดิจิทัล สัญลักษณ์ NITI.TECH" width={900} height={900} priority className="mx-auto mt-2 h-28 w-28 object-contain sm:h-56 sm:w-56" />
             <div className="mt-4 grid grid-cols-3 divide-x divide-line border-t border-line pt-4 text-center">
-              <div><p className="font-serif text-3xl font-light text-gold-bright">{allArticles.length}</p><p className="index mt-1">ARTICLES</p></div>
-              <div><p className="font-serif text-3xl font-light text-gold-bright">{inForce}</p><p className="index mt-1">LAWS IN FORCE</p></div>
-              <div><p className="font-serif text-3xl font-light text-gold-bright">{useCases.length}</p><p className="index mt-1">USE CASES</p></div>
+              <div><p className="font-serif text-3xl font-light text-gold-bright">{allArticles.length}</p><p className="mt-1 text-xs text-ink-2">บทความ</p></div>
+              <div><p className="font-serif text-3xl font-light text-gold-bright">{inForce}</p><p className="mt-1 text-xs text-ink-2">กฎหมายที่มีผล</p></div>
+              <div><p className="font-serif text-3xl font-light text-gold-bright">{useCases.length}</p><p className="mt-1 text-xs text-ink-2">กรณีใช้งาน</p></div>
             </div>
-            <p className="code mt-4 text-center text-ink-3">LAST_UPDATE // {UPDATED}</p>
+            <p className="code mt-4 text-center text-ink-3">อัปเดตล่าสุด {new Date(UPDATED).toLocaleDateString('th-TH', { dateStyle: 'long' })}</p>
           </div>
         </div>
 
@@ -110,7 +110,7 @@ export default function Home() {
                 <h2 className="mt-2 text-2xl font-semibold">Legislative Radar</h2>
                 <p className="text-sm text-ink-2">สถานะกฎหมายและร่างกฎหมายที่ต้องจับตา</p>
               </div>
-              <span className="chip"><span className="dot !bg-amber" /> LIVE_FEED</span>
+              <span className="chip"><span className="dot !bg-amber" /> ติดตามต่อเนื่อง</span>
             </div>
             <div className="mt-6"><RadarList limit={4} compact /></div>
             <Link href="/radar" className="link-ghost mt-6">→ ดูสถานะกฎหมายทั้งหมด ({radar.length})</Link>
@@ -180,7 +180,7 @@ export default function Home() {
           <div className="pointer-events-none absolute left-1/2 top-0 h-48 w-[600px] -translate-x-1/2 rounded-full bg-gold/10 blur-[100px]" />
           <p className="chip relative mx-auto">ADVISORY // LAWSLANE NETWORK</p>
           <h2 className="relative mx-auto mt-5 max-w-3xl font-serif text-3xl font-light leading-tight md:text-5xl">
-            เรื่องจริงซับซ้อนกว่าบทความ <span className="italic text-gold-bright">คุยกับทนาย</span>ที่เข้าใจเทคโนโลยี
+            เรื่องจริงซับซ้อนกว่าบทความ <span className="text-gold-bright">คุยกับทนาย</span>ที่เข้าใจเทคโนโลยี
           </h2>
           <p className="relative mx-auto mt-4 max-w-2xl text-ink-2">
             ทนายความบน Lawslane ผ่านการยืนยันตัวตนและใบอนุญาต ช่วยได้ตั้งแต่ร่างสัญญา SaaS ตรวจ PDPA ไปจนถึงคดีหมิ่นประมาทออนไลน์และมิจฉาชีพ

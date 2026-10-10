@@ -12,6 +12,13 @@ const chips = ['PDPA', 'คุกกี้', 'ข้อมูลรั่ว', '
 // "ม.14" / "มาตรา 14" ให้ค้นเจอเหมือนกัน
 const norm = (s: string) => s.toLowerCase().replace(/ม\.\s*/g, 'มาตรา ').replace(/\s+/g, ' ').trim();
 
+// ตัวเลขต้องตรงทั้งจำนวน: "16" ไม่ไปเจอ "160" หรือ "116"
+const matcher = (w: string) => {
+  const esc = w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = new RegExp(`${/^\d/.test(w) ? '(?<!\\d)' : ''}${esc}${/\d$/.test(w) ? '(?!\\d)' : ''}`);
+  return (t: string) => re.test(t);
+};
+
 export function KnowledgeSearch({ categories }: { categories: KCategory[] }) {
   const [q, setQ] = useState('');
   const [cat, setCat] = useState('all');
@@ -24,19 +31,20 @@ export function KnowledgeSearch({ categories }: { categories: KCategory[] }) {
 
   const results = useMemo(() => {
     if (!term) return [];
-    const words = term.split(' ').filter(Boolean);
+    const words = term.split(' ').filter(Boolean).map(matcher);
     return scoped
       .flatMap((c) => c.articles)
       .map((a) => {
-        const title = a.title.toLowerCase();
+        const title = norm(a.title);
         const laws = norm(a.laws.join(' '));
+        const summary = norm(a.summary);
         const text = norm(a.text);
-        if (!words.every((w) => text.includes(w))) return { a, score: 0 };
+        if (!words.every((m) => m(text))) return { a, score: 0 };
         let score = 0;
-        for (const w of words) {
-          if (title.includes(w)) score += 5;
-          if (laws.includes(w)) score += 4;
-          if (a.summary.toLowerCase().includes(w)) score += 2;
+        for (const m of words) {
+          if (m(title)) score += 5;
+          if (m(laws)) score += 4;
+          if (m(summary)) score += 2;
           score += 1;
         }
         return { a, score };
@@ -80,8 +88,7 @@ export function KnowledgeSearch({ categories }: { categories: KCategory[] }) {
 
       {term ? (
         <section className="mt-10" aria-live="polite">
-          <p className="index">QUERY_RESULT // {results.length}</p>
-          <h2 className="mt-1 text-lg font-semibold">พบ {results.length} บทความ</h2>
+                    <h2 className="mt-1 text-lg font-semibold">พบ {results.length} บทความ</h2>
           <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {results.map((a) => <ArticleCard key={a.slug} a={a} />)}
           </div>

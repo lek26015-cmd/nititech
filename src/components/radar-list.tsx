@@ -28,7 +28,7 @@ export function RadarRow({ r, compact = false }: { r: RadarItem; compact?: boole
       </div>
       <p className="mt-2 font-semibold leading-snug">{compact ? r.short : r.name}</p>
       <p className="mt-1 text-sm leading-relaxed text-ink-2">{r.note}</p>
-      {!compact && <p className="code mt-2 text-ink-3">REGULATOR // {r.regulator}</p>}
+      {!compact && <p className="code mt-2 text-ink-3">หน่วยงานกำกับ: {r.regulator}</p>}
       {first && <Link href={`/knowledge/${first.slug}`} className="link-ghost mt-2">→ อ่านสรุป</Link>}
     </li>
   );

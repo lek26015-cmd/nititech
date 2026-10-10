@@ -17,6 +17,8 @@ export interface Category {
   id: string;
   /** รหัสสั้นแบบ mono เช่น PDPA, CYBER */
   code: string;
+  /** ชื่อหมวดแบบสั้น ใช้บนการ์ด */
+  short: string;
   title: string;
   blurb: string;
   articles: Article[];

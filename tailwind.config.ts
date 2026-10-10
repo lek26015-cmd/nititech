@@ -10,7 +10,8 @@ const config: Config = {
         gold: { DEFAULT: '#D4AF37', bright: '#F2CA50', dim: '#735C00' },
         cyan: { DEFAULT: '#00F0FF', dim: '#00686F' },
         amber: { DEFAULT: '#FF7A00', soft: '#FFC19E' },
-        ink: { DEFAULT: '#F5F6F8', 2: '#8E93A0', 3: '#4F5462' },
+        // ink-3 ปรับจาก #4F5462 ในดีไซน์ให้คอนทราสต์ผ่าน 4.5:1 บนพื้นการ์ด
+        ink: { DEFAULT: '#F5F6F8', 2: '#8E93A0', 3: '#7F8595' },
         line: { DEFAULT: 'rgba(255,255,255,0.08)', 2: 'rgba(255,255,255,0.16)' },
       },
       fontFamily: {

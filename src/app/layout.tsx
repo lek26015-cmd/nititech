@@ -5,7 +5,7 @@ import { Header, Footer } from '@/components/site';
 import { SITE_URL, SITE_NAME, SITE_DESC } from '@/lib/site';
 
 // ฟอนต์ละตินตามดีไซน์ (Newsreader / Plus Jakarta Sans / JetBrains Mono) + ฟอนต์ไทยคู่กัน
-const newsreader = Newsreader({ subsets: ['latin'], weight: ['300', '400'], style: ['normal', 'italic'], variable: '--font-newsreader', display: 'swap' });
+const newsreader = Newsreader({ subsets: ['latin'], weight: ['300', '400'], variable: '--font-newsreader', display: 'swap' });
 const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'], variable: '--font-jakarta', display: 'swap' });
 const mono = JetBrains_Mono({ subsets: ['latin'], weight: ['400', '500', '600'], variable: '--font-mono', display: 'swap' });
 const thai = IBM_Plex_Sans_Thai({ subsets: ['thai'], weight: ['400', '500', '600', '700'], variable: '--font-thai', display: 'swap' });

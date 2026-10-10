@@ -73,15 +73,15 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <header className="border-b border-line">
         <div className="mx-auto max-w-7xl px-4 pb-10 pt-10 md:px-10">
           <nav aria-label="breadcrumb" className="code flex flex-wrap gap-2 text-ink-3">
-            <Link href="/" className="hover:text-gold">HOME</Link>/<Link href="/knowledge" className="hover:text-gold">ARCHIVE</Link>/
-            <Link href={`/category/${a.category.id}`} className="hover:text-gold">{a.category.code}</Link>/<span className="text-ink-2">{refOf(a)}</span>
+            <Link href="/" className="hover:text-gold">หน้าแรก</Link>/<Link href="/knowledge" className="hover:text-gold">คลังความรู้</Link>/
+            <Link href={`/category/${a.category.id}`} className="hover:text-gold">{a.category.short}</Link>/<span className="text-ink-2">{refOf(a)}</span>
           </nav>
           <h1 className="mt-5 max-w-4xl font-serif text-[32px] font-light leading-[1.25] tracking-tight md:text-5xl md:leading-[1.2]">{a.title}</h1>
           <p className="mt-5 max-w-3xl text-lg leading-relaxed text-ink-2">{a.summary}</p>
           <div className="mt-6 flex flex-wrap gap-2">
             <span className="chip"><span className="dot" />{a.category.title}</span>
-            <span className="chip">{readingMinutes(a)} MIN READ</span>
-            <span className="chip">UPDATED {UPDATED}</span>
+            <span className="chip">อ่าน {readingMinutes(a)} นาที</span>
+            <span className="chip">อัปเดต {thaiDate(UPDATED)}</span>
           </div>
         </div>
       </header>
@@ -90,7 +90,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         <aside className="order-2 lg:order-1">
           <div className="space-y-4 lg:sticky lg:top-24">
             <nav aria-label="ในบทความนี้" className="glass p-4">
-              <p className="index">INDEX // ในบทความนี้</p>
+              <p className="index">ในบทความนี้</p>
               <ol className="mt-3 space-y-2 text-sm">
                 {a.points.map((p, i) => (
                   <li key={p.heading} className="flex gap-2">
@@ -104,7 +104,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               </ol>
             </nav>
             <div className="glass p-4 text-sm">
-              <p className="index">AUDIENCE</p>
+              <p className="index">เหมาะกับ</p>
               <p className="mt-2 text-ink-2">{a.audience}</p>
             </div>
           </div>
@@ -156,7 +156,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
           {related.length > 0 && (
             <section className="mt-14">
-              <p className="index">CROSS_REF // อ่านต่อ</p>
+              <p className="index">อ่านต่อ</p>
               <div className="mt-4 grid gap-4 sm:grid-cols-2">
                 {related.map((r) => <ArticleCard key={r.slug} a={toCard(r)} />)}
               </div>

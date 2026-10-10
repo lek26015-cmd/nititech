@@ -37,7 +37,7 @@ export function PdpaCheck() {
       <div className="space-y-8">
         {groups.map((g, gi) => (
           <section key={g}>
-            <p className="index">MODULE_{String(gi + 1).padStart(2, '0')} // {g}</p>
+            <p className="index">{String(gi + 1).padStart(2, '0')} // {g}</p>
             <div className="mt-3 space-y-3">
               {questions.filter((q) => q.group === g).map((q) => (
                 <div key={q.id} className="glass flex flex-col gap-3 p-4 sm:flex-row sm:items-center sm:justify-between">
@@ -69,16 +69,16 @@ export function PdpaCheck() {
 
       <aside className="lg:sticky lg:top-24 lg:self-start">
         <div className="glass-2 p-5 shadow-aureum" aria-live="polite">
-          <p className="index">READINESS_SCORE</p>
+          <p className="index">คะแนนความพร้อม</p>
           <p className="mt-2 font-serif text-6xl font-light text-gold-bright">{pct}<span className="text-2xl text-ink-2">%</span></p>
           <p className={`mt-1 text-sm font-semibold ${answered ? level.c : 'text-ink-3'}`}>{answered ? level.t : 'ตอบคำถามเพื่อดูผล'}</p>
           <div className="mt-4 h-1.5 w-full bg-white/10"><div className="h-full bg-gold transition-all" style={{ width: `${pct}%` }} /></div>
-          <p className="code mt-2 text-ink-3">ANSWERED {answered}/{questions.length}</p>
+          <p className="code mt-2 text-ink-3">ตอบแล้ว {answered}/{questions.length} ข้อ</p>
           <p className="mt-4 text-xs leading-relaxed text-ink-3">คำตอบประมวลผลในเบราว์เซอร์ของคุณเท่านั้น ไม่มีการส่งหรือบันทึกไว้ที่ใด</p>
         </div>
         {gaps.length > 0 && (
           <div className="glass mt-4 p-5">
-            <p className="index">ACTION_ITEMS // {gaps.length}</p>
+            <p className="index">สิ่งที่ต้องทำ ({gaps.length})</p>
             <ul className="mt-3 space-y-3">
               {gaps.map((q) => (
                 <li key={q.id} className="text-sm">

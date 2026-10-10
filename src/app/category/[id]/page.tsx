@@ -28,7 +28,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ id: s
     <div className="grid-bg">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }} />
       <div className="mx-auto max-w-7xl px-4 py-14 md:px-10">
-        <nav className="code text-ink-3"><Link href="/knowledge" className="hover:text-gold">ARCHIVE</Link> / {c.code}</nav>
+        <nav className="code text-ink-3"><Link href="/knowledge" className="hover:text-gold">คลังความรู้</Link> / {c.short}</nav>
         <h1 className="mt-4 font-serif text-4xl font-light md:text-5xl">{c.title}</h1>
         <p className="mt-3 max-w-2xl text-ink-2">{c.blurb}</p>
         <div className="mt-8 flex gap-2 overflow-x-auto pb-1">

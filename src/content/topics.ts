@@ -5,17 +5,18 @@ import { pdpa } from './articles/pdpa';
 import { cyber } from './articles/cyber';
 import { ai } from './articles/ai';
 import { digital } from './articles/digital';
+import { shorts } from './shorts';
 
 export type { Article, Category };
 
 const pick = (slugs: string[]) => slugs.map((s) => digital.find((a) => a.slug === s)!);
 
 export const categories: Category[] = [
-  { id: 'pdpa', code: 'PDPA', title: 'ข้อมูลส่วนบุคคล (PDPA)', blurb: 'ฐานทางกฎหมาย ความยินยอม คุกกี้ เหตุข้อมูลรั่ว DPO และการส่งข้อมูลไปต่างประเทศ', articles: pdpa },
-  { id: 'cyber', code: 'CYBER_CRIME', title: 'อาชญากรรมไซเบอร์และโซเชียล', blurb: 'พ.ร.บ.คอมพิวเตอร์ หมิ่นประมาทออนไลน์ มิจฉาชีพ บัญชีม้า และการเจาะระบบ', articles: cyber },
-  { id: 'ai', code: 'AI_IP', title: 'AI และทรัพย์สินทางปัญญา', blurb: 'ลิขสิทธิ์งาน AI ข้อมูลเทรนโมเดล Deepfake ร่างกฎหมาย AI ไทย และ EU AI Act', articles: ai },
-  { id: 'digital', code: 'DIGITAL_BIZ', title: 'ธุรกิจดิจิทัลและสัญญาออนไลน์', blurb: 'ลายมือชื่ออิเล็กทรอนิกส์ แพลตฟอร์มดิจิทัล ETDA เงื่อนไขการใช้บริการ', articles: pick(['e-signature-validity', 'digital-platform-decree', 'online-contract-terms']) },
-  { id: 'fintech', code: 'FINTECH_SEC', title: 'สินทรัพย์ดิจิทัลและความมั่นคงไซเบอร์', blurb: 'ใบอนุญาตคริปโต ICO และหน้าที่ของหน่วยงานโครงสร้างพื้นฐานสำคัญ', articles: pick(['digital-assets-license', 'cybersecurity-act']) },
+  { id: 'pdpa', code: 'PDPA', short: 'PDPA', title: 'ข้อมูลส่วนบุคคล (PDPA)', blurb: 'ฐานทางกฎหมาย ความยินยอม คุกกี้ เหตุข้อมูลรั่ว DPO และการส่งข้อมูลไปต่างประเทศ', articles: pdpa },
+  { id: 'cyber', code: 'CYBER_CRIME', short: 'ไซเบอร์', title: 'อาชญากรรมไซเบอร์และโซเชียล', blurb: 'พ.ร.บ.คอมพิวเตอร์ หมิ่นประมาทออนไลน์ มิจฉาชีพ บัญชีม้า และการเจาะระบบ', articles: cyber },
+  { id: 'ai', code: 'AI_IP', short: 'AI & ลิขสิทธิ์', title: 'AI และทรัพย์สินทางปัญญา', blurb: 'ลิขสิทธิ์งาน AI ข้อมูลเทรนโมเดล Deepfake ร่างกฎหมาย AI ไทย และ EU AI Act', articles: ai },
+  { id: 'digital', code: 'DIGITAL_BIZ', short: 'ธุรกิจดิจิทัล', title: 'ธุรกิจดิจิทัลและสัญญาออนไลน์', blurb: 'ลายมือชื่ออิเล็กทรอนิกส์ แพลตฟอร์มดิจิทัล ETDA เงื่อนไขการใช้บริการ', articles: pick(['e-signature-validity', 'digital-platform-decree', 'online-contract-terms']) },
+  { id: 'fintech', code: 'FINTECH_SEC', short: 'คริปโต & ไซเบอร์', title: 'สินทรัพย์ดิจิทัลและความมั่นคงไซเบอร์', blurb: 'ใบอนุญาตคริปโต ICO และหน้าที่ของหน่วยงานโครงสร้างพื้นฐานสำคัญ', articles: pick(['digital-assets-license', 'cybersecurity-act']) },
 ];
 
 export const allArticles = categories.flatMap((c) => c.articles.map((a) => ({ ...a, category: c })));
@@ -31,6 +32,8 @@ export function readingMinutes(a: Article): number {
 export const refOf = (a: FullArticle) => `${a.category.code.split('_')[0]}-${String(a.category.articles.findIndex((x) => x.slug === a.slug) + 1).padStart(2, '0')}`;
 
 export const toCard = (a: FullArticle) => ({
-  slug: a.slug, title: a.title, summary: a.summary, category: a.category.code, categoryId: a.category.id, minutes: readingMinutes(a), ref: refOf(a),
+  slug: a.slug, title: a.title, summary: a.summary, category: a.category.short, categoryId: a.category.id, minutes: readingMinutes(a), ref: refOf(a),
 });
+/** ชื่อสั้นของบทความ (ไม่มีให้ใช้ส่วนก่อน ":" ของชื่อเต็ม) */
+export const shortOf = (a: Article) => shorts[a.slug] ?? a.title.split(':')[0];
 export const findArticle = (slug: string) => allArticles.find((a) => a.slug === slug);
