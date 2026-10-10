@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { radar, statusLabel, type RadarStatus } from '@/content/radar';
 import { UPDATED } from '@/content/types';
 import { findArticle, shortOf } from '@/content/topics';
-import { StatusChip } from '@/components/radar-list';
 import { Disclaimer, LawyerCta } from '@/components/site';
 
 export const metadata: Metadata = {
@@ -33,7 +32,7 @@ export default function Radar() {
                 {items.map((r) => (
                   <article key={r.id} className="glass flex flex-col p-5">
                     <div className="flex items-start justify-between gap-3">
-                      <StatusChip s={r.status} />
+                      <p className="index">{r.short}</p>
                       <p className="code text-right text-ink-3">{r.when}</p>
                     </div>
                     <h3 className="mt-3 font-semibold leading-snug">{r.name}</h3>
