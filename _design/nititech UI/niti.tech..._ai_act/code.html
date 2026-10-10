@@ -1,0 +1,1177 @@
+<!DOCTYPE html><html class="dark" lang="th" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "inverse-surface": "#e3e2e6",
+          "surface-bright": "#38393c",
+          "on-secondary-fixed": "#002022",
+          "secondary-fixed-dim": "#00dbe9",
+          "surface-dim": "#121316",
+          "inverse-primary": "#735c00",
+          "outline": "#99907c",
+          "surface": "#121316",
+          "surface-container-low": "#1b1b1f",
+          "surface-tint": "#e9c349",
+          "primary-container": "#d4af37",
+          "on-secondary-container": "#00686f",
+          "primary-fixed-dim": "#e9c349",
+          "primary-fixed": "#ffe088",
+          "tertiary-fixed": "#ffdbc8",
+          "on-tertiary-fixed": "#321200",
+          "on-secondary": "#00363a",
+          "surface-container": "#1f1f23",
+          "on-primary-fixed-variant": "#574500",
+          "on-tertiary-fixed-variant": "#753400",
+          "on-tertiary": "#522300",
+          "secondary-fixed": "#7df4ff",
+          "surface-variant": "#343538",
+          "on-primary-container": "#554300",
+          "primary": "#f2ca50",
+          "on-surface-variant": "#d0c5af",
+          "tertiary-container": "#ff9a59",
+          "surface-container-lowest": "#0d0e11",
+          "tertiary-fixed-dim": "#ffb68b",
+          "on-error-container": "#ffdad6",
+          "surface-container-highest": "#343538",
+          "secondary-container": "#00eefc",
+          "on-error": "#690005",
+          "on-primary-fixed": "#241a00",
+          "error-container": "#93000a",
+          "on-tertiary-container": "#723300",
+          "outline-variant": "#4d4635",
+          "secondary": "#d3fbff",
+          "inverse-on-surface": "#303034",
+          "background": "#121316",
+          "error": "#ffb4ab",
+          "on-secondary-fixed-variant": "#004f54",
+          "on-background": "#e3e2e6",
+          "surface-container-high": "#292a2d",
+          "tertiary": "#ffc19e",
+          "on-surface": "#e3e2e6",
+          "on-primary": "#3c2f00"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "margin-tablet": "2.5rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem",
+          "space-3xl": "6rem",
+          "gutter-desktop": "2rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem",
+          "margin": "1rem",
+          "gutter": "1.5rem",
+          "space-xl": "2.5rem",
+          "margin-desktop": "4rem",
+          "space-2xl": "4rem"
+        },
+        "fontFamily": {
+          "label-caps": [
+            "JetBrains Mono"
+          ],
+          "headline-xl-mobile": [
+            "Newsreader"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero-mobile": [
+            "Newsreader"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-xl": [
+            "Newsreader"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-code": [
+            "JetBrains Mono"
+          ],
+          "display-hero": [
+            "Newsreader"
+          ],
+          "body-xl": [
+            "Newsreader"
+          ]
+        },
+        "fontSize": {
+          "label-caps": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.12em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "32px",
+            {
+              "lineHeight": "38px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-hero-mobile": [
+            "40px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "300"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "48px",
+            {
+              "lineHeight": "54px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "26px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-code": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "500"
+            }
+          ],
+          "display-hero": [
+            "72px",
+            {
+              "lineHeight": "76px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "300"
+            }
+          ],
+          "body-xl": [
+            "20px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script><style>@keyframes techGridFlow{0%{background-position:0 0,0 0,0 0}50%{background-position:30px 45px,-40px 30px,0 0}100%{background-position:60px 90px,-80px 60px,0 0}}@keyframes streamPulse{0%,100%{opacity:0.25;transform:translateY(0)}50%{opacity:0.45;transform:translateY(15px)}}.ambient-tech-circuit{background-image:linear-gradient(to right,rgba(212,175,55,0.04) 1px,transparent 1px),linear-gradient(to bottom,rgba(212,175,55,0.04) 1px,transparent 1px),radial-gradient(circle at 50% 30%,rgba(242,202,80,0.035) 0%,transparent 70%);background-size:48px 48px,48px 48px,100% 100%;animation:techGridFlow 45s linear infinite;}.ambient-stream-glow{animation:streamPulse 10s ease-in-out infinite alternate;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" id="tech-gold-bg"><div class="absolute inset-0 ambient-tech-circuit"></div><div class="absolute inset-0 ambient-stream-glow opacity-30 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(212,175,55,0.12),transparent_75%)]"></div><svg class="absolute inset-0 w-full h-full opacity-[0.06]" preserveAspectRatio="none" viewBox="0 0 1440 900" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-100 250 L350 250 L450 350 L800 350 L900 250 L1600 250" stroke="#f2ca50" stroke-width="1.5" stroke-dasharray="12 16"></path><path d="M-50 650 L250 650 L380 520 L750 520 L850 620 L1550 620" stroke="#d4af37" stroke-width="1" stroke-dasharray="8 12"></path><path d="M450 0 L450 350 L520 420 L520 900" stroke="#f2ca50" stroke-width="1" stroke-dasharray="6 14"></path><path d="M1050 0 L1050 400 L950 500 L950 900" stroke="#00eefc" stroke-width="1" stroke-dasharray="10 18" opacity="0.4"></path><circle cx="450" cy="350" r="3.5" fill="#f2ca50"></circle><circle cx="800" cy="350" r="3" fill="#d4af37"></circle><circle cx="380" cy="520" r="3" fill="#f2ca50"></circle><circle cx="850" cy="620" r="3.5" fill="#f2ca50"></circle></svg></div><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-space-sm" data-path="home" href="#"><img alt="nititech-logo-03.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQlWGCByEdWtTKpBZUCWCSh6I0GCLQw6n2GYUsoU3uyUdfypWUxAUxAyWnk2yL-h77XrsQhS7NpkiuA8qa5ZW83sN3fVuOklk2NtpEMn3NUffnK6p7DdYcR9F5KUfcVLCsl8ozk-5tlFctUZd3R9trDhcS_O8tSKXMg7oZKjddI8UoNp0hY261i3SRFDqvvOVt1QrLhQuZM1giBZANq19vkgUMi8Y4tKDyBA-xdUqS8TGGa-o6TK29pbQHPZPErBSHVKg"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">NITI<span class="text-primary">.TECH</span></span></a><span class="hidden xl:inline-block font-label-caps text-label-caps px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant">LEGAL_TECH // CYBER_HUB</span></div><nav class="hidden lg:flex items-center gap-space-md flex-shrink" data-active-classes="bg-primary-container text-on-primary-container rounded px-space-sm py-1.5"><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1 px-space-xs font-body-md text-body-md" data-path="home" href="#">หน้าแรก</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1 px-space-xs font-body-md text-body-md" data-path="ai-and-big-data" href="#">AI &amp; Big Data</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1 px-space-xs font-body-md text-body-md" data-path="pdpa-and-data-governance" href="#">PDPA &amp; Data Governance</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1 px-space-xs font-body-md text-body-md" data-path="smart-contracts-and-web3" href="#">Smart Contracts &amp; Web3</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1 px-space-xs font-body-md text-body-md" data-path="cyber-litigation-and-operations" href="#">คดี &amp; ปฏิบัติการไซเบอร์</a></nav><div class="flex items-center gap-space-sm flex-shrink-0"><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="hidden sm:inline font-label-code text-label-code">Search</span><kbd class="font-label-caps text-label-caps px-1 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant">⌘K</kbd></button><a class="p-[1px] rounded bg-gradient-to-r from-primary via-tertiary-container to-primary-container inline-flex transition-transform hover:scale-[1.02]" data-path="subscribe-briefing" href="#"><span class="px-space-md py-1.5 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container hover:text-on-surface font-label-code text-label-code flex items-center gap-space-xs tracking-wider">SUBSCRIBE BRIEFING</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)] relative z-10"><div class="flex flex-col w-full text-on-surface">
+<!-- TOP CONTEXT TELEMETRY BAR -->
+<section class="w-full bg-surface-container-lowest px-6 lg:px-12 py-3">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4 font-label-code text-label-code">
+<nav class="flex items-center gap-2 text-on-surface-variant flex-wrap">
+<a class="hover:text-primary transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[15px]">home</span>
+<span class="">หน้าแรก</span>
+</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-primary transition-colors" href="#">AI &amp; Big Data</a>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-medium">บทวิเคราะห์เชิงลึก (Deep Analysis)</span>
+</nav>
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-caps text-label-caps">
+          DOCKET // TH-AI-2025-01
+        </span>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-surface-container text-secondary font-label-caps text-label-caps">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+          PEER REVIEWED &amp; VERIFIED
+        </span>
+</div>
+</div>
+</section>
+<!-- ARTICLE HERO HEADER -->
+<section class="relative w-full px-6 lg:px-12 pt-12 pb-16 overflow-hidden">
+<!-- Atmospheric glows -->
+<div class="absolute -top-40 right-10 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-20 -left-20 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
+<!-- Headline & Subtitle Rail -->
+<div class="lg:col-span-9 space-y-6">
+<div class="flex flex-wrap items-center gap-2 font-label-caps text-label-caps">
+<span class="px-2.5 py-1 rounded bg-primary-container text-on-primary-container font-semibold">
+            LEGISLATIVE CODEX // 2025
+          </span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant">
+            GENAI &amp; INTELLECTUAL PROPERTY
+          </span>
+<span class="px-2.5 py-1 rounded bg-surface-container text-tertiary">
+            TORT REFORM
+          </span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface leading-tight tracking-tight">
+          ถอดรหัสร่าง พ.ร.บ. ปัญญาประดิษฐ์ (AI Act) ฉบับประเทศไทย: <br class="hidden sm:inline">
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary-fixed to-secondary">
+            ความรับผิดทางละเมิดและลิขสิทธิ์โมเดล GenAI
+          </span>
+</h1>
+<p class="font-body-xl text-body-xl text-on-surface-variant leading-relaxed max-w-4xl">
+          การวิเคราะห์เจตนารมณ์แห่งกฎหมาย การแบ่งระดับความเสี่ยงของโมเดลปัญญาประดิษฐ์ ภาระการพิสูจน์ตามหลัก Strict Liability และความท้าทายของ Fair Use ในข้อมูลฝึกสอนอัลกอริทึมยุคใหม่
+        </p>
+<!-- Metadata & Lead Author Ribbon -->
+<div class="pt-4 flex flex-wrap items-center justify-between gap-6">
+<div class="flex items-center gap-4">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-lg" data-alt="Portrait of Dr. Nititham Technology, esteemed Thai legal scholar and tech law commissioner in a sleek dark contemporary academic suit with warm studio lighting and subtle obsidian backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSgaWMzDXGBUBbQsKg1jOdvRXEu8Z20oEimk9_xSzD6oHUmbVAmWRf5JWZmWQvZNDY2VPhIcMyoV6PGOw2VITBdRBk3H4ILIMtLxXOllB3YzQAQf3oe9IiaUHu3PKqwxMwhCnXjUQ3z4GwOfv2EUYUYOuuLkO6e4SVlisAHTq4CC1LYgIKpRw5sZy3x5nY_7Uf6BVb_Bm13vU5y5eKdAf3nOSd4PK5vrE-D4OzzH3gOsDgpZPS7WImeQ">
+<div class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary text-[12px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface">ศ.ดร. นิติธรรม เทคโนโลยี</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-caps text-label-caps">DIRECTOR OF RESEARCH</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                ผู้ทรงคุณวุฒิสภานิติบัญญัติเทคโนโลยี • สถาบันสารสนเทศและการวิจัยนิติศาสตร์ไซเบอร์
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-6 font-label-code text-label-code text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_today</span>
+<span class="">24 กุมภาพันธ์ 2025</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">schedule</span>
+<span class="">อ่านประมาณ 15 นาที</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[18px]">visibility</span>
+<span class="">4,820 สถิติการเข้าถึง</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Seal & Crest Column -->
+<div class="lg:col-span-3 flex lg:flex-col items-center justify-center lg:justify-start gap-4 p-6 rounded-xl bg-surface-container-low shadow-xl">
+<div class="relative w-36 h-36 flex items-center justify-center">
+<div class="absolute inset-0 rounded-full bg-primary/10 animate-pulse"></div>
+<img alt="NITI.TECH Official Seal" class="w-32 h-32 object-contain relative z-10 drop-shadow-[0_0_12px_rgba(212,175,55,0.4)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQlWGCByEdWtTKpBZUCWCSh6I0GCLQw6n2GYUsoU3uyUdfypWUxAUxAyWnk2yL-h77XrsQhS7NpkiuA8qa5ZW83sN3fVuOklk2NtpEMn3NUffnK6p7DdYcR9F5KUfcVLCsl8ozk-5tlFctUZd3R9trDhcS_O8tSKXMg7oZKjddI8UoNp0hY261i3SRFDqvvOVt1QrLhQuZM1giBZANq19vkgUMi8Y4tKDyBA-xdUqS8TGGa-o6TK29pbQHPZPErBSHVKg">
+</div>
+<div class="text-center font-label-code text-label-code space-y-1">
+<div class="text-primary font-bold tracking-wider">OFFICIAL REPOSITORIA</div>
+<div class="text-on-surface-variant text-[11px]">CERTIFICATE ID #NT-TH-9842</div>
+<div class="text-outline text-[10px]">SHA-256: 7e9b2...4f981c</div>
+</div>
+</div>
+</div>
+</section>
+<!-- QUICK ACTIONS BAR -->
+<section class="sticky top-20 z-40 w-full bg-surface-container-lowest/90 backdrop-blur-xl px-6 lg:px-12 py-3 shadow-md">
+<div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
+<!-- Audio Player Pill -->
+<div class="flex items-center gap-3 px-3 py-1.5 rounded-full bg-surface-container-high">
+<button aria-label="Play AI Audio Overview" class="w-7 h-7 rounded-full bg-primary flex items-center justify-center hover:scale-105 transition-transform" id="audio-toggle-btn">
+<span class="material-symbols-outlined text-on-primary text-[16px]" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-primary tracking-wider">AI AUDIO BRIEFING</span>
+<span class="font-label-code text-label-code text-on-surface-variant text-[11px]">ฟังบทความบรรยายเสียง (12:45 Min)</span>
+</div>
+<!-- Sound Wave Mock -->
+<div class="hidden sm:flex items-center gap-0.5 ml-2 h-4">
+<span class="w-0.5 h-2 bg-primary animate-pulse"></span>
+<span class="w-0.5 h-3.5 bg-primary/80 animate-pulse"></span>
+<span class="w-0.5 h-1.5 bg-primary/60"></span>
+<span class="w-0.5 h-4 bg-primary animate-pulse"></span>
+<span class="w-0.5 h-2 bg-primary/50"></span>
+</div>
+</div>
+<!-- Action Buttons Cluster -->
+<div class="flex items-center gap-2 font-label-code text-label-code">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" id="citation-modal-btn">
+<span class="material-symbols-outlined text-[16px] text-primary">format_quote</span>
+<span class="">คัดลอกคำอ้างอิง</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" id="pdf-download-btn">
+<span class="material-symbols-outlined text-[16px] text-secondary">picture_as_pdf</span>
+<span class="hidden sm:inline">ดาวน์โหลด</span><span class="">PDF</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-all" id="bookmark-btn">
+<span class="material-symbols-outlined text-[16px]">bookmark_border</span>
+<span class="hidden sm:inline">บันทึก</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded bg-primary-container text-on-primary-container hover:opacity-90 transition-all font-semibold" id="share-btn">
+<span class="material-symbols-outlined text-[16px]">share</span>
+<span class="">แชร์</span>
+</button>
+</div>
+</div>
+</section>
+<!-- MAIN EDITORIAL CONTENT GRID -->
+<section class="w-full px-6 lg:px-12 py-12">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10">
+<!-- STICKY TABLE OF CONTENTS & CONTEXT RAIL (DESKTOP) -->
+<aside class="hidden lg:block lg:col-span-3 space-y-6">
+<div class="sticky top-40 space-y-6">
+<!-- TOC Panel -->
+<div class="p-5 rounded-xl bg-surface-container-low shadow-lg space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-primary tracking-widest">TABLE OF CONTENTS</span>
+<span class="font-label-code text-label-code text-outline text-[11px]">7 SECTIONS &amp; CASE BRIEF</span>
+</div>
+<nav class="space-y-1 font-body-md text-body-md text-on-surface-variant">
+<a class="block py-1.5 px-2.5 rounded hover:bg-surface-container hover:text-primary transition-colors text-on-surface font-medium" href="#section-summary">
+                00. สรุปประเด็นบริหาร (Executive Summary)
+              </a>
+<a class="block py-1.5 px-2.5 rounded hover:bg-surface-container hover:text-primary transition-colors" href="#section-classification">
+                01. การจัดระดับความเสี่ยงของ AI
+              </a>
+<a class="block py-1.5 px-2.5 rounded hover:bg-surface-container hover:text-primary transition-colors" href="#section-liability">
+                02. ความรับผิดเด็ดขาด (Strict Liability)
+              </a>
+<a class="block py-1.5 px-2.5 rounded hover:bg-surface-container hover:text-primary transition-colors" href="#section-copyright">
+                03. ลิขสิทธิ์ข้อมูลฝึกสอน &amp; Fair Use
+              </a>
+<a class="block py-1.5 px-2.5 rounded hover:bg-surface-container hover:text-primary transition-colors" href="#section-comparison">
+                04. เปรียบเทียบ EU vs. ร่างไทย
+              </a>
+<a class="block py-1.5 px-2.5 rounded hover:bg-surface-container hover:text-primary transition-colors" href="#section-recommendations">
+                05. ข้อเสนอแนะเชิงกลยุทธ์
+              </a>
+<a class="block py-1.5 px-2.5 rounded hover:bg-surface-container hover:text-primary transition-colors text-primary font-medium flex items-center justify-between" href="#section-litigation-advisory"><span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">balance</span>06. แนวทางว่าความ &amp; คำฟ้อง</span><span class="font-label-caps text-[9px] px-1 py-0.5 rounded bg-primary/20 text-primary">LITIGATION</span></a><a class="block py-1.5 px-2.5 rounded hover:bg-surface-container hover:text-primary transition-colors flex items-center justify-between" href="#section-precedent-evidence"><span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">gavel</span>07. ภาระการนำสืบพยานดิจิทัล</span><span class="font-label-caps text-[9px] px-1 py-0.5 rounded bg-surface-container-high text-secondary">EVIDENCE</span></a></nav>
+</div>
+<!-- Quick Metrics Panel -->
+<div class="p-5 rounded-xl bg-surface-container-lowest shadow-md space-y-3">
+<div class="font-label-caps text-label-caps text-secondary">STATUTORY INDEX</div>
+<div class="space-y-2 text-on-surface-variant text-[13px] font-body-md">
+<div class="flex justify-between items-center">
+<span class="">มาตราที่มีข้อพิพาท:</span>
+<span class="font-label-code text-label-code text-primary">ม.24, ม.47, ม.88</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="">โทษปรับสูงสุด:</span>
+<span class="font-label-code text-label-code text-tertiary">50,000,000 THB</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="">ระยะเวลาเปลี่ยนผ่าน:</span>
+<span class="font-label-code text-label-code text-on-surface">360 วัน</span>
+</div>
+</div>
+</div>
+<!-- Citation Helper Card -->
+<div class="p-4 rounded-xl bg-surface-container-high/60 space-y-2">
+<span class="font-label-caps text-label-caps text-outline">CITATION KEY</span>
+<p class="font-label-code text-label-code text-on-surface text-[11px] select-all">
+              นิติธรรม เทคโนโลยี. (2568). ถอดรหัสร่าง พ.ร.บ. ปัญญาประดิษฐ์. NITI.TECH Law Review, 2025(1), 1-28.
+            </p>
+</div>
+</div>
+</aside>
+<!-- ARTICLE BODY -->
+<article class="lg:col-span-9 space-y-12">
+<!-- SECTION: EXECUTIVE SUMMARY (TL;DR BOX) -->
+<section class="p-6 sm:p-8 rounded-xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-low shadow-2xl relative overflow-hidden" id="section-summary">
+<div class="absolute -right-10 -bottom-10 w-44 h-44 bg-primary/10 rounded-full blur-2xl pointer-events-none"></div>
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-[24px]">terminal</span>
+<span class="font-label-caps text-label-caps text-primary tracking-widest">EXECUTIVE SUMMARY // สรุปสาระสำคัญเชิงนโยบาย</span>
+</div>
+<div class="space-y-4 text-on-surface font-body-lg text-body-lg">
+<p class="">
+              ร่างพระราชบัญญัติการพัฒนานวัตกรรมและการกำกับดูแลปัญญาประดิษฐ์ พ.ศ. .... (ฉบับรับฟังความคิดเห็นล่าสุด) ถือเป็นหมุดหมายสำคัญที่สุดของวงการกฎหมายดิจิทัลไทย โดยมุ่งเน้นการวางกรอบความรับผิดทางแพ่งและอาญาของผู้พัฒนา (AI Developers) และผู้นำไปใช้งาน (Deployers) โดยมี 3 เสาหลักที่กระทบต่อระบบนิเวศเทคโนโลยีอย่างมีนัยสำคัญ:
+            </p>
+<ul class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+<li class="p-4 rounded-lg bg-surface-container-lowest/80 space-y-1">
+<span class="font-label-caps text-label-caps text-primary">01 // TIERED RISKS</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">เกณฑ์ 4 ระดับ</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">แบ่งระดับความเสี่ยงตามแนวทาง EU AI Act แต่อะลุ้มอล่วยให้ระบบราชการในระยะเริ่มต้น</p>
+</li>
+<li class="p-4 rounded-lg bg-surface-container-lowest/80 space-y-1">
+<span class="font-label-caps text-label-caps text-secondary">02 // LIABILITY SHIFT</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">ความรับผิดเด็ดขาด</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">ผลักภาระการพิสูจน์ (Reverse Burden of Proof) ให้ผู้ควบคุมโมเดล Black-Box AI</p>
+</li>
+<li class="p-4 rounded-lg bg-surface-container-lowest/80 space-y-1">
+<span class="font-label-caps text-label-caps text-tertiary">03 // TDM EXEMPTION</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">ข้อยกเว้นลิขสิทธิ์</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">การทำ Text and Data Mining (TDM) จะถือว่าชอบด้วยกฎหมาย หากมีการแจ้ง Opt-Out Protocol</p>
+</li>
+</ul>
+</div>
+</section>
+<!-- SECTION 1: CLASSIFICATION -->
+<section class="space-y-6" id="section-classification">
+<div class="space-y-2">
+<div class="font-label-caps text-label-caps text-secondary">CHAPTER 01 // TAXONOMY &amp; RISK LEVEL</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+              1. นิยามระบบปัญญาประดิษฐ์ความเสี่ยงสูง (High-Risk AI Classification)
+            </h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            หัวใจสำคัญของร่าง พ.ร.บ. ฉบับนี้คือการกำหนดนิยาม “ระบบปัญญาประดิษฐ์ที่มีความเสี่ยงสูง” (High-Risk AI Systems) ตามหมวด 3 มาตรา 24 ซึ่งระบุครอบคลุมระบบอัลกอริทึมที่ส่งผลกระทบต่อสิทธิเสรีภาพขั้นพื้นฐาน ความปลอดภัยในชีวิต ร่างกาย หรือทรัพย์สินของประชาชน โดยจำแนกออกเป็น 4 หมวดหมู่สำคัญ ได้แก่:
+          </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="p-5 rounded-lg bg-surface-container-low space-y-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[20px]">csv</span>
+<span class="font-headline-sm text-headline-sm">การระบุตัวตนทางชีวมิติแบบเรียลไทม์</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                (Real-time Remote Biometric Identification) ในพื้นที่สาธารณะ ซึ่งถูกจัดให้อยู่ในกลุ่มที่ต้องผ่านการประเมินผลกระทบด้านสิทธิมนุษยชน (Human Rights Impact Assessment) ก่อนใช้งานเสมอ
+              </p>
+</div>
+<div class="p-5 rounded-lg bg-surface-container-low space-y-2">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-[20px]">health_and_safety</span>
+<span class="font-headline-sm text-headline-sm">การประเมินคัดกรองทางการแพทย์และประกันภัย</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                ระบบอัตโนมัติที่ทำการตัดสินใจ (Automated Decision Making) ด้านการอนุมัติสิทธิการรักษาพยาบาลและการกำหนดเบี้ยประกันภัยรายบุคคล โดยไม่ผ่านการทบทวนของมนุษย์ (Human-in-the-loop)
+              </p>
+</div>
+<div class="p-5 rounded-lg bg-surface-container-low space-y-2">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+<span class="font-headline-sm text-headline-sm">การคัดเลือกและประเมินผลบุคลากร</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                การนำ AI วิเคราะห์เรซูเม่ หรือระบบตรวจจับอารมณ์ขณะสัมภาษณ์งาน เพื่อป้องกันอคติทางอัลกอริทึม (Algorithmic Bias) ต่อเพศ วัย และชาติพันธุ์
+              </p>
+</div>
+<div class="p-5 rounded-lg bg-surface-container-low space-y-2">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-[20px]">account_balance</span>
+<span class="font-headline-sm text-headline-sm">การประเมินเครดิตและธุรกรรมสถาบันการเงิน</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                การคำนวณ Credit Scoring หรือความเสี่ยงการฟอกเงินที่มีนัยสำคัญต่อการเข้าถึงบริการทางการเงินขั้นพื้นฐานของประชาชน
+              </p>
+</div>
+</div>
+<!-- Feature Graphic / Architecture Diagram Placeholder -->
+<div class="p-6 rounded-xl bg-surface-container-lowest space-y-4">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant">DIAGRAM 1.1 // SYSTEM COMPLIANCE FLOW</span>
+<span class="font-label-code text-label-code text-primary">ALGORITHM AUDIT TRAIL</span>
+</div>
+<!-- Technical Flow UI Mock -->
+<div class="grid grid-cols-1 sm:grid-cols-4 gap-2 text-center font-label-code text-label-code">
+<div class="p-3 rounded bg-surface-container text-on-surface">
+<div class="text-primary text-[10px] font-bold">STAGE 01</div>
+<div class="">Risk Categorization</div>
+</div>
+<div class="p-3 rounded bg-surface-container text-on-surface">
+<div class="text-secondary text-[10px] font-bold">STAGE 02</div>
+<div class="">Dataset Provenance</div>
+</div>
+<div class="p-3 rounded bg-surface-container text-on-surface">
+<div class="text-tertiary text-[10px] font-bold">STAGE 03</div>
+<div class="">Algorithmic Stress Test</div>
+</div>
+<div class="p-3 rounded bg-primary-container text-on-primary-container font-semibold">
+<div class="text-[10px] font-bold text-on-primary-fixed-variant">STAGE 04</div>
+<div class="">Regulatory Sandbox</div>
+</div>
+</div>
+</div>
+</section>
+<!-- STATUTORY CITATION CALLOUT -->
+<blockquote class="p-6 rounded-r-xl bg-surface-container-low pl-6 border-l-4 border-primary space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">gavel</span>
+<span class="font-label-caps text-label-caps text-primary tracking-wider">ร่าง พ.ร.บ. ปัญญาประดิษฐ์ พ.ศ. .... มาตรา 47 วรรคสอง</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface italic">
+            “ในกรณีที่ความเสียหายเกิดจากการประมวลผลของระบบปัญญาประดิษฐ์ที่มีลักษณะเป็นกล่องดำ (Black-Box System) ให้สันนิษฐานไว้ก่อนว่าความเสียหายดังกล่าวเกิดจากความประมาทเลินเล่ออย่างร้ายแรงของผู้พัฒนา เว้นแต่ผู้พัฒนาจะพิสูจน์ได้ว่าได้ปฏิบัติตามมาตรฐานการทดสอบความมั่นคงปลอดภัยทางเทคโนโลยีขั้นสูงแล้ว...”
+          </p>
+<div class="font-label-code text-label-code text-on-surface-variant">
+            — บันทึกหลักการและเหตุผลประกอบร่างกฎหมาย คณะกรรมาธิการวิสามัญศึกษาเทคโนโลยีไซเบอร์
+          </div>
+</blockquote>
+<!-- SECTION 2: LIABILITY -->
+<section class="space-y-6" id="section-liability">
+<div class="space-y-2">
+<div class="font-label-caps text-label-caps text-primary">CHAPTER 02 // COMPARATIVE TORT JURISPRUDENCE</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+              2. หลัก Strict Liability เทียบกับความประมาทเลินเล่อ (Comparative Tort Law)
+            </h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            ในกฎหมายลักษณะละเมิดตามประมวลกฎหมายแพ่งและพาณิชย์ มาตรา 420 ผู้เสียหายมีภาระการพิสูจน์ (Burden of Proof) ว่าผู้กระทำละเมิดได้กระทำโดยจงใจหรือประมาทเลินเล่อ แต่เนื่องจากลักษณะเฉพาะของโมเดล Generative AI และ Deep Neural Networks ที่ไม่สามารถอธิบายกระบวนการคิดของระบบได้โดยตรง (Explainability Problem) ร่างกฎหมายไทยจึงเสนอให้นำหลัก **ความรับผิดเด็ดขาด (Strict Liability)** มาปรับใช้ในบางสถานการณ์
+          </p>
+<!-- Interactive Analytical Card Comparison -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="p-6 rounded-xl bg-surface-container-low space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-on-surface">หลักละเมิดดั้งเดิม (ป.พ.พ. ม.420)</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-surface-container text-outline">CLASSICAL TORT</span>
+</div>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">close</span>
+<span class="">ผู้เสียหายต้องพิสูจน์ข้อบกพร่องของโค้ด (Bug/Flaw) ซึ่งแทบเป็นไปไม่ได้สำหรับคนทั่วไป</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">close</span>
+<span class="">ผู้พัฒนาปฏิเสธความรับผิดได้ง่ายหากอ้างว่าเป็นผลลัพธ์ที่เกิดจากการเรียนรู้ด้วยตนเองของโมเดล</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">close</span>
+<span class="">ขาดกลไกเยียวยาผู้เสียหายอย่างเร่งด่วนในกรณี AI ก่อให้เกิดอุบัติเหตุหรือความเสียหายต่อทรัพย์สินขนาดใหญ่</span>
+</li>
+</ul>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-high space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary">กลไกใหม่ตามร่าง AI Act (ม.47)</span>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-primary-container text-on-primary-container">REVERSED BURDEN</span>
+</div>
+<ul class="space-y-3 font-body-md text-body-md text-on-surface">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+<span class="">สันนิษฐานความรับผิดของผู้ให้บริการ (Deployer) ทันทีที่เกิดความเสียหายจากการตัดสินใจของระบบ</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+<span class="">ภาระการพิสูจน์ตกแก่ผู้พัฒนาว่าจะต้องแสดง Log การทำงานและการทดสอบด้านความปลอดภัย</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">check</span>
+<span class="">บังคับให้ผู้ประกอบการในกลุ่ม High-Risk ต้องทำประกันภัยความรับผิดต่อบุคคลภายนอก (Mandatory AI Insurance)</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- SECTION 3: COPYRIGHT & FAIR USE -->
+<section class="space-y-6" id="section-copyright">
+<div class="space-y-2">
+<div class="font-label-caps text-label-caps text-tertiary">CHAPTER 03 // INTELLECTUAL PROPERTY &amp; DATA FEEDS</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+              3. การจัดการลิขสิทธิ์ข้อมูลฝึกสอน (Training Dataset Copyright &amp; Fair Use Doctrine)
+            </h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            ข้อถกเถียงที่ดุเดือดที่สุดในประชาคมวิชาการและผู้สร้างสรรค์คอนเทนต์ไทย คือการนำงานอันมีลิขสิทธิ์ (วรรณกรรม ภาพวาด ภาพถ่าย ดนตรี) ไปทำการคัดลอก ประมวลผล และสกัดเวกเตอร์เพื่อป้อนเข้าเป็นข้อมูลฝึกสอน (Training Sets) ของ Large Language Models (LLMs) และ Diffusion Models ว่าจะเข้าข่ายข้อยกเว้นการละเมิดลิขสิทธิ์ (Fair Use) ตามมาตรา 32 แห่ง พ.ร.บ. ลิขสิทธิ์ หรือไม่
+          </p>
+<!-- Visual Showcase Image -->
+<div class="rounded-xl overflow-hidden bg-surface-container-low shadow-xl">
+<img class="w-full h-80 object-cover" data-alt="Futuristic cyber courtroom visualization with holographic digital statutes, golden scales of justice floating beside machine learning neural network weights and data matrices in deep obsidian ambience with gold and cyan lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuozmeXdUAIpDQzkYrmpNJCh-dGPj3pecVaxFDAAzsljGhgQkMqIXOWkNWs2qw2MSFzxFwAbDt6Iknagfwo0hDnFCukzKO2Dwv5x_M7g1w5UqFuY4l7An1v5xMIpXXbEYDGL1cL44IuvNoBYN6JZRTmz2yXWciNR_4bp3D04xSBxpDNrTrDj3wkhgVuFVzEYDgvAMGGCRZvunafUWshOuZrL8cbKG212xFtlzazYrXzr5HrR5i5lJWzA">
+<div class="p-4 bg-surface-container-lowest flex flex-wrap items-center justify-between text-[12px] font-label-code text-on-surface-variant">
+<span class="">ภาพจำลอง: กระบวนการตรวจสอบโครงข่ายประสาทเทียมกับสิทธิในผลงานสร้างสรรค์</span>
+<span class="text-primary">FIGURE // 03.1 NEURAL REDLINE</span>
+</div>
+</div>
+<div class="p-5 rounded-xl bg-surface-container-low space-y-3">
+<h4 class="font-headline-sm text-headline-sm text-on-surface">โมเดล Text and Data Mining (TDM) ในบริบทไทย:</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              คณะกรรมการยกร่างฯ ได้เสนอทางออกคู่ขนานด้วยการนำหลักการ Opt-out Protocol มากำหนดเป็นมาตรฐานกลาง หากเจ้าของสิทธิประกาศห้ามการทำ Web Scraping ผ่านสัญญาอนุญาตหรือ Machine-readable formats (เช่น robots.txt หรือ meta tags) ผู้พัฒนาโมเดลจะไม่สามารถอ้างหลัก Fair Use เพื่อนำผลงานดังกล่าวไปฝึกสอนได้อีกต่อไป มิฉะนั้นจะต้องรับผิดชอบชดใช้ค่าเสียหายทางแพ่งในอัตราทวีคูณ (Statutory Treble Damages)
+            </p>
+</div>
+</section>
+<!-- SECTION 4: COMPARATIVE MATRIX TABLE -->
+<section class="space-y-6" id="section-comparison">
+<div class="space-y-2">
+<div class="font-label-caps text-label-caps text-secondary">CHAPTER 04 // BENCHMARK MATRIX</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+              4. ตารางเปรียบเทียบ: กฎหมาย AI ของสหภาพยุโรป (EU AI Act) เทียบกับ ร่าง พ.ร.บ. ปัญญาประดิษฐ์ไทย
+            </h2>
+</div>
+<!-- Structured Comparison Table without explicit borders -->
+<div class="overflow-x-auto rounded-xl bg-surface-container-lowest shadow-xl">
+<table class="w-full text-left font-body-md text-body-md border-collapse">
+<thead>
+<tr class="bg-surface-container-high text-on-surface font-label-caps text-label-caps">
+<th class="p-4">ประเด็นการวิเคราะห์ (METRIC)</th>
+<th class="p-4 text-secondary">EU AI ACT (REGULATION 2024/1689)</th>
+<th class="p-4 text-primary">ร่าง พ.ร.บ. ปัญญาประดิษฐ์ (ฉบับไทย)</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface-variant">
+<tr class="bg-surface-container/50 hover:bg-surface-container transition-colors">
+<td class="p-4 font-semibold text-on-surface">ขอบเขตการกำกับดูแล</td>
+<td class="p-4">ครอบคลุมทั่วโลก (Extraterritorial Effect) ที่มีผลต่อพลเมือง EU</td>
+<td class="p-4 text-on-surface">เน้นผู้ประกอบการที่มีฐานในไทย หรือให้บริการผู้บริโภคในไทย</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="p-4 font-semibold text-on-surface">ระบบต้องห้ามเด็ดขาด (Prohibited AI)</td>
+<td class="p-4">Social Scoring, Cognitive Behavioral Manipulation, Biometric Categorization</td>
+<td class="p-4 text-on-surface">จำกัดเฉพาะ Social Scoring ทางอาญา และระบบที่กระทบต่อความมั่นคงแห่งรัฐ</td>
+</tr>
+<tr class="bg-surface-container/50 hover:bg-surface-container transition-colors">
+<td class="p-4 font-semibold text-on-surface">ความรับผิดทางละเมิด</td>
+<td class="p-4">แยกบังคับด้วย AI Liability Directive (ความรับผิดชอบเชิงโครงสร้าง)</td>
+<td class="p-4 text-on-surface font-medium text-primary">รวมอยู่ในกฎหมายแม่บท (Reversed Burden of Proof)</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container transition-colors">
+<td class="p-4 font-semibold text-on-surface">บทลงโทษปรับสูงสุด</td>
+<td class="p-4 text-tertiary">35 ล้านยูโร หรือ 7% ของรายได้รวมทั่วโลก</td>
+<td class="p-4 text-tertiary">50 ล้านบาท หรือ 5% ของรายได้จากการประกอบการในประเทศ</td>
+</tr>
+<tr class="bg-surface-container/50 hover:bg-surface-container transition-colors">
+<td class="p-4 font-semibold text-on-surface">Sandboxing &amp; Startup Support</td>
+<td class="p-4">กำหนดให้แต่ละรัฐสมาชิกจัดตั้ง AI Regulatory Sandboxes</td>
+<td class="p-4 text-on-surface">มีกองทุนสนับสนุนและผ่อนผันโทษสำหรับ SME / Research Labs ใน 2 ปีแรก</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- SECTION 5: RECOMMENDATIONS -->
+<section class="space-y-6" id="section-recommendations">
+<div class="space-y-2">
+<div class="font-label-caps text-label-caps text-primary">CHAPTER 05 // ACTIONABLE STRATEGY</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">
+              5. ข้อเสนอแนะเชิงนโยบายสำหรับองค์กรและ Tech Startups ในไทย
+            </h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="p-6 rounded-xl bg-surface-container-low space-y-3">
+<span class="font-label-caps text-label-caps text-primary">PROTOCOL 01</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Data Lineage &amp; Auditing</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                จัดทำบัญชีแหล่งที่มาของข้อมูลฝึกสอน (Data Provenance Ledger) เพื่อพร้อมรับมือการตรวจสอบย้อนกลับจากสำนักงานส่งเสริมเศรษฐกิจดิจิทัล และหน่วยงานกำกับกำกับสิทธิ
+              </p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-low space-y-3">
+<span class="font-label-caps text-label-caps text-secondary">PROTOCOL 02</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Algorithmic Governance</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                แต่งตั้งคณะกรรมการธรรมาภิบาล AI ภายในองค์กร (AI Ethics &amp; Compliance Officer) ทำการประเมินความเสี่ยงก่อน Deploy โมเดลสู่ Production
+              </p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container-low space-y-3">
+<span class="font-label-caps text-label-caps text-tertiary">PROTOCOL 03</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Cyber &amp; AI Insurance</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                เตรียมงบประมาณและพิจารณาทำกรมธรรม์ประกันภัยความรับผิดชอบด้านอัลกอริทึมเพื่อกระจายความเสี่ยงจากข้อกำหนด Reverse Burden of Proof
+              </p>
+</div>
+</div>
+</section>
+<!-- AUTHOR BIO & EDITORIAL CERTIFICATION BOX -->
+<!-- SECTION 6: LITIGATION ADVISORY & CASE BRIEF -->
+<section class="space-y-6" id="section-litigation-advisory">
+  <div class="space-y-2">
+    <div class="flex items-center gap-2 font-label-caps text-label-caps text-primary tracking-wider">
+      <span class="material-symbols-outlined text-[18px]">balance</span>
+      <span class="">CHAPTER 06 // LITIGATION ADVISORY &amp; DEFENSE BRIEF</span>
+    </div>
+    <h2 class="font-headline-lg text-headline-lg text-on-surface flex items-center gap-3">
+      <span class="">6. คำแถลงการณ์และแนวทางการว่าความ (Litigation Advisory &amp; Pleading Brief)</span>
+    </h2>
+  </div>
+
+  <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+    แนวทางการตั้งรูปคดีสำหรับเนติบัณฑิต ที่ปรึกษากฎหมายองค์กร (In-house Counsel) และทนายความผู้ว่าต่างแก้ต่างในคดีความเสียหายอันเกิดจากอัลกอริทึมปัญญาประดิษฐ์และการประมวลผลเครือข่ายประสาทเทียม
+  </p>
+
+  <!-- Legal Pleading Docket Card -->
+  <div class="p-6 rounded-xl bg-surface-container-low border-l-4 border-primary space-y-6 shadow-xl">
+    <div class="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-outline-variant/30 font-label-code text-label-code">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary text-[20px]">history_edu</span>
+        <span class="font-bold text-on-surface">แนวร่างคำคู่ความและข้อต่อสู้ในศาล (COURT PLEADING BENCHMARK)</span>
+      </div>
+      <span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-caps text-label-caps">ADMISSIBILITY CODEX §2025</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Pleading Column 1: Plaintiff (โจทก์) -->
+      <div class="p-5 rounded-lg bg-surface-container-lowest space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="font-headline-sm text-headline-sm text-primary flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[20px]">gavel</span> กลยุทธ์ฝ่ายโจทก์ (Plaintiff Strategy)
+          </span>
+          <span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-primary/20 text-primary">BURDEN REVERSAL</span>
+        </div>
+        <ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+          <li class="flex items-start gap-2.5">
+            <span class="font-label-code text-primary font-bold text-[13px]">§ 01</span>
+            <span class=""><strong>ฟ้องคดีแบบผลักภาระ:</strong> อ้างอิง ม.47 วรรคสอง บังคับให้จำเลยต้องเปิดเผย Model Checkpoints, Training Logs และ Weights เพื่อพิสูจน์ความสุจริต</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="font-label-code text-primary font-bold text-[13px]">§ 02</span>
+            <span class=""><strong>ละเมิดต่อเนื่อง (Continuing Tort):</strong> ฟ้องร้องการประมวลผลและการกระจายตัวของผลลัพธ์โมเดลแบบละเมิดสิทธิข้ามเขตอำนาจศาล</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="font-label-code text-primary font-bold text-[13px]">§ 03</span>
+            <span class=""><strong>คำขอคุ้มครองชั่วคราว:</strong> ร้องขอให้ศาลสั่งระงับการทำงานของ API ชั่วคราวก่อนพิพากษาตาม ป.วิ.พ. มาตรา 254 (2)</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Pleading Column 2: Defendant (จำเลย) -->
+      <div class="p-5 rounded-lg bg-surface-container-high space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="font-headline-sm text-headline-sm text-secondary flex items-center gap-1.5">
+            <span class="material-symbols-outlined text-[20px]">shield</span> ข้อต่อสู้ฝ่ายจำเลย (Defense Affirmative)
+          </span>
+          <span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-secondary-container/20 text-secondary">SAFE HARBOR</span>
+        </div>
+        <ul class="space-y-3 font-body-md text-body-md text-on-surface-variant">
+          <li class="flex items-start gap-2.5">
+            <span class="font-label-code text-secondary font-bold text-[13px]">§ 01</span>
+            <span class=""><strong>เหตุสุดวิสัยทางเทคนิค (Technological Force Majeure):</strong> ปรากฏการณ์ Hallucination ที่อยู่นอกเหนือสมรรถนะแห่งวิทยาการปัจจุบัน (State of the Art Defense)</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="font-label-code text-secondary font-bold text-[13px]">§ 02</span>
+            <span class=""><strong>กฎหมายปิดปาก (Promissory Estoppel):</strong> โจทก์ยินยอมรับความเสี่ยงใน Term of Service และยอมรับผลการวิเคราะห์โดยขาด Human Oversight</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <span class="font-label-code text-secondary font-bold text-[13px]">§ 03</span>
+            <span class=""><strong>ข้อจำกัดความรับผิดผู้ให้บริการโครงข่าย:</strong> อ้าง Safe Harbor ตาม พ.ร.บ. ว่าด้วยการกระทำความผิดเกี่ยวกับคอมพิวเตอร์ฯ มาตรา 15</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 7: JURISPRUDENCE & EVIDENCE ADMISSIBILITY -->
+<section class="space-y-6" id="section-precedent-evidence">
+  <div class="space-y-2">
+    <div class="flex items-center gap-2 font-label-caps text-label-caps text-secondary tracking-wider">
+      <span class="material-symbols-outlined text-[18px]">menu_book</span>
+      <span class="">CHAPTER 07 // JURISPRUDENCE &amp; PRECEDENT ANALYSIS</span>
+    </div>
+    <h2 class="font-headline-lg text-headline-lg text-on-surface">
+      7. การสืบพยานหลักฐานอิเล็กทรอนิกส์และบรรทัดฐานคำพิพากษา (Electronic Evidence Admissibility)
+    </h2>
+  </div>
+
+  <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+    การนำเสนอพยานหลักฐานดิจิทัลที่ผลิตขึ้นโดยอัลกอริทึม (AI-Generated Evidence) ต่อศาลไทย ต้องเผชิญกับเงื่อนไขความชอบด้วยกฎหมายตาม <strong>พ.ร.บ. ธุรกรรมทางอิเล็กทรอนิกส์ พ.ศ. 2544 มาตรา 11</strong> และข้อกำหนดว่าด้วยการรับฟังพยานหลักฐานตาม ป.วิ.พ. มาตรา 94 และ ป.วิ.อ. มาตรา 226/3
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="p-6 rounded-xl bg-surface-container-low space-y-3">
+      <div class="flex items-center gap-2 text-primary">
+        <span class="material-symbols-outlined text-[22px]">fingerprint</span>
+        <h4 class="font-headline-sm text-headline-sm text-on-surface">ห่วงโซ่การครอบครองพยาน</h4>
+      </div>
+      <span class="font-label-caps text-label-caps text-primary">CHAIN OF CUSTODY</span>
+      <p class="font-body-md text-body-md text-on-surface-variant">
+        การบันทึก Cryptographic Hash (SHA-256) และ Timestamping ของโมเดลและ Prompt ตั้งแต่จุดเกิดเหตุ เพื่อมิให้พยานหลักฐานถูกตัดทอนความน่าเชื่อถือตาม ป.วิ.พ. มาตรา 84/1
+      </p>
+    </div>
+
+    <div class="p-6 rounded-xl bg-surface-container-low space-y-3">
+      <div class="flex items-center gap-2 text-secondary">
+        <span class="material-symbols-outlined text-[22px]">psychology</span>
+        <h4 class="font-headline-sm text-headline-sm text-on-surface">พยานผู้เชี่ยวชาญศาล</h4>
+      </div>
+      <span class="font-label-caps text-label-caps text-secondary">EXPERT TESTIMONY (ป.วิ.พ. ม.98)</span>
+      <p class="font-body-md text-body-md text-on-surface-variant">
+        ความจำเป็นในการเบิกความของวิศวกรข้อมูลและนักวิจัย เพื่อคลี่คลายกลไก 'Black-box' ให้ประจักษ์แก่บัลลังก์ศาลตามหลัก Daubert Standard สากล
+      </p>
+    </div>
+
+    <div class="p-6 rounded-xl bg-surface-container-low space-y-3">
+      <div class="flex items-center gap-2 text-tertiary">
+        <span class="material-symbols-outlined text-[22px]">assured_workload</span>
+        <h4 class="font-headline-sm text-headline-sm text-on-surface">หลักปิดปากโดยสัญญา</h4>
+      </div>
+      <span class="font-label-caps text-label-caps text-tertiary">DOCTRINE OF ESTOPPEL</span>
+      <p class="font-body-md text-body-md text-on-surface-variant">
+        การเทียบเคียง ป.พ.พ. มาตรา 5 บัญญัติให้การใช้สิทธิต้องกระทำโดยสุจริต ป้องกันมิให้ผู้พัฒนาใช้ข้อสัญญาปฏิเสธความรับผิด (Exemption Clause) ที่ขัดต่อความสงบเรียบร้อย
+      </p>
+    </div>
+  </div>
+</section><div class="p-8 rounded-xl bg-surface-container-low shadow-xl space-y-6">
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+<img class="w-20 h-20 rounded-full object-cover shadow-xl flex-shrink-0" data-alt="Portrait of senior cyber law professor Dr. Nititham Technology wearing sleek dark rimmed spectacles, looking forward with confident intellectual expression, obsidian background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT2D9i12kHJzSr7JqCM_HTbTnUheoWY04MasqMBx_mec3Ezqcu0yVWOZyq8V-DZh_6u2IItw5ABzM-LAlWTLQAPyOBPa_3GFvhPNpkeCaiqaa998RWGA1HTQqGseooOF5RndDxIVVooOQjD3iArc-44rIFKd_mMlwGusssQCHwNsu9jNEcrFtQCyFRBsol7Lu69jd0fxCePlCzAZmKymozdD54OA7WICuuvadQMLt29W9yHIrCWyf5Dw">
+<div class="space-y-1 flex-1">
+<div class="flex items-center gap-2 flex-wrap">
+<h3 class="font-headline-md text-headline-md text-on-surface">ศ.ดร. นิติธรรม เทคโนโลยี</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-caps text-label-caps">FELLOW // LEGAL TECH LAB</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                ศาสตราจารย์พิเศษด้านกฎหมายปัญญาประดิษฐ์และนิติวิทยาศาสตร์คอมพิวเตอร์ อดีตที่ปรึกษากฎหมายโทรคมนาคมสากล ปัจจุบันดำรงตำแหน่งผู้อำนวยการฝ่ายวิจัยนิติบัญญัติไซเบอร์ สถาบัน NITI.TECH
+              </p>
+<div class="flex items-center gap-4 pt-2 font-label-code text-label-code text-primary">
+<a class="hover:underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">link</span>
+<span class="">ORCID: 0000-0002-8941-2094</span>
+</a>
+<a class="hover:underline flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[14px]">mail</span>
+<span class="">nititham@niti.tech</span>
+</a>
+</div>
+</div>
+</div>
+<div class="pt-4 flex flex-wrap items-center justify-between gap-4 font-label-code text-label-code text-on-surface-variant text-[11px]">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[16px]">verified_user</span>
+<span class="">บทวิเคราะห์นี้ผ่านการตรวจทานทางวิชาการ (Double-blind Peer Review) โดยคณะบรรณาธิการนิติศาสตร์ไซเบอร์</span>
+</div>
+<span class="text-outline">ARCHIVE REFERENCE: #NT-PUB-2025-Q1-094</span>
+</div>
+</div>
+<!-- STATUTORY DISCLAIMER -->
+<div class="p-5 rounded-lg bg-surface-container-lowest text-on-surface-variant text-[12px] space-y-1 font-body-md leading-relaxed">
+<div class="flex items-center gap-1.5 text-tertiary font-medium">
+<span class="material-symbols-outlined text-[16px]">info</span>
+<span class="">ข้อสงวนสิทธิ์ทางกฎหมาย (LEGAL DISCLAIMER)</span>
+</div>
+<p class="">
+            เนื้อหาและบทวิเคราะห์ในเอกสารนี้จัดทำขึ้นเพื่อวัตถุประสงค์ในการเผยแพร่องค์ความรู้ทางวิชาการและการพัฒนานโยบายสาธารณะเท่านั้น มิใช่การให้คำปรึกษาทางกฎหมายเฉพาะกรณี การนำข้อมูลหรือแนวทางในบทความนี้ไปปรับใช้ในกิจการหรือคดีความใดๆ ควรได้รับคำปรึกษาจากทนายความหรือผู้เชี่ยวชาญทางกฎหมายที่มีใบอนุญาตอย่างเป็นทางการ
+          </p>
+</div>
+</article>
+</div>
+</section>
+<!-- RELATED ARTICLES / ANALYTICAL CAROUSEL -->
+<section class="w-full bg-surface-container-lowest px-6 lg:px-12 py-16">
+<div class="max-w-7xl mx-auto space-y-8">
+<div class="flex flex-wrap items-end justify-between gap-4">
+<div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest">CONTINUED INVESTIGATION</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">บทวิเคราะห์และงานวิจัยที่เกี่ยวข้อง</h2>
+</div>
+<a class="font-label-code text-label-code text-primary hover:underline flex items-center gap-1" href="#">
+<span class="">ดูบทความทั้งหมดในหมวด AI &amp; BIG DATA</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Related 1 -->
+<a class="group p-5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between space-y-4" href="#">
+<div class="space-y-3">
+<div class="w-full h-44 rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Futuristic autonomous delivery vehicle scanning a neon-lit smart city intersection with digital sensor grid overlay, dark mood with subtle cyan and gold lights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKZ5OaRhJkwilI7vRdT8rWZK5LaPUZkVvPtDOaDiA8H81akQ2_UL9pQNGMIKUuioYv-efDYP2hm8FfDziL00ljZw7FiWxRE7gAJgd6CyaljD_ZyUaBSCkRxe2N2xrdKbVEjXAGBxl-zRXEpPFR6CEPGiPS2Q3OlWfMm-YSnyaKLU-d70bGw3WILD2rtzkGKsgu8mvUXEh3ikxr3qPAaXWEWZmqFJg1Tl7uj-9BKW7LV5Co5MW9cd47Bg">
+</div>
+<div class="flex items-center gap-2 font-label-caps text-label-caps text-secondary">
+<span class="">CYBER LITIGATION</span>
+<span class="">•</span>
+<span class="">FEB 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+              คดีอุบัติเหตุยานยนต์ไร้คนขับ (AV): ใครต้องติดคุกเมื่อโค้ดคำนวณเบรกผิดพลาด?
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+              เจาะลึกคำวินิจฉัยคดีตัวอย่างในต่างประเทศว่าด้วยความรับผิดทางอาญาของผู้เขียนอัลกอริทึม
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2 font-label-code text-label-code text-outline text-[12px]">
+<span class="">อ่าน 10 นาที</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Related 2 -->
+<a class="group p-5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between space-y-4" href="#">
+<div class="space-y-3">
+<div class="w-full h-44 rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Holographic visualization of cross-border data transfer cables spanning international oceans with cryptographic lock icons, moody obsidian theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2tv-UNC5CMGx5J_ebaJd9TlSbvavE--hQgnPYXvyLXXjmicrzyIEfgcqSX8zm6UzaBGvZAiDfD64uAmUJP7BxK5FaNNYcfKacjPmQFjLZ9E1C3ze1MulqJN9r_yFjOj5AtaQ2W4zZ8rZrYDdt72YwYPKDp7M4DcHALFDl_4aPeBZm_-eGJp-xwbKDJgYXepjucxmYsJJSTkYmJtNl_Tr6ELav8xzaeBs6xrjc3HykMbvvPPQUoWxQAQ">
+</div>
+<div class="flex items-center gap-2 font-label-caps text-label-caps text-primary">
+<span class="">PDPA &amp; DATA PRIVACY</span>
+<span class="">•</span>
+<span class="">JAN 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+              การโอนย้ายข้อมูลข้ามพรมแดน (Cross-border Data Flow) ตาม ม.28 และมาตรฐาน CBPRs
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+              แนวทางปฏิบัติใหม่ของคณะกรรมการคุ้มครองข้อมูลส่วนบุคคลสำหรับบริษัทข้ามชาติในภูมิภาคอาเซียน
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2 font-label-code text-label-code text-outline text-[12px]">
+<span class="">อ่าน 14 นาที</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Related 3 -->
+<a class="group p-5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between space-y-4" href="#">
+<div class="space-y-3">
+<div class="w-full h-44 rounded-lg overflow-hidden bg-surface-container-high">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Smart contract code snippet interacting with an arbitration gavel in a dark high-tech courtroom setting, golden circuitry illumination." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdFasuiND442k2XCVOHfyJJbudOCaB99aEQkluHUkV5ezzY7nCPCrlC-VPiSGAxlWhgGdiJ-E1o0ucjmDmtTdKG2SbMmxSuhs0ycn3UNBZRx68IZKputDgrT-nK0kYvf7FIW5yCPmzaz--WYiasTDBRPBOzEFb3dutv3XuA662ipb37hFnfCSn0lHMcL2aBQXn_almZ21IapUua7oV_NcQ2pCZDdCr5ECIQg547NvA4RMD7BA5U59gJg">
+</div>
+<div class="flex items-center gap-2 font-label-caps text-label-caps text-tertiary">
+<span class="">SMART CONTRACTS</span>
+<span class="">•</span>
+<span class="">JAN 2025</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface group-hover:text-primary transition-colors">
+              อนุญาโตตุลาการบนบล็อกเชน: การบังคับตามคำชี้ขาดของ Smart Contract ในศาลไทย
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">
+              ประเด็นการยอมรับหลักฐานการลงลายมือชื่อทางอิเล็กทรอนิกส์และธุรกรรมไร้ตัวกลาง
+            </p>
+</div>
+<div class="flex items-center justify-between pt-2 font-label-code text-label-code text-outline text-[12px]">
+<span class="">อ่าน 12 นาที</span>
+<span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE DISCUSSION & EXPERT PEER COMMENTS -->
+<section class="w-full px-6 lg:px-12 py-16">
+<div class="max-w-4xl mx-auto space-y-8">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-secondary tracking-widest">PEER DELIBERATION</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">การแลกเปลี่ยนความเห็นเชิงวิชาการ (3 ความเห็น)</h2>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container text-on-surface-variant font-label-caps text-label-caps">
+          CREDENTIALS VERIFIED ONLY
+        </span>
+</div>
+<!-- Comment Submission Box -->
+<div class="p-5 rounded-xl bg-surface-container-low space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-sm">
+            ME
+          </div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface text-[15px]">ร่วมแสดงความเห็นในฐานะผู้เชี่ยวชาญ</div>
+<div class="font-label-code text-label-code text-outline text-[11px]">เข้าสู่ระบบด้วย Digital Identity หรือ บัตรสภาทนายความ</div>
+</div>
+</div>
+<textarea class="w-full p-3 rounded bg-surface-container-lowest text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-primary" placeholder="พิมพ์ข้อคิดเห็นทางกฎหมายหรือประเด็นโต้แย้งของคุณที่นี่..." rows="3"></textarea>
+<div class="flex justify-between items-center">
+<span class="text-[11px] font-label-code text-on-surface-variant">Markdown Supported • Verified Counsel Badge Displayed</span>
+<button class="px-4 py-2 rounded bg-primary text-on-primary font-label-code text-label-code font-semibold hover:bg-primary-container hover:text-on-primary-container transition-colors">
+            SUBMIT ARGUMENT
+          </button>
+</div>
+</div>
+<!-- Existing Comments Thread -->
+<div class="space-y-4">
+<!-- Comment 1 -->
+<div class="p-5 rounded-xl bg-surface-container-low space-y-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-secondary font-bold">
+                กน
+              </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface text-[15px]">กฤษฎา นิติกิจ</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-secondary font-label-caps text-label-caps">PARTNER // TECH LAW FIRM</span>
+</div>
+<div class="font-label-code text-label-code text-outline text-[11px]">24 กุมภาพันธ์ 2025 • 14:32 น.</div>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 font-label-code text-label-code text-[12px]">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span>
+<span class="">18</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            เห็นด้วยกับอาจารย์นิติธรรมอย่างยิ่งในประเด็นเรื่อง Strict Liability ครับ หากร่างกฎหมายไม่กำหนดข้อยกเว้นที่ชัดเจนสำหรับ Open-weight Models ภาค Startup ในไทยจะหยุดการพัฒนาโมเดลของตนเองทันที เพราะไม่มีบริษัทใดสามารถรับความเสี่ยงจากการถูกฟ้องร้องแบบผลักภาระการพิสูจน์ได้
+          </p>
+</div>
+<!-- Comment 2 -->
+<div class="p-5 rounded-xl bg-surface-container-low space-y-3">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary font-bold">
+                พร
+              </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface text-[15px]">ดร. พรไพลิน เลิศปัญญา</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-highest text-primary font-label-caps text-label-caps">AI RESEARCH SCIENTIST</span>
+</div>
+<div class="font-label-code text-label-code text-outline text-[11px]">24 กุมภาพันธ์ 2025 • 16:15 น.</div>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1 font-label-code text-label-code text-[12px]">
+<span class="material-symbols-outlined text-[16px]">thumb_up</span>
+<span class="">24</span>
+</button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            ในส่วนของ TDM Opt-Out Protocol ทางเทคนิคการตรวจจับ robots.txt มักไม่ได้ผลกับการเทรนแบบ Offline Crawl จาก Common Crawl ที่มีอยู่แล้ว การออกกฎหมายต้องคำนึงถึง Timestamp ของข้อมูลที่ถูกจัดเก็บไว้ก่อนหน้าวันที่ร่าง พ.ร.บ. มีผลบังคับใช้ด้วย มิฉะนั้นจะเกิดสุญญากาศทางปฏิบัติ
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CITATION / EXPORT MODAL DIALOG (CLIENT INTERACTION) -->
+<div class="fixed inset-0 z-50 bg-surface/80 backdrop-blur-md hidden items-center justify-center p-4" id="citation-dialog">
+<div class="max-w-xl w-full p-6 rounded-2xl bg-surface-container-high shadow-2xl space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">format_quote</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">คัดลอกคำอ้างอิงเชิงวิชาการ (Citation)</span>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface" id="close-citation-dialog">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-4">
+<div>
+<span class="font-label-caps text-label-caps text-primary">รูปแบบ APA 7TH EDITION</span>
+<div class="p-3 rounded bg-surface-container-lowest text-on-surface font-label-code text-label-code text-[12px] mt-1 select-all">
+            นิติธรรม เทคโนโลยี. (2025, 24 กุมภาพันธ์). ถอดรหัสร่าง พ.ร.บ. ปัญญาประดิษฐ์ (AI Act) ฉบับประเทศไทย: ความรับผิดทางละเมิดและลิขสิทธิ์โมเดล GenAI. NITI.TECH Legal Hub. https://niti.tech/ai-act-thailand-analysis
+          </div>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary">รูปแบบการอ้างอิงตำราและวารสารกฎหมายไทย</span>
+<div class="p-3 rounded bg-surface-container-lowest text-on-surface font-label-code text-label-code text-[12px] mt-1 select-all">
+            นิติธรรม เทคโนโลยี, “ถอดรหัสร่าง พ.ร.บ. ปัญญาประดิษฐ์ (AI Act) ฉบับประเทศไทย: ความรับผิดทางละเมิดและลิขสิทธิ์โมเดล GenAI”, วารสารนิติศาสตร์ไซเบอร์ NITI.TECH (24 กุมภาพันธ์ 2568), สืบค้นจาก https://niti.tech
+          </div>
+</div>
+</div>
+<div class="flex justify-end gap-3 pt-2 font-label-code text-label-code">
+<button class="px-4 py-2 rounded bg-primary text-on-primary font-semibold hover:bg-primary-container hover:text-on-primary-container transition-colors flex items-center gap-1.5" id="copy-citation-action">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+<span class="">คัดลอกลงคลิปบอร์ด</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- INTERACTIVE SCRIPTS -->
+<script>
+  // Bookmark button toggle micro-interaction
+  const bookmarkBtn = document.getElementById('bookmark-btn');
+  if (bookmarkBtn) {
+    let saved = false;
+    bookmarkBtn.addEventListener('click', () => {
+      saved = !saved;
+      const icon = bookmarkBtn.querySelector('.material-symbols-outlined');
+      if (saved) {
+        icon.innerText = 'bookmark';
+        icon.style.fontVariationSettings = "'FILL' 1";
+        bookmarkBtn.classList.add('text-primary');
+      } else {
+        icon.innerText = 'bookmark_border';
+        icon.style.fontVariationSettings = "'FILL' 0";
+        bookmarkBtn.classList.remove('text-primary');
+      }
+    });
+  }
+
+  // Audio Reader Toggle
+  const audioBtn = document.getElementById('audio-toggle-btn');
+  if (audioBtn) {
+    let isPlaying = false;
+    audioBtn.addEventListener('click', () => {
+      isPlaying = !isPlaying;
+      const icon = audioBtn.querySelector('.material-symbols-outlined');
+      icon.innerText = isPlaying ? 'pause' : 'play_arrow';
+    });
+  }
+
+  // Citation Modal Handler
+  const citationBtn = document.getElementById('citation-modal-btn');
+  const citationDialog = document.getElementById('citation-dialog');
+  const closeCitationDialog = document.getElementById('close-citation-dialog');
+  const copyCitationAction = document.getElementById('copy-citation-action');
+
+  if (citationBtn && citationDialog && closeCitationDialog) {
+    citationBtn.addEventListener('click', () => {
+      citationDialog.classList.remove('hidden');
+      citationDialog.classList.add('flex');
+    });
+
+    closeCitationDialog.addEventListener('click', () => {
+      citationDialog.classList.add('hidden');
+      citationDialog.classList.remove('flex');
+    });
+
+    if (copyCitationAction) {
+      copyCitationAction.addEventListener('click', () => {
+        const textToCopy = "นิติธรรม เทคโนโลยี. (2025). ถอดรหัสร่าง พ.ร.บ. ปัญญาประดิษฐ์ (AI Act) ฉบับประเทศไทย. NITI.TECH";
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          copyCitationAction.innerText = "คัดลอกเรียบร้อยแล้ว!";
+          setTimeout(() => {
+            copyCitationAction.innerHTML = '<span class="material-symbols-outlined text-[16px]">content_copy</span><span>คัดลอกลงคลิปบอร์ด</span>';
+            citationDialog.classList.add('hidden');
+            citationDialog.classList.remove('flex');
+          }, 1000);
+        });
+      });
+    }
+  }
+
+  // Share Web API Trigger
+  const shareBtn = document.getElementById('share-btn');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', () => {
+      if (navigator.share) {
+        navigator.share({
+          title: 'ถอดรหัสร่าง พ.ร.บ. ปัญญาประดิษฐ์ (AI Act) ฉบับประเทศไทย - NITI.TECH',
+          text: 'บทวิเคราะห์ความรับผิดทางละเมิดและลิขสิทธิ์โมเดล GenAI โดย ศ.ดร. นิติธรรม เทคโนโลยี',
+          url: window.location.href,
+        }).catch(() => {});
+      } else {
+        navigator.clipboard.writeText(window.location.href);
+        alert('คัดลอกลิงก์บทความเรียบร้อยแล้ว');
+      }
+    });
+  }
+
+  // PDF Download simulation
+  const pdfBtn = document.getElementById('pdf-download-btn');
+  if (pdfBtn) {
+    pdfBtn.addEventListener('click', () => {
+      const originalHtml = pdfBtn.innerHTML;
+      pdfBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span><span>กำลังสร้าง...</span>';
+      setTimeout(() => {
+        pdfBtn.innerHTML = originalHtml;
+        window.print();
+      }, 800);
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-gutter-desktop mb-space-2xl"><div class="lg:col-span-4 space-y-space-md"><div class="flex items-center gap-space-sm"><img alt="nititech-logo-03.png" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQlWGCByEdWtTKpBZUCWCSh6I0GCLQw6n2GYUsoU3uyUdfypWUxAUxAyWnk2yL-h77XrsQhS7NpkiuA8qa5ZW83sN3fVuOklk2NtpEMn3NUffnK6p7DdYcR9F5KUfcVLCsl8ozk-5tlFctUZd3R9trDhcS_O8tSKXMg7oZKjddI8UoNp0hY261i3SRFDqvvOVt1QrLhQuZM1giBZANq19vkgUMi8Y4tKDyBA-xdUqS8TGGa-o6TK29pbQHPZPErBSHVKg"><span class="font-headline-sm text-headline-sm text-on-surface">NITI<span class="text-primary">.TECH</span></span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">สถาบันสารสนเทศและการวิจัยนิติศาสตร์ไซเบอร์ ศูนย์รวมองค์ความรู้ด้านกฎหมายปัญญาประดิษฐ์ ธรรมาภิบาลข้อมูล และคดีความมั่นคงไซเบอร์ระดับชาติ</p><div class="flex items-center gap-space-sm"><span class="font-label-caps text-label-caps px-space-xs py-0.5 rounded bg-surface-container-high text-secondary">STATUS // LIVE_TELEMETRY</span><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span></div></div><div class="lg:col-span-3 space-y-space-sm"><div class="font-label-caps text-label-caps text-on-surface">INVESTIGATIVE DOMAINS</div><ul class="space-y-space-xs font-body-md text-body-md"><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">AI Liability &amp; Algorithmic Audit</li><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">PDPA Enforcement &amp; Consent Frameworks</li><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Smart Contract Arbitration &amp; DeFi Law</li><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Digital Forensics &amp; Incident Protocols</li></ul></div><div class="lg:col-span-2 space-y-space-sm"><div class="font-label-caps text-label-caps text-on-surface">REPOSITORIES</div><ul class="space-y-space-xs font-body-md text-body-md"><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Legal Codebase</li><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Precedent Matrix</li><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Regulatory Gazettes</li><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">API &amp; Machine Law</li></ul></div><div class="lg:col-span-3 space-y-space-sm"><div class="font-label-caps text-label-caps text-on-surface">EXECUTIVE DISPATCH</div><p class="font-body-md text-body-md text-on-surface-variant">รับสรุปคดีและคำวินิจฉัยด้านไซเบอร์ล่าสุดทุกสัปดาห์</p><div class="flex items-center gap-space-xs"><div class="relative flex-1"><input class="w-full bg-surface-container rounded px-space-sm py-2 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none" placeholder="counsel@firm.co" type="text"></div><button class="px-space-md py-2 bg-primary rounded font-label-code text-label-code text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-colors">JOIN</button></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-label-code text-label-code"><div class="flex items-center gap-space-md"><span class="">© 2025 NITI.TECH LEGAL LABS</span><span class="text-outline">//</span><span class="">SYSTEM PROTOCOL V4.2</span></div><div class="flex items-center gap-space-lg"><span class="">TERMS OF SERVICE</span><span class="">CRYPTOGRAPHIC DISCLOSURE</span><span class="">FEED STATUS: NOMINAL</span></div></div></div></footer>
+
+
+
+
+
+</body></html>

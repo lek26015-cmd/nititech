@@ -1,0 +1,802 @@
+<!DOCTYPE html><html class="dark" lang="th"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "inverse-surface": "#e3e2e6",
+          "surface-bright": "#38393c",
+          "on-secondary-fixed": "#002022",
+          "secondary-fixed-dim": "#00dbe9",
+          "surface-dim": "#121316",
+          "inverse-primary": "#735c00",
+          "outline": "#99907c",
+          "surface": "#121316",
+          "surface-container-low": "#1b1b1f",
+          "surface-tint": "#e9c349",
+          "primary-container": "#d4af37",
+          "on-secondary-container": "#00686f",
+          "primary-fixed-dim": "#e9c349",
+          "primary-fixed": "#ffe088",
+          "tertiary-fixed": "#ffdbc8",
+          "on-tertiary-fixed": "#321200",
+          "on-secondary": "#00363a",
+          "surface-container": "#1f1f23",
+          "on-primary-fixed-variant": "#574500",
+          "on-tertiary-fixed-variant": "#753400",
+          "on-tertiary": "#522300",
+          "secondary-fixed": "#7df4ff",
+          "surface-variant": "#343538",
+          "on-primary-container": "#554300",
+          "primary": "#f2ca50",
+          "on-surface-variant": "#d0c5af",
+          "tertiary-container": "#ff9a59",
+          "surface-container-lowest": "#0d0e11",
+          "tertiary-fixed-dim": "#ffb68b",
+          "on-error-container": "#ffdad6",
+          "surface-container-highest": "#343538",
+          "secondary-container": "#00eefc",
+          "on-error": "#690005",
+          "on-primary-fixed": "#241a00",
+          "error-container": "#93000a",
+          "on-tertiary-container": "#723300",
+          "outline-variant": "#4d4635",
+          "secondary": "#d3fbff",
+          "inverse-on-surface": "#303034",
+          "background": "#121316",
+          "error": "#ffb4ab",
+          "on-secondary-fixed-variant": "#004f54",
+          "on-background": "#e3e2e6",
+          "surface-container-high": "#292a2d",
+          "tertiary": "#ffc19e",
+          "on-surface": "#e3e2e6",
+          "on-primary": "#3c2f00"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.125rem",
+          "lg": "0.25rem",
+          "xl": "0.5rem",
+          "full": "0.75rem"
+        },
+        "spacing": {
+          "margin-tablet": "2.5rem",
+          "space-sm": "0.5rem",
+          "space-xs": "0.25rem",
+          "space-3xl": "6rem",
+          "gutter-desktop": "2rem",
+          "space-lg": "1.5rem",
+          "space-md": "1rem",
+          "margin": "1rem",
+          "gutter": "1.5rem",
+          "space-xl": "2.5rem",
+          "margin-desktop": "4rem",
+          "space-2xl": "4rem"
+        },
+        "fontFamily": {
+          "label-caps": [
+            "JetBrains Mono"
+          ],
+          "headline-xl-mobile": [
+            "Newsreader"
+          ],
+          "headline-md": [
+            "Plus Jakarta Sans"
+          ],
+          "display-hero-mobile": [
+            "Newsreader"
+          ],
+          "body-md": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-xl": [
+            "Newsreader"
+          ],
+          "headline-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "headline-sm": [
+            "Plus Jakarta Sans"
+          ],
+          "body-lg": [
+            "Plus Jakarta Sans"
+          ],
+          "label-code": [
+            "JetBrains Mono"
+          ],
+          "display-hero": [
+            "Newsreader"
+          ],
+          "body-xl": [
+            "Newsreader"
+          ]
+        },
+        "fontSize": {
+          "label-caps": [
+            "10px",
+            {
+              "lineHeight": "14px",
+              "letterSpacing": "0.12em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-xl-mobile": [
+            "32px",
+            {
+              "lineHeight": "38px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-hero-mobile": [
+            "40px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "300"
+            }
+          ],
+          "body-md": [
+            "14px",
+            {
+              "lineHeight": "22px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-xl": [
+            "48px",
+            {
+              "lineHeight": "54px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg": [
+            "32px",
+            {
+              "lineHeight": "40px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "headline-sm": [
+            "18px",
+            {
+              "lineHeight": "26px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "16px",
+            {
+              "lineHeight": "26px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "label-code": [
+            "12px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.06em",
+              "fontWeight": "500"
+            }
+          ],
+          "display-hero": [
+            "72px",
+            {
+              "lineHeight": "76px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "300"
+            }
+          ],
+          "body-xl": [
+            "20px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container"><div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" id="tech-gold-bg"><style>@keyframes tech-drift{0%{transform:translateY(0) translateX(0);}50%{transform:translateY(-24px) translateX(12px);}100%{transform:translateY(0) translateX(0);}}@keyframes circuit-glow{0%,100%{opacity:0.25;}50%{opacity:0.5;}}.circuit-grid{background-image:linear-gradient(to right,rgba(212,175,55,0.04) 1px,transparent 1px),linear-gradient(to bottom,rgba(212,175,55,0.04) 1px,transparent 1px);background-size:48px 48px;animation:tech-drift 24s ease-in-out infinite;}.circuit-dots{background-image:radial-gradient(circle,rgba(242,202,80,0.12) 1px,transparent 1px);background-size:96px 96px;animation:circuit-glow 8s ease-in-out infinite;}</style><div class="absolute inset-0 circuit-grid pointer-events-none"></div><div class="absolute inset-0 circuit-dots pointer-events-none"></div><svg class="absolute inset-0 w-full h-full opacity-10 pointer-events-none" xmlns="http://www.w3.org/2000/svg"><defs><pattern height="160" id="gold-circuit-pattern" patternUnits="userSpaceOnUse" width="160"><path d="M0 80 H60 L80 100 H160 M80 0 V40 L100 60 V160 M40 160 V120 L20 100 V0" fill="none" stroke="#d4af37" stroke-dasharray="4 8" stroke-width="1"></path><circle cx="60" cy="80" fill="#f2ca50" r="2.5"></circle><circle cx="80" cy="100" fill="#f2ca50" r="2.5"></circle><circle cx="100" cy="60" fill="#f2ca50" r="2.5"></circle></pattern></defs><rect fill="url(#gold-circuit-pattern)" height="100%" width="100%"></rect></svg></div><header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-lg flex-shrink-0"><a class="flex items-center gap-space-sm" data-path="home" href="#"><img alt="NITI.TECH Official Emblem" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQlWGCByEdWtTKpBZUCWCSh6I0GCLQw6n2GYUsoU3uyUdfypWUxAUxAyWnk2yL-h77XrsQhS7NpkiuA8qa5ZW83sN3fVuOklk2NtpEMn3NUffnK6p7DdYcR9F5KUfcVLCsl8ozk-5tlFctUZd3R9trDhcS_O8tSKXMg7oZKjddI8UoNp0hY261i3SRFDqvvOVt1QrLhQuZM1giBZANq19vkgUMi8Y4tKDyBA-xdUqS8TGGa-o6TK29pbQHPZPErBSHVKg"><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface">NITI<span class="text-primary">.TECH</span></span></a><span class="hidden xl:inline-block font-label-caps text-label-caps px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant">LEGAL_TECH // CYBER_HUB</span></div><nav class="hidden lg:flex items-center gap-space-md flex-shrink" data-active-classes="bg-primary-container text-on-primary-container rounded px-space-sm py-1.5"><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1 px-space-xs font-body-md text-body-md" data-path="home" href="#">หน้าแรก</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1 px-space-xs font-body-md text-body-md" data-path="ai-and-big-data" href="#">AI &amp; Big Data</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1 px-space-xs font-body-md text-body-md" data-path="pdpa-and-data-governance" href="#">PDPA &amp; Data Governance</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1 px-space-xs font-body-md text-body-md" data-path="smart-contracts-and-web3" href="#">Smart Contracts &amp; Web3</a><a class="text-on-surface-variant hover:text-on-surface transition-colors py-1 px-space-xs font-body-md text-body-md" data-path="cyber-litigation-and-operations" href="#">คดี &amp; ปฏิบัติการไซเบอร์</a></nav><div class="flex items-center gap-space-sm flex-shrink-0"><button class="flex items-center gap-space-xs px-space-sm py-1.5 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface transition-all" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="hidden sm:inline font-label-code text-label-code">Search</span><kbd class="font-label-caps text-label-caps px-1 py-0.5 rounded bg-surface-container-lowest text-on-surface-variant">⌘K</kbd></button><a class="p-[1px] rounded bg-gradient-to-r from-primary via-tertiary-container to-primary-container inline-flex transition-transform hover:scale-[1.02]" data-path="subscribe-briefing" href="#"><span class="px-space-md py-1.5 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container hover:text-on-surface font-label-code text-label-code flex items-center gap-space-xs tracking-wider">SUBSCRIBE BRIEFING</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)] relative z-10"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[340px] bg-primary/10 rounded-full blur-[140px] pointer-events-none"></div>
+<div class="absolute top-1/4 -right-24 w-[420px] h-[280px] bg-secondary-container/10 rounded-full blur-[120px] pointer-events-none"></div>
+<!-- Main Content Area -->
+<div class="max-w-7xl mx-auto px-6 lg:px-12 py-space-xl relative z-10 space-y-space-2xl">
+<!-- SECTION 1: HEADER & TELEMETRY STATUS -->
+<section class="space-y-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container animate-ping"></span>
+<span class="font-label-caps text-label-caps tracking-widest text-secondary-fixed">PDPA_SEC // TRUST_TELEMETRY</span>
+<span class="font-label-code text-label-code text-outline">• REGULATORY SPEC 2025</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-label-caps text-label-caps px-space-sm py-1 rounded bg-surface-container-high text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+              ISO/IEC 27701 &amp; PDPA COMPLIANT
+            </span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-end">
+<div class="lg:col-span-8 space-y-space-sm">
+<div class="font-label-code text-label-code text-primary uppercase tracking-wider">
+              [SEC_CMP-PORTAL] // ศูนย์บริหารจัดการความยินยอมแห่งชาตินิติดิจิทัล
+            </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight leading-tight">
+              ศูนย์จัดการความยินยอมและ<br>
+<span class="text-primary italic">การคุ้มครองข้อมูลส่วนบุคคล</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+              NITI.TECH ปฏิบัติตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA) อย่างเคร่งครัด ท่านมีสิทธิควบคุม กำหนด และเพิกถอนความยินยอมในการประมวลผลข้อมูลส่วนบุคคลได้แบบละเอียดทุกมิติ
+            </p>
+</div>
+<!-- Quick Telemetry Card -->
+<div class="lg:col-span-4 bg-surface-container-low p-space-lg rounded-xl shadow-xl space-y-space-md relative overflow-hidden"><div class="absolute -right-6 -bottom-6 w-36 h-36 opacity-10 pointer-events-none overflow-hidden"><img alt="Official Crest Watermark" class="w-full h-full object-contain filter drop-shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQlWGCByEdWtTKpBZUCWCSh6I0GCLQw6n2GYUsoU3uyUdfypWUxAUxAyWnk2yL-h77XrsQhS7NpkiuA8qa5ZW83sN3fVuOklk2NtpEMn3NUffnK6p7DdYcR9F5KUfcVLCsl8ozk-5tlFctUZd3R9trDhcS_O8tSKXMg7oZKjddI8UoNp0hY261i3SRFDqvvOVt1QrLhQuZM1giBZANq19vkgUMi8Y4tKDyBA-xdUqS8TGGa-o6TK29pbQHPZPErBSHVKg"></div><div class="relative z-10 space-y-space-md"><div class="flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="NITI.TECH Emblem Crest" class="h-5 w-5 object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQlWGCByEdWtTKpBZUCWCSh6I0GCLQw6n2GYUsoU3uyUdfypWUxAUxAyWnk2yL-h77XrsQhS7NpkiuA8qa5ZW83sN3fVuOklk2NtpEMn3NUffnK6p7DdYcR9F5KUfcVLCsl8ozk-5tlFctUZd3R9trDhcS_O8tSKXMg7oZKjddI8UoNp0hY261i3SRFDqvvOVt1QrLhQuZM1giBZANq19vkgUMi8Y4tKDyBA-xdUqS8TGGa-o6TK29pbQHPZPErBSHVKg"><span class="font-label-caps text-label-caps text-outline">PRIVACY TRUST SCORE</span></div><span class="font-label-code text-label-code text-primary font-bold">100% AUDITED</span></div><div class="flex items-center gap-space-md"><div class="relative w-16 h-16 flex items-center justify-center flex-shrink-0"><svg class="w-16 h-16 transform -rotate-90" viewBox="0 0 36 36"><path class="text-surface-container-highest" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3"></path><path class="text-primary" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="100, 100" stroke-linecap="round" stroke-width="3"></path></svg><span class="absolute font-label-code text-label-code text-on-surface font-bold">100%</span></div><div class="space-y-0.5"><div class="font-label-caps text-label-caps text-on-surface flex items-center gap-1.5">CERTIFIED LEGAL LABS<span class="material-symbols-outlined text-primary text-[14px]">verified</span></div><div class="font-body-md text-body-md text-on-surface-variant text-xs">ตราประทับรับรอง Cyber Law Institute &amp; PDPA Compliance</div></div></div><div class="p-space-xs rounded bg-surface-container space-y-1"><div class="flex items-center justify-between font-label-code text-label-code text-[11px] text-outline"><span class="">USER_PSEUDONYM_ID:</span><span class="text-secondary select-all" id="user-hash">DPO-AUTH-882194</span></div><div class="flex items-center justify-between font-label-code text-label-code text-[11px] text-outline"><span class="">LAST_SYNC:</span><span class="text-on-surface" id="last-sync-time">2025-05-14 16:42:09 UTC</span></div></div></div></div>
+</div>
+</section>
+<!-- SECTION 2: CORE INTERACTIVE CONSENT CONTROLS -->
+<section class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<div class="font-label-caps text-label-caps text-primary tracking-widest">[MODULE_01] // GRANULAR_CONSENT</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">การจัดหมวดหมู่และการอนุญาตข้อมูล (Consent Toggles)</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-code text-label-code text-on-surface-variant">สถานะบันทึก:</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-label-caps text-label-caps" id="badge-pref-status">กำหนดเอง (CUSTOMIZED)</span>
+</div>
+</div>
+<div class="space-y-space-md" id="consent-accordion-group">
+<!-- Item 1: Strictly Necessary (Always On) -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-lg transition-all">
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[22px]">lock</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">คุกกี้และข้อมูลที่จำเป็นอย่างยิ่ง (Strictly Necessary)</h3>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-label-caps text-label-caps">MANDATORY</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+                    จำเป็นสำหรับการทำงานขั้นพื้นฐานของระบบความมั่นคงไซเบอร์ การยืนยันตัวตนเซสชันเข้ารหัส และการรักษาความปลอดภัยของระบบคดีความ ไม่สามารถปิดการใช้งานได้
+                  </p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-md flex-shrink-0">
+<span class="font-label-code text-label-code text-primary uppercase">เปิดใช้งานถาวร (ALWAYS ACTIVE)</span>
+<button aria-label="Toggle details" class="w-8 h-8 rounded bg-surface-container text-on-surface hover:bg-surface-container-high flex items-center justify-center toggle-accordion" data-target="details-necessary" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200" id="icon-necessary">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Expanded Details -->
+<div class="hidden bg-surface-container p-space-lg space-y-space-sm" id="details-necessary">
+<div class="font-label-code text-label-code text-outline uppercase">[LEGAL_JUSTIFICATION] พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 มาตรา 24 (5) ความจำเป็นเพื่อประโยชน์โดยชอบด้วยกฎหมาย</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md font-body-md text-body-md text-xs">
+<div class="bg-surface-container-lowest p-space-sm rounded">
+<span class="font-label-code text-label-code text-primary block">SESSION_TOKEN_HASH</span>
+<span class="text-on-surface-variant">วัตถุประสงค์: รักษาความปลอดภัยของเครือข่ายและสิทธิคดี</span>
+<span class="text-outline block mt-1">อายุ: สิ้นสุดตามเซสชัน (Session)</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded">
+<span class="font-label-code text-label-code text-primary block">CONSENT_STATE_ID</span>
+<span class="text-on-surface-variant">วัตถุประสงค์: จดจำตัวเลือกการยินยอมของท่านตามกฎหมาย</span>
+<span class="text-outline block mt-1">อายุ: 365 วัน (1 ปี)</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded">
+<span class="font-label-code text-label-code text-primary block">SECURITY_CHALLENGE</span>
+<span class="text-on-surface-variant">วัตถุประสงค์: ป้องกันภัยคุกคาม DDoS และ Botnet</span>
+<span class="text-outline block mt-1">อายุ: 24 ชั่วโมง</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 2: Academic Analytics & Performance -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-lg transition-all">
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center flex-shrink-0 text-secondary-container">
+<span class="material-symbols-outlined text-[22px]">analytics</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">การวิเคราะห์เชิงสถิติและประสิทธิภาพวิชาการ (Academic Analytics)</h3>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-secondary font-label-caps text-label-caps">ANONYMIZED</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+                    ช่วยให้สถาบันวัดผลการอ่านวิจัยนิติศาสตร์ไซเบอร์ ตรวจวัดเวลาการเข้าถึงเอกสารทางกฎหมาย และปรับปรุงความเสถียรของฐานข้อมูลคดีแบบไม่ระบุตัวบุคคล
+                  </p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-md flex-shrink-0">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggle-analytics" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-primary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-fixed after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+<button aria-label="Toggle details" class="w-8 h-8 rounded bg-surface-container text-on-surface hover:bg-surface-container-high flex items-center justify-center toggle-accordion" data-target="details-analytics" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Expanded Details -->
+<div class="hidden bg-surface-container p-space-lg space-y-space-sm" id="details-analytics">
+<div class="font-label-code text-label-code text-outline uppercase">[LEGAL_JUSTIFICATION] ฐานความยินยอม (Consent) มาตรา 19 โดยผ่านกระบวนการ Pseudonymization</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md font-body-md text-body-md text-xs">
+<div class="bg-surface-container-lowest p-space-sm rounded">
+<span class="font-label-code text-label-code text-secondary block">_NITILABS_GA_METRIC</span>
+<span class="text-on-surface-variant">รวบรวมพฤติกรรมการค้นคว้าฎีกาและสถิติการใช้งานเครื่องมือ AI Audit</span>
+<span class="text-outline block mt-1">อายุ: 90 วัน | ผู้ควบคุม: NITI.TECH Legal Labs</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded">
+<span class="font-label-code text-label-code text-secondary block">_PERF_TELEMETRY</span>
+<span class="text-on-surface-variant">ตรวจจับ latency ของ node สัญญาอัจฉริยะและการกระจายข้อมูลข้อกฎหมาย</span>
+<span class="text-outline block mt-1">อายุ: 30 วัน | ผู้ควบคุม: NITI.TECH Network Team</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Item 3: Personalized Legal Dispatch -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-lg transition-all">
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center flex-shrink-0 text-tertiary-container">
+<span class="material-symbols-outlined text-[22px]">tune</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">การนำเสนอเนื้อหากฎหมายเฉพาะบุคคล (Personalized Dispatch)</h3>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-tertiary font-label-caps text-label-caps">PREFERENCE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+                    จดจำสาขาวิชากฎหมายที่ท่านเชี่ยวชาญ (เช่น AI Ethics, FinTech, Web3 Arbitration) เพื่อคัดกรองสรุปคำวินิจฉัยและรายงานเชิงลึกที่สอดคล้องกับความสนใจของท่าน
+                  </p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-md flex-shrink-0">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggle-personalization" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-primary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-fixed after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+<button aria-label="Toggle details" class="w-8 h-8 rounded bg-surface-container text-on-surface hover:bg-surface-container-high flex items-center justify-center toggle-accordion" data-target="details-personalization" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Expanded Details -->
+<div class="hidden bg-surface-container p-space-lg space-y-space-sm" id="details-personalization">
+<div class="font-label-code text-label-code text-outline uppercase">[LEGAL_JUSTIFICATION] ฐานความยินยอมโดยชัดแจ้งเพื่อการคัดกรองข้อมูลเฉพาะบุคคล</div>
+<div class="bg-surface-container-lowest p-space-sm rounded font-body-md text-body-md text-xs">
+<span class="font-label-code text-label-code text-tertiary block">PREF_PRACTICE_AREA</span>
+<span class="text-on-surface-variant">เก็บบันทึกแท็กข้อกฎหมาย (Tags) ที่ท่านบุ๊กมาร์กไว้ในคลังความรู้</span>
+<span class="text-outline block mt-1">อายุ: 180 วัน | ผู้ควบคุม: NITI.TECH Content Engineering</span>
+</div>
+</div>
+</div>
+<!-- Item 4: Third-party Partner & Research Network -->
+<div class="bg-surface-container-low rounded-xl overflow-hidden shadow-lg transition-all">
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-10 h-10 rounded bg-surface-container flex items-center justify-center flex-shrink-0 text-outline">
+<span class="material-symbols-outlined text-[22px]">hub</span>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">การเชื่อมโยงข้อมูลพันธมิตรสภากฎหมายและวิชาการ (Research Exchange)</h3>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-outline font-label-caps text-label-caps">EXTERNAL_APIS</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">
+                    ส่งต่อดัชนีหัวข้อวิจัยทางกฎหมายและสถิติไม่ระบุตัวบุคคลไปยังสถาบันการศึกษาและศาลจำลองไซเบอร์ เพื่อร่วมกันพัฒนาโมเดล AI นิติศาสตร์ระดับประเทศ
+                  </p>
+</div>
+</div>
+<div class="flex items-center justify-between md:justify-end gap-space-md flex-shrink-0">
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" id="toggle-partners" type="checkbox">
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-primary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-on-primary-fixed after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+<button aria-label="Toggle details" class="w-8 h-8 rounded bg-surface-container text-on-surface hover:bg-surface-container-high flex items-center justify-center toggle-accordion" data-target="details-partners" type="button">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200">expand_more</span>
+</button>
+</div>
+</div>
+<!-- Expanded Details -->
+<div class="hidden bg-surface-container p-space-lg space-y-space-sm" id="details-partners">
+<div class="font-label-code text-label-code text-outline uppercase">[LEGAL_JUSTIFICATION] ฐานความยินยอมแยกเฉพาะ (Explicit Opt-in Consent)</div>
+<div class="bg-surface-container-lowest p-space-sm rounded font-body-md text-body-md text-xs">
+<span class="font-label-code text-label-code text-outline block">ACADEMIC_FEDERATED_SYNC</span>
+<span class="text-on-surface-variant">เครือข่ายความร่วมมือ: Thai Cyber Law Consortium, Thammasat &amp; Chulalongkorn Legal Tech Labs</span>
+<span class="text-outline block mt-1">อายุ: จนกว่าจะเพิกถอนสิทธิ | นโยบาย: เข้ารหัสข้อมูลก่อนส่งออก 100%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: DATA SUBJECT RIGHTS (DSR) PORTAL -->
+<section class="space-y-space-lg">
+<div class="space-y-space-xs">
+<div class="font-label-caps text-label-caps text-secondary-fixed tracking-widest">[MODULE_02] // DSR_ENFORCEMENT</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">ระบบยื่นคำร้องใช้สิทธิของเจ้าของข้อมูล (PDPA Rights Portal)</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+            ท่านสามารถใช้สิทธิตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 ได้โดยตรงผ่านระบบอัตโนมัติ โดยสถาบันจะดำเนินการตรวจสอบและตอบกลับภายใน 30 วันตามกฎหมาย
+          </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Right 1: Access & Portability -->
+<div class="bg-surface-container-low hover:bg-surface-container transition-all p-space-lg rounded-xl flex flex-col justify-between group shadow-lg">
+<div class="space-y-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container group-hover:bg-primary/20 flex items-center justify-center text-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">download_for_offline</span>
+</div>
+<div class="font-label-caps text-label-caps text-outline">SEC. 30 // PDPA THAILAND</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">ขอเข้าถึงและรับสำเนาข้อมูล</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs">
+                ขอรับสำเนาข้อมูลส่วนบุคคลของท่านที่อยู่ในความดูแลของ NITI.TECH ในรูปแบบที่สามารถอ่านได้ด้วยเครื่องมืออิเล็กทรอนิกส์
+              </p>
+</div>
+<button class="mt-space-lg w-full py-2 bg-surface-container hover:bg-primary hover:text-on-primary text-on-surface font-label-code text-label-code rounded transition-colors text-center" onclick="triggerDSRModal('เข้าถึงและรับสำเนาข้อมูล (Right of Access)')">
+              ยื่นคำร้อง (EXECUTE)
+            </button>
+</div>
+<!-- Right 2: Rectification -->
+<div class="bg-surface-container-low hover:bg-surface-container transition-all p-space-lg rounded-xl flex flex-col justify-between group shadow-lg">
+<div class="space-y-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container group-hover:bg-secondary-container/20 flex items-center justify-center text-secondary transition-colors">
+<span class="material-symbols-outlined text-[22px]">edit_note</span>
+</div>
+<div class="font-label-caps text-label-caps text-outline">SEC. 35 // PDPA THAILAND</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">ขอแก้ไขข้อมูลให้ถูกต้อง</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs">
+                ดำเนินการแก้ไขข้อมูลประวัติการวิจัย ข้อมูลองค์กร หรือข้อมูลทางวิชาการให้เป็นปัจจุบัน ถูกต้อง และไม่ก่อให้เกิดความเข้าใจผิด
+              </p>
+</div>
+<button class="mt-space-lg w-full py-2 bg-surface-container hover:bg-secondary hover:text-on-secondary text-on-surface font-label-code text-label-code rounded transition-colors text-center" onclick="triggerDSRModal('แก้ไขข้อมูลส่วนบุคคล (Right to Rectification)')">
+              ยื่นคำร้อง (EXECUTE)
+            </button>
+</div>
+<!-- Right 3: Erasure / RTBF -->
+<div class="bg-surface-container-low hover:bg-surface-container transition-all p-space-lg rounded-xl flex flex-col justify-between group shadow-lg">
+<div class="space-y-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container group-hover:bg-error-container/40 flex items-center justify-center text-error transition-colors">
+<span class="material-symbols-outlined text-[22px]">delete_forever</span>
+</div>
+<div class="font-label-caps text-label-caps text-outline">SEC. 33 // PDPA THAILAND</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">ขอลบหรือทำลายข้อมูล</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs">
+                ขอให้ทำลายหรือทำให้ข้อมูลส่วนบุคคลไม่สามารถระบุตัวบุคคลได้ เมื่อหมดความจำเป็นหรือท่านได้เพิกถอนความยินยอม
+              </p>
+</div>
+<button class="mt-space-lg w-full py-2 bg-surface-container hover:bg-error-container hover:text-on-error-container text-on-surface font-label-code text-label-code rounded transition-colors text-center" onclick="triggerDSRModal('ขอลบหรือทำลายข้อมูล (Right to Erasure)')">
+              ยื่นคำร้อง (EXECUTE)
+            </button>
+</div>
+<!-- Right 4: Object / Withdraw -->
+<div class="bg-surface-container-low hover:bg-surface-container transition-all p-space-lg rounded-xl flex flex-col justify-between group shadow-lg">
+<div class="space-y-space-sm">
+<div class="w-10 h-10 rounded bg-surface-container group-hover:bg-tertiary-container/30 flex items-center justify-center text-tertiary transition-colors">
+<span class="material-symbols-outlined text-[22px]">block</span>
+</div>
+<div class="font-label-caps text-label-caps text-outline">SEC. 32 // PDPA THAILAND</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">ขอคัดค้านและเพิกถอน</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs">
+                ขอคัดค้านการเก็บ รวบรวม หรือใช้ข้อมูลในแง่การศึกษาวิจัย หรือเพิกถอนความยินยอมทั้งหมดในระบบด้วยปุ่มคำสั่งเดียว
+              </p>
+</div>
+<button class="mt-space-lg w-full py-2 bg-surface-container hover:bg-tertiary-container hover:text-on-tertiary-container text-on-surface font-label-code text-label-code rounded transition-colors text-center" onclick="triggerDSRModal('ขอคัดค้านและเพิกถอนความยินยอม (Right to Object)')">
+              ยื่นคำร้อง (EXECUTE)
+            </button>
+</div>
+</div>
+</section>
+<!-- SECTION 4: DATA FLOW & AUDIT TRAIL VISUALIZATION -->
+<section class="bg-surface-container-low rounded-xl p-space-xl shadow-xl space-y-space-lg">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div>
+<div class="font-label-caps text-label-caps text-primary tracking-widest">[MODULE_03] // DATA_FLOW_AUDIT</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">แผนผังการไหลเวียนข้อมูลและเส้นทางตรวจพิสูจน์ (Audit Trail)</h2>
+</div>
+<div class="font-label-code text-label-code text-outline flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            CRYPTOGRAPHIC HASH: 0x8F3C...A241
+          </div>
+</div>
+<!-- Visual Flow Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop relative">
+<!-- Node 1 -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary">INGESTION // THAILAND</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">sensors</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Local Edge Node</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs">
+              เกตเวย์ความปลอดภัยกรุงเทพฯ ทำการคัดแยก metadata และเข้ารหัส SHA-256 ทันทีที่รับส่งคำขอ
+            </p>
+<div class="p-space-xs rounded bg-surface-container-lowest font-label-code text-label-code text-[11px] text-outline">
+              ENCRYPTION: AES-256-GCM
+            </div>
+</div>
+<!-- Node 2 -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-primary">PSEUDONYMIZATION // LABS</span>
+<span class="material-symbols-outlined text-[18px] text-primary">enhanced_encryption</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Secure Vault (Zero-Knowledge)</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs">
+              การจับคู่อัตลักษณ์จริงถูกแยกเก็บใน Secure Key Enclave ไม่มีการจัดเก็บข้อมูลระบุตัวตนในดาต้าเบสวิเคราะห์
+            </p>
+<div class="p-space-xs rounded bg-surface-container-lowest font-label-code text-label-code text-[11px] text-outline">
+              KEY HOST: HSM Level-3 Validated
+            </div>
+</div>
+<!-- Node 3 -->
+<div class="bg-surface-container p-space-md rounded-xl space-y-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-tertiary">LEGAL DISPATCH // ARCHIVE</span>
+<span class="material-symbols-outlined text-[18px] text-tertiary">verified_user</span>
+</div>
+<div class="font-headline-sm text-headline-sm text-on-surface">Audit Ledger &amp; Gazette Sync</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs">
+              บันทึก Log ความยินยอมใน Immutable Time-Stamped Ledger สำหรับตรวจสอบกรณีข้อพิพาท PDPA
+            </p>
+<div class="p-space-xs rounded bg-surface-container-lowest font-label-code text-label-code text-[11px] text-outline">
+              RETENTION: Auto-purge after 365d
+            </div>
+</div>
+</div>
+<!-- Live Consent Ledger Telemetry Snippet -->
+<div class="p-space-md rounded bg-surface-container-lowest font-label-code text-label-code space-y-1 overflow-x-auto">
+<div class="text-outline text-[11px] flex items-center justify-between">
+<span class="">[REALTIME_CONSENT_CHAIN_SNIPPET]</span>
+<span class="text-secondary">INTEGRITY_CHECK: PASS</span>
+</div>
+<div class="text-on-surface-variant text-[12px] whitespace-nowrap">
+            2025-05-14T16:42:09Z &gt; TX_ID: 882194a_c &gt; ESSENTIAL: [LOCKED_TRUE] | ANALYTICS: [GRANTED] | RESEARCH: [DENIED] | HASH: 9bc7...e401
+          </div>
+</div>
+</section>
+<!-- SECTION 5: ACTION BUTTONS CONSOLE -->
+<section class="bg-surface-container-high p-space-lg rounded-xl shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-space-md sticky bottom-6 z-40 backdrop-blur-xl bg-opacity-95">
+<div class="flex items-center gap-space-md w-full lg:w-auto">
+<div class="w-10 h-10 rounded bg-primary flex items-center justify-center flex-shrink-0 text-on-primary">
+<span class="material-symbols-outlined text-[24px]">gavel</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface">ต้องการบันทึกการตั้งค่าหรือไม่?</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs">
+              การเปลี่ยนแปลงจะมีผลต่อการเข้าชมและการรับเอกสารสรุปคดีทันที
+            </p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs w-full lg:w-auto justify-end">
+<button class="px-space-md py-2.5 rounded bg-surface-container hover:bg-surface-container-highest text-on-surface font-label-code text-label-code transition-colors" onclick="handleRejectNonEssential()" type="button">
+            ปฏิเสธส่วนที่ไม่จำเป็น
+          </button>
+<button class="px-space-md py-2.5 rounded bg-surface-container hover:bg-surface-container-highest text-primary font-label-code text-label-code transition-colors" onclick="handleSavePreferences()" type="button">
+            บันทึกการตั้งค่าของฉัน
+          </button>
+<button class="px-space-lg py-2.5 rounded bg-primary hover:bg-primary-container text-on-primary hover:text-on-primary-container font-label-code text-label-code transition-all shadow-lg shadow-primary/20" onclick="handleAcceptAll()" type="button">
+            ยอมรับทั้งหมด (ACCEPT ALL)
+          </button>
+<button class="p-2.5 rounded bg-surface-container hover:bg-surface-container-highest text-secondary transition-colors" onclick="handleDownloadAuditPDF()" title="ดาวน์โหลดบันทึกประวัติความยินยอม (PDF Certificate)" type="button">
+<span class="material-symbols-outlined text-[20px]">file_download</span>
+</button>
+</div>
+</section>
+<!-- SECTION 6: DPO CONTACT & SUPERVISORY AUTHORITY BOX -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop pt-space-md">
+<!-- DPO Channel Box -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-xl shadow-lg space-y-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary text-[24px]">verified_user</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">เจ้าหน้าที่คุ้มครองข้อมูลส่วนบุคคล (Data Protection Officer - DPO)</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            หากท่านมีข้อสงสัย ข้อเสนอแนะ หรือต้องการความชัดเจนเกี่ยวกับการจัดการข้อมูลตามกฎหมาย PDPA สามารถติดต่อคณะทำงานคุ้มครองข้อมูลได้โดยตรง:
+          </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md font-body-md text-body-md">
+<div class="bg-surface-container p-space-sm rounded">
+<span class="font-label-caps text-label-caps text-outline block">ENCRYPTED EMAIL</span>
+<a class="text-primary hover:underline font-label-code text-label-code" href="mailto:dpo@niti.tech">dpo@niti.tech</a>
+<span class="text-outline text-xs block mt-1">PGP Fingerprint: 4E92 B109</span>
+</div>
+<div class="bg-surface-container p-space-sm rounded">
+<span class="font-label-caps text-label-caps text-outline block">RESPONSE TIME</span>
+<span class="text-on-surface font-label-code text-label-code">&lt; 72 ชั่วโมงทำการ</span>
+<span class="text-outline text-xs block mt-1">ตามมาตรฐานระเบียบ สคส.</span>
+</div>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant text-xs space-y-1">
+<div class="text-on-surface font-medium">สถาบันสารสนเทศและการวิจัยนิติศาสตร์ไซเบอร์ (NITI.TECH LEGAL LABS)</div>
+<div class="">อาคารนวัตกรรมดิจิทัล ถนนวิทยุ แขวงลุมพินี เขตปทุมวัน กรุงเทพมหานคร 10330</div>
+</div>
+</div>
+<!-- Official Authority Link -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-lg rounded-xl shadow-lg flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-sm">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">account_balance</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">หน่วยงานกำกับดูแลอย่างเป็นทางการ</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs">
+              ท่านมีสิทธิยื่นเรื่องร้องเรียนต่อคณะกรรมการผู้เชี่ยวชาญตาม พ.ร.บ. คุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 ในกรณีที่เห็นว่าการปฏิบัติขององค์กรไม่สอดคล้องกับตัวบทกฎหมาย
+            </p>
+<div class="p-space-sm rounded bg-surface-container font-body-md text-body-md text-xs space-y-1">
+<div class="font-medium text-on-surface">สำนักงานคณะกรรมการคุ้มครองข้อมูลส่วนบุคคล (สคส. - PDPC)</div>
+<div class="text-outline">ศูนย์ราชการเฉลิมพระเกียรติฯ อาคารรัฐประศาสนภักดี (อาคาร B) ถ.แจ้งวัฒนะ</div>
+<div class="font-label-code text-label-code text-secondary">HOTLINE: 1111 ต่อ 88</div>
+</div>
+</div>
+<a class="py-2.5 px-space-md bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-label-code text-label-code flex items-center justify-between transition-colors" href="https://www.pdpc.or.th" rel="noopener noreferrer" target="_blank">
+<span class="">เยี่ยมชมเว็บไซต์ทางการของ สคส.</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</section>
+</div>
+</div>
+<!-- DSR Request Modal Backdrop -->
+<div class="fixed inset-0 z-50 bg-surface-container-lowest/80 backdrop-blur-md hidden flex items-center justify-center p-4" id="dsr-modal">
+<div class="bg-surface-container-low w-full max-w-lg rounded-xl p-space-xl shadow-2xl space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="font-label-caps text-label-caps text-primary tracking-widest">[PDPA_FORM // DSR_SUBMIT]</div>
+<button class="text-on-surface-variant hover:text-on-surface" onclick="closeDSRModal()" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="space-y-1">
+<h4 class="font-headline-md text-headline-md text-on-surface" id="dsr-modal-title">ยื่นคำร้องใช้สิทธิ</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs">
+          กรุณากรอกข้อมูลเพื่อยืนยันตัวตนในการประมวลผลคำร้องตามระเบียบ PDPA
+        </p>
+</div>
+<form class="space-y-space-sm" onsubmit="handleDSRSubmit(event)">
+<div class="space-y-1">
+<label class="font-label-code text-label-code text-outline block">EMAIL_ADDRESS_REGISTRATION</label>
+<input class="w-full bg-surface-container rounded px-space-sm py-2 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none" placeholder="counsel@firm.co" required="" type="email">
+</div>
+<div class="space-y-1">
+<label class="font-label-code text-label-code text-outline block">LEGAL_REASON_OR_IDENTIFIER</label>
+<textarea class="w-full bg-surface-container rounded px-space-sm py-2 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none" placeholder="ระบุรายละเอียดเพิ่มเติม หรือเลขอ้างอิงคดีวิจัย..." required="" rows="3"></textarea>
+</div>
+<div class="p-space-xs rounded bg-surface-container font-label-code text-label-code text-[11px] text-outline">
+          * ระบบจะจัดส่งรหัสยืนยัน OTP ไปยังอีเมลของท่านเพื่อยืนยันตัวตนตามมาตรการ Zero-Trust
+        </div>
+<div class="flex items-center justify-end gap-space-xs pt-space-xs">
+<button class="px-space-md py-2 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-code text-label-code" onclick="closeDSRModal()" type="button">
+            ยกเลิก
+          </button>
+<button class="px-space-md py-2 rounded bg-primary text-on-primary hover:bg-primary-container font-label-code text-label-code" type="submit">
+            ส่งคำร้องต่อ DPO
+          </button>
+</div>
+</form>
+</div>
+</div>
+<!-- Notification Toast -->
+<div class="fixed bottom-24 right-6 z-50 hidden bg-surface-container-high text-on-surface px-space-md py-3 rounded-lg shadow-2xl flex items-center gap-space-sm" id="consent-toast">
+<span class="material-symbols-outlined text-primary text-[20px]" id="toast-icon">check_circle</span>
+<span class="font-body-md text-body-md" id="toast-message">บันทึกการตั้งค่าความยินยอมสำเร็จ</span>
+</div>
+<script>
+    // Accordion toggle behavior
+    document.querySelectorAll('.toggle-accordion').forEach(button => {
+      button.addEventListener('click', () => {
+        const targetId = button.getAttribute('data-target');
+        const details = document.getElementById(targetId);
+        const icon = button.querySelector('.material-symbols-outlined');
+        
+        if (details.classList.contains('hidden')) {
+          details.classList.remove('hidden');
+          icon.textContent = 'expand_less';
+        } else {
+          details.classList.add('hidden');
+          icon.textContent = 'expand_more';
+        }
+      });
+    });
+
+    // Toast utility
+    function showNotification(msg, iconName = 'check_circle') {
+      const toast = document.getElementById('consent-toast');
+      const msgEl = document.getElementById('toast-message');
+      const iconEl = document.getElementById('toast-icon');
+      msgEl.textContent = msg;
+      iconEl.textContent = iconName;
+      toast.classList.remove('hidden');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+      }, 3500);
+    }
+
+    // Accept All
+    function handleAcceptAll() {
+      document.getElementById('toggle-analytics').checked = true;
+      document.getElementById('toggle-personalization').checked = true;
+      document.getElementById('toggle-partners').checked = true;
+      updateStatusBadge('ยอมรับทั้งหมด (ALL GRANTED)');
+      showNotification('บันทึกความยินยอมครบทุกหมวดหมู่เรียบร้อยแล้ว');
+      updateTimestamp();
+    }
+
+    // Reject Non-Essential
+    function handleRejectNonEssential() {
+      document.getElementById('toggle-analytics').checked = false;
+      document.getElementById('toggle-personalization').checked = false;
+      document.getElementById('toggle-partners').checked = false;
+      updateStatusBadge('เฉพาะที่จำเป็น (NECESSARY ONLY)');
+      showNotification('ปฏิเสธการประมวลผลข้อมูลที่ไม่จำเป็นเรียบร้อยแล้ว');
+      updateTimestamp();
+    }
+
+    // Save Custom Preferences
+    function handleSavePreferences() {
+      updateStatusBadge('กำหนดเอง (CUSTOMIZED)');
+      showNotification('บันทึกการกำหนดค่าความเป็นส่วนตัวของท่านแล้ว');
+      updateTimestamp();
+    }
+
+    // Timestamp updater
+    function updateTimestamp() {
+      const now = new Date();
+      const formatted = now.toISOString().replace('T', ' ').substring(0, 19) + ' UTC';
+      document.getElementById('last-sync-time').textContent = formatted;
+    }
+
+    function updateStatusBadge(text) {
+      document.getElementById('badge-pref-status').textContent = text;
+    }
+
+    // Download PDF Log Simulator
+    function handleDownloadAuditPDF() {
+      showNotification('กำลังสร้างไฟล์ PDF บันทึกความยินยอมพร้อมลายเซ็นดิจิทัล...', 'download');
+      setTimeout(() => {
+        const dummyContent = "data:text/plain;charset=utf-8,NITI.TECH PDPA CONSENT LOG\\nID: DPO-AUTH-882194\\nSTATUS: VERIFIED";
+        const link = document.createElement("a");
+        link.setAttribute("href", dummyContent);
+        link.setAttribute("download", "NITI_TECH_PDPA_Consent_Audit.txt");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }, 1000);
+    }
+
+    // DSR Modal handlers
+    function triggerDSRModal(title) {
+      document.getElementById('dsr-modal-title').textContent = title;
+      document.getElementById('dsr-modal').classList.remove('hidden');
+    }
+
+    function closeDSRModal() {
+      document.getElementById('dsr-modal').classList.add('hidden');
+    }
+
+    function handleDSRSubmit(event) {
+      event.preventDefault();
+      closeDSRModal();
+      showNotification('ยื่นคำร้องเรียบร้อย เจ้าหน้าที่ DPO จะติดต่อกลับทางอีเมล');
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-gutter-desktop mb-space-2xl"><div class="lg:col-span-4 space-y-space-md"><div class="flex items-center gap-space-sm"><img alt="NITI.TECH Official Emblem" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQlWGCByEdWtTKpBZUCWCSh6I0GCLQw6n2GYUsoU3uyUdfypWUxAUxAyWnk2yL-h77XrsQhS7NpkiuA8qa5ZW83sN3fVuOklk2NtpEMn3NUffnK6p7DdYcR9F5KUfcVLCsl8ozk-5tlFctUZd3R9trDhcS_O8tSKXMg7oZKjddI8UoNp0hY261i3SRFDqvvOVt1QrLhQuZM1giBZANq19vkgUMi8Y4tKDyBA-xdUqS8TGGa-o6TK29pbQHPZPErBSHVKg"><span class="font-headline-sm text-headline-sm text-on-surface">NITI<span class="text-primary">.TECH</span></span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">สถาบันสารสนเทศและการวิจัยนิติศาสตร์ไซเบอร์ ศูนย์รวมองค์ความรู้ด้านกฎหมายปัญญาประดิษฐ์ ธรรมาภิบาลข้อมูล และคดีความมั่นคงไซเบอร์ระดับชาติ</p><div class="flex items-center gap-space-sm"><span class="font-label-caps text-label-caps px-space-xs py-0.5 rounded bg-surface-container-high text-secondary">STATUS // LIVE_TELEMETRY</span><span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span></div></div><div class="lg:col-span-3 space-y-space-sm"><div class="font-label-caps text-label-caps text-on-surface">INVESTIGATIVE DOMAINS</div><ul class="space-y-space-xs font-body-md text-body-md"><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">AI Liability &amp; Algorithmic Audit</li><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">PDPA Enforcement &amp; Consent Frameworks</li><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Smart Contract Arbitration &amp; DeFi Law</li><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Digital Forensics &amp; Incident Protocols</li></ul></div><div class="lg:col-span-2 space-y-space-sm"><div class="font-label-caps text-label-caps text-on-surface">REPOSITORIES</div><ul class="space-y-space-xs font-body-md text-body-md"><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Legal Codebase</li><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Precedent Matrix</li><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">Regulatory Gazettes</li><li class="text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer">API &amp; Machine Law</li></ul></div><div class="lg:col-span-3 space-y-space-sm"><div class="font-label-caps text-label-caps text-on-surface">EXECUTIVE DISPATCH</div><p class="font-body-md text-body-md text-on-surface-variant">รับสรุปคดีและคำวินิจฉัยด้านไซเบอร์ล่าสุดทุกสัปดาห์</p><div class="flex items-center gap-space-xs"><div class="relative flex-1"><input class="w-full bg-surface-container rounded px-space-sm py-2 font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant focus:outline-none" placeholder="counsel@firm.co" type="text"></div><button class="px-space-md py-2 bg-primary rounded font-label-code text-label-code text-on-primary hover:bg-primary-container hover:text-on-primary-container transition-colors">JOIN</button></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-label-code text-label-code"><div class="flex items-center gap-space-md"><span class="">© 2025 NITI.TECH LEGAL LABS</span><span class="text-outline">//</span><span class="">SYSTEM PROTOCOL V4.2</span></div><div class="flex items-center gap-space-lg"><span class="">TERMS OF SERVICE</span><span class="">CRYPTOGRAPHIC DISCLOSURE</span><span class="">FEED STATUS: NOMINAL</span></div></div></div></footer>
+
+
+
+</body></html>

@@ -1,0 +1,11 @@
+node_modules
+.next
+.env*
+!.env.example
+*.tsbuildinfo
+next-env.d.ts
+.claude
+.DS_Store
+_design/*.zip
+_design/*.png
+_design/nititech UI/**/*.png

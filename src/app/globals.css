@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { color-scheme: dark; }
+body { @apply bg-void text-ink antialiased; }
+::selection { background: rgba(212, 175, 55, 0.35); }
+
+@layer components {
+  /* พื้นตารางเทคนิค 24px */
+  .grid-bg { background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 24px 24px; }
+  .glass { @apply rounded border border-line bg-[rgba(16,18,23,0.72)] backdrop-blur-xl; }
+  .glass-2 { @apply rounded-lg border border-line-2 bg-[rgba(22,26,35,0.85)] backdrop-blur-2xl; }
+  .label { @apply font-mono text-[10px] font-semibold uppercase tracking-[0.12em]; }
+  .code { @apply font-mono text-xs font-medium tracking-[0.06em]; }
+  .index { @apply label text-ink-3; }
+  .chip { @apply label inline-flex items-center gap-1.5 rounded-sm border border-line-2 bg-black/50 px-2 py-1 text-ink-2; }
+  .dot { @apply inline-block h-1 w-1 animate-pulse rounded-full bg-cyan; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded px-5 py-3 text-[13px] font-semibold transition; }
+  .btn-gold { @apply btn bg-gold text-void hover:shadow-aureum-hover; }
+  .btn-term { @apply btn border border-white/[0.12] bg-white/[0.03] text-ink hover:border-cyan hover:shadow-cyan; }
+  .link-ghost { @apply code relative inline-flex items-center gap-1 text-gold after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:bg-gold after:transition-all hover:after:w-full; }
+  .field { @apply w-full rounded border border-white/10 bg-[rgba(10,11,14,0.8)] px-3 py-2.5 text-ink placeholder:text-ink-3 focus:border-cyan focus:shadow-cyan focus:outline-none; }
+  .rule { @apply border-t border-line; }
+  .prose-niti p { @apply mt-3 leading-[1.85] text-ink/85; }
+  .prose-niti ul { @apply mt-3 space-y-1.5 pl-5; }
+  .prose-niti li { @apply relative leading-relaxed text-ink/85 before:absolute before:-left-4 before:top-[0.7em] before:h-1 before:w-2 before:bg-gold/70; }
+}
