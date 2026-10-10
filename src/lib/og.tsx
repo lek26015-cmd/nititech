@@ -5,14 +5,17 @@ import { ImageResponse } from 'next/og';
 // ภาพแชร์ (OG) ธีมเดียวกับเว็บ — satori ใช้ woff2 ไม่ได้ จึงใช้ LINE Seed แบบ .ttf
 export const ogSize = { width: 1200, height: 630 };
 
-const font = (f: string) => readFile(join(process.cwd(), 'src/fonts', f));
-const asset = async (p: string) => `data:image/png;base64,${(await readFile(join(process.cwd(), p))).toString('base64')}`;
+// path ตายตัว เพื่อให้ bundler ติดตามไฟล์ได้ (ไม่ดึงทั้งโปรเจกต์)
+const png = (b: Buffer) => `data:image/png;base64,${b.toString('base64')}`;
 
 export async function renderOg({ kicker, title, sub }: { kicker: string; title: string; sub?: string }) {
-  const [bd, rg, wordmark, emblem] = await Promise.all([
-    font('LINESeedSansTH_Bd.ttf'), font('LINESeedSansTH_Rg.ttf'),
-    asset('public/logo/wordmark-duo.png'), asset('src/app/og-emblem.png'),
+  const [bd, rg, wm, em] = await Promise.all([
+    readFile(join(process.cwd(), 'src/fonts/LINESeedSansTH_Bd.ttf')),
+    readFile(join(process.cwd(), 'src/fonts/LINESeedSansTH_Rg.ttf')),
+    readFile(join(process.cwd(), 'public/logo/wordmark-duo.png')),
+    readFile(join(process.cwd(), 'src/app/og-emblem.png')),
   ]);
+  const wordmark = png(wm), emblem = png(em);
   const size = title.length > 60 ? 50 : title.length > 36 ? 58 : 68;
   return new ImageResponse(
     (
