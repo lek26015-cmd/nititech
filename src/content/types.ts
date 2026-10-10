@@ -19,6 +19,8 @@ export interface Category {
   code: string;
   /** ชื่อหมวดแบบสั้น ใช้บนการ์ด */
   short: string;
+  /** ลิงก์ไปบริการที่ตรงหมวดบน Lawslane */
+  lawslane: { href: string; label: string; desc: string };
   title: string;
   blurb: string;
   articles: Article[];

@@ -6,7 +6,7 @@ import { allArticles, findArticle, readingMinutes, refOf, toCard } from '@/conte
 import { UPDATED } from '@/content/types';
 import { ArticleCard } from '@/components/article-card';
 import { LawyerCta, Disclaimer } from '@/components/site';
-import { SITE_URL, SITE_NAME, breadcrumbLd } from '@/lib/site';
+import { SITE_URL, SITE_NAME, LAWSLANE_URL, breadcrumbLd } from '@/lib/site';
 
 export function generateStaticParams() {
   return allArticles.map((a) => ({ slug: a.slug }));
@@ -56,7 +56,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       '@context': 'https://schema.org', '@type': 'Article', headline: a.title, description: a.summary, inLanguage: 'th', isAccessibleForFree: true,
       datePublished: UPDATED, dateModified: UPDATED, articleSection: a.category.title, keywords: (a.laws ?? []).join(', '),
       mainEntityOfPage: `${SITE_URL}/knowledge/${a.slug}`,
-      author: { '@type': 'Organization', name: SITE_NAME }, publisher: { '@type': 'Organization', name: SITE_NAME },
+      author: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL }, publisher: { '@type': 'Organization', name: 'Lawslane', url: LAWSLANE_URL },
     },
     breadcrumbLd([{ name: 'หน้าแรก', path: '/' }, { name: 'คลังความรู้', path: '/knowledge' }, { name: a.category.title, path: `/category/${a.category.id}` }, { name: a.title, path: `/knowledge/${a.slug}` }]),
   ];
@@ -152,7 +152,18 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             </section>
           )}
 
-          <div className="mt-8 space-y-4"><Disclaimer /><LawyerCta /></div>
+          <div className="mt-8 space-y-4">
+            <Disclaimer />
+            <a href={a.category.lawslane.href} className="glass group flex items-center justify-between gap-4 p-5 transition hover:border-cyan hover:shadow-cyan">
+              <span>
+                <span className="index block">ต่อยอดบน Lawslane</span>
+                <span className="mt-1 block font-semibold text-ink group-hover:text-cyan">{a.category.lawslane.label}</span>
+                <span className="mt-1 block text-sm text-ink-2">{a.category.lawslane.desc}</span>
+              </span>
+              <ArrowRight size={18} className="shrink-0 text-ink-3 group-hover:text-cyan" />
+            </a>
+            <LawyerCta />
+          </div>
 
           {related.length > 0 && (
             <section className="mt-14">

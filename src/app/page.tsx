@@ -8,7 +8,7 @@ import { UPDATED } from '@/content/types';
 import { ArticleCard } from '@/components/article-card';
 import { RadarList } from '@/components/radar-list';
 import { SectionHead } from '@/components/site';
-import { SITE_URL, SITE_NAME, SITE_DESC, lawyerUrl } from '@/lib/site';
+import { SITE_URL, SITE_NAME, SITE_DESC, LAWSLANE_URL, lawyerUrl } from '@/lib/site';
 
 const FEATURED = ['pdpa-basics', 'deepfake-law', 'online-scam-victim'];
 const featured = FEATURED.map(findArticle).filter((a) => a !== undefined);
@@ -27,6 +27,7 @@ const homeLd = {
   url: SITE_URL,
   inLanguage: 'th',
   description: SITE_DESC,
+  publisher: { '@type': 'Organization', name: 'Lawslane', url: LAWSLANE_URL },
   potentialAction: { '@type': 'SearchAction', target: `${SITE_URL}/knowledge?q={q}`, 'query-input': 'required name=q' },
 };
 

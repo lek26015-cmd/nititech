@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { categories } from '@/content/topics';
-import { lawyerUrl } from '@/lib/site';
+import { lawyerUrl, lawslane } from '@/lib/site';
 import { MobileNav } from './mobile-nav';
 
 export const nav = [
@@ -36,14 +36,14 @@ export function Header() {
 export function Footer() {
   return (
     <footer className="mt-24 border-t border-line bg-void-2/60">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-[1.3fr_1fr_1fr] md:px-10">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr] md:px-10">
         <div>
           <div className="flex items-center gap-3">
             <Image src="/logo/emblem-gold.png" alt="" width={900} height={900} className="h-10 w-10" />
             <Image src="/logo/wordmark-light.png" alt="NITI.TECH" width={900} height={286} className="h-5 w-auto" />
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-ink-2">
-            พื้นที่ความรู้กฎหมายเทคโนโลยีไทย ข้อมูลส่วนบุคคล อาชญากรรมไซเบอร์ AI และธุรกิจดิจิทัล โดย Lawslane
+            พื้นที่ความรู้กฎหมายเทคโนโลยีไทย ข้อมูลส่วนบุคคล อาชญากรรมไซเบอร์ AI และธุรกิจดิจิทัล จัดทำโดย <a href={lawslane.home} className="text-gold hover:underline">Lawslane</a> แพลตฟอร์มปรึกษาทนายความออนไลน์
           </p>
           <p className="mt-4 chip"><span className="dot" /> STATUS // LIVE</p>
         </div>
@@ -63,6 +63,15 @@ export function Footer() {
             <li><Link href="/radar" className="hover:text-gold">สถานะกฎหมายเทคโนโลยี</Link></li>
             <li><Link href="/matrix" className="hover:text-gold">แผนผังกฎหมายตามกรณีใช้งาน</Link></li>
             <li><Link href="/about" className="hover:text-gold">เกี่ยวกับเราและนโยบายความเป็นส่วนตัว</Link></li>
+          </ul>
+        </div>
+        <div>
+          <p className="index">จาก Lawslane</p>
+          <ul className="mt-3 space-y-2 text-sm text-ink-2">
+            <li><a href={lawslane.lawyers} className="hover:text-gold">ค้นหาทนายความ</a></li>
+            <li><a href={lawslane.ai} className="hover:text-gold">Lawslane AI ผู้ช่วยกฎหมาย</a></li>
+            <li><a href={lawslane.forms} className="hover:text-gold">แบบฟอร์มกฎหมาย</a></li>
+            <li><a href={lawslane.articles} className="hover:text-gold">บทความกฎหมาย</a></li>
           </ul>
         </div>
       </div>
